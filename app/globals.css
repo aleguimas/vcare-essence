@@ -1,67 +1,145 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@theme inline {
-  /* Paleta VCare Essence */
-  --color-cream: #F5F1EA;
-  --color-cream-50: #FAF7F2;
+@theme {
+  /* ─── Paleta ─────────────────────────────────────────────────────────── */
+  --color-cream:     #F5F1EA;
+  --color-cream-50:  #FAF7F2;
   --color-cream-100: #F5F1EA;
   --color-cream-200: #EDE6D9;
 
-  --color-sand: #D9CFBE;
+  --color-sand:     #D9CFBE;
   --color-sand-100: #E8E0D1;
   --color-sand-200: #D9CFBE;
   --color-sand-300: #C7B89E;
 
-  --color-bronze: #8C7853;
+  --color-bronze:     #8C7853;
   --color-bronze-100: #B5A47F;
   --color-bronze-200: #A18E68;
   --color-bronze-300: #8C7853;
   --color-bronze-400: #6E5E40;
   --color-bronze-500: #54472F;
 
-  --color-moss: #3A4A3F;
+  --color-moss:     #3A4A3F;
   --color-moss-100: #647368;
   --color-moss-200: #4D5D52;
   --color-moss-300: #3A4A3F;
   --color-moss-400: #2A3830;
   --color-moss-500: #1D2823;
 
-  --color-navy: #1F2A44;
+  --color-navy:     #1F2A44;
   --color-navy-100: #3C4660;
   --color-navy-200: #2D3852;
   --color-navy-300: #1F2A44;
 
-  --color-ink: #1A1A1A;
+  --color-ink:   #1A1A1A;
   --color-muted: #6B6B6B;
-  --color-line: #E5E0D6;
+  --color-line:  #E5E0D6;
 
-  /* Fontes */
+  /* ─── Tipografia ─────────────────────────────────────────────────────── */
   --font-serif: var(--font-fraunces), Georgia, serif;
-  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-sans:  var(--font-inter), system-ui, sans-serif;
+
+  /* Escala editorial — tamanhos com line-height e letter-spacing compostos */
+  --text-display-xl: clamp(3rem, 8vw, 6.5rem);
+  --text-display-xl--line-height: 1.05;
+  --text-display-xl--letter-spacing: -0.02em;
+
+  --text-display-lg: clamp(2.5rem, 6vw, 4.5rem);
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+
+  --text-display-md: clamp(2rem, 4vw, 3rem);
+  --text-display-md--line-height: 1.15;
+  --text-display-md--letter-spacing: -0.015em;
+
+  --text-h1: clamp(2rem, 4vw, 3rem);
+  --text-h1--line-height: 1.2;
+  --text-h1--letter-spacing: -0.015em;
+
+  --text-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --text-h2--line-height: 1.25;
+  --text-h2--letter-spacing: -0.01em;
+
+  --text-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --text-h3--line-height: 1.3;
+
+  --text-lead: clamp(1.125rem, 1.5vw, 1.375rem);
+  --text-lead--line-height: 1.5;
+
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.65;
+
+  --text-small: 0.9375rem;
+  --text-small--line-height: 1.5;
+
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.15em;
+
+  /* ─── Transições ─────────────────────────────────────────────────────── */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-400: 400ms;
+  --duration-600: 600ms;
+  --duration-800: 800ms;
 }
 
-html {
-  background-color: #F5F1EA;
-  color: #1A1A1A;
-}
+/* ─── Utilitários customizados ───────────────────────────────────────────── */
 
-body {
-  font-family: var(--font-sans);
-  min-height: 100dvh;
-}
+/* Espaçamento de seção responsivo */
+@utility py-section-sm   { padding-block: clamp(3rem, 6vw, 5rem); }
+@utility py-section      { padding-block: clamp(4rem, 10vw, 8rem); }
+@utility py-section-lg   { padding-block: clamp(6rem, 14vw, 12rem); }
+@utility pt-section-sm   { padding-block-start: clamp(3rem, 6vw, 5rem); }
+@utility pt-section      { padding-block-start: clamp(4rem, 10vw, 8rem); }
+@utility pt-section-lg   { padding-block-start: clamp(6rem, 14vw, 12rem); }
+@utility pb-section-sm   { padding-block-end: clamp(3rem, 6vw, 5rem); }
+@utility pb-section      { padding-block-end: clamp(4rem, 10vw, 8rem); }
+@utility pb-section-lg   { padding-block-end: clamp(6rem, 14vw, 12rem); }
 
-/* Seleção de texto */
-::selection {
-  background-color: #8C7853;
-  color: #F5F1EA;
-}
+/* Larguras máximas de prosa */
+@utility max-w-prose-narrow { max-width: 36rem; }
+@utility max-w-prose-wide   { max-width: 52rem; }
+@utility max-w-container    { max-width: 76rem; }
 
-/* Respeita preferência de movimento reduzido */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+/* ─── Base ───────────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    color-scheme: light;
   }
+
+  ::selection {
+    background-color: #8C7853;
+    color: #F5F1EA;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F5F1EA;
+  }
+
+  body {
+    color: #1A1A1A;
+    font-feature-settings: 'ss01', 'cv11';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ─── Utilities extras ───────────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty; }
 }
