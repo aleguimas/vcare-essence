@@ -1,36 +1,64 @@
-import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
-import { Eyebrow } from '@/components/editorial/Eyebrow';
-import { Heading } from '@/components/editorial/Heading';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { ROUTES } from '@/lib/routes';
+import type { Metadata } from 'next';
+import { Hero } from '@/components/sections/home/Hero';
+import { SensoryIntro } from '@/components/sections/home/SensoryIntro';
+import { MethodsIntro } from '@/components/sections/home/MethodsIntro';
+import { CareGrid } from '@/components/sections/home/CareGrid';
+import { Founders } from '@/components/sections/home/Founders';
+import { HouseGallery } from '@/components/sections/home/HouseGallery';
+import { JournalPreview } from '@/components/sections/home/JournalPreview';
+import { Testimonials } from '@/components/sections/home/Testimonials';
+import { OnlineCTA } from '@/components/sections/home/OnlineCTA';
+import { FinalCTA } from '@/components/sections/home/FinalCTA';
+import { SITE } from '@/lib/routes';
+
+export const metadata: Metadata = {
+  title: 'VCare Essence — A primeira clínica sensorial de Recife',
+  description:
+    'Casa boutique de saúde mental no RioMar Trade Center. Cuidamos do que ninguém vê: a mente, o emocional, a essência. Atendimento presencial em Recife e online.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'VCare Essence — A primeira clínica sensorial de Recife',
+    description:
+      'Casa boutique de saúde mental no RioMar Trade Center. Cuidamos do que ninguém vê: a mente, o emocional, a essência.',
+    images: [{ url: '/images/og/og-home.jpg', width: 1200, height: 630 }],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalClinic',
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: `${SITE.address.street}, ${SITE.address.complement}`,
+    addressLocality: SITE.address.city,
+    addressRegion: SITE.address.state,
+    postalCode: SITE.address.zip,
+    addressCountry: SITE.address.country,
+  },
+  // TODO: telephone, openingHours, priceRange — aguardar decisão das sócias
+};
 
 export default function HomePage() {
   return (
     <>
-      <Section size="lg" tone="cream">
-        <Container>
-          <Eyebrow>VCare Essence · Recife</Eyebrow>
-          <Heading as="h1" size="display-xl" className="mt-4 max-w-prose-wide">
-            Por dentro é onde tudo começa.{' '}
-            <em className="not-italic text-bronze">E onde tudo trava.</em>
-          </Heading>
-          <p className="mt-6 text-lead text-muted max-w-prose">
-            Casa boutique de saúde mental no RioMar Trade Center. A primeira clínica sensorial de
-            Recife.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button asChild size="lg">
-              <Link href={ROUTES.aCasa}>Conhecer a casa</Link>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <Link href={ROUTES.agendar}>Agendar uma conversa</Link>
-            </Button>
-          </div>
-        </Container>
-      </Section>
-      {/* Sprint 02 — blocos da home completa */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <Hero />
+      <SensoryIntro />
+      <MethodsIntro />
+      <CareGrid />
+      <Founders />
+      <HouseGallery />
+      <JournalPreview />
+      <Testimonials />
+      <OnlineCTA />
+      <FinalCTA />
     </>
   );
 }
