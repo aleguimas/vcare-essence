@@ -10,6 +10,7 @@ import {
   TURNOS,
 } from '@/lib/validations/reserva-sala';
 import { cn } from '@/lib/utils';
+import { trackEvent } from '@/lib/analytics';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
 
@@ -51,6 +52,7 @@ export function ReservaSala() {
 
       if (!res.ok) throw new Error('Erro ao enviar');
 
+      trackEvent('form_submit', { form_name: 'reserva_sala' });
       toast.success('Solicitação recebida. Confirmamos disponibilidade em até 24h.');
       reset();
     } catch {

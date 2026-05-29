@@ -1,8 +1,12 @@
 import type { Metadata } from 'next';
 import { Fraunces, Inter } from 'next/font/google';
 import { Toaster } from 'sonner';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import './globals.css';
 import { buildMetadata } from '@/lib/seo';
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -35,6 +39,8 @@ export default function RootLayout({
           }}
         />
       </body>
+      {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }

@@ -42,8 +42,29 @@ export const SITE = {
     zip: '51110-160', // TODO: verificar CEP exato com as sócias
   },
   phone: '', // TODO: aguardar decisão das sócias
-  whatsapp: '', // TODO: aguardar decisão das sócias
+  whatsapp: '', // TODO: aguardar decisão das sócias (formato 5581XXXXXXXXX)
   instagram: '', // TODO: aguardar decisão das sócias
   email: '', // TODO: aguardar decisão das sócias
   cnpj: '', // TODO: aguardar decisão das sócias
 } as const;
+
+/**
+ * Base do Cal.com (username). Definido via NEXT_PUBLIC_CALCOM_USERNAME.
+ * Enquanto vazio, o segmentador degrada para WhatsApp/email.
+ */
+export const CALCOM_USERNAME = process.env.NEXT_PUBLIC_CALCOM_USERNAME ?? '';
+
+/** calLinks por vertical — usados pelo embed do Cal.com. */
+export const CAL_LINKS = {
+  metodoV: 'primeiro-encontro-metodo-v',
+  metodoC: 'conversa-inicial-metodo-c',
+  psicoterapia: 'psicoterapia-camila',
+  hipnoterapia: 'hipnoterapia-vanessa',
+  testeVocacional: 'teste-vocacional-camila',
+  orientacaoFamiliar: 'orientacao-familiar-camila',
+} as const;
+
+export function buildCalLink(slug: string): string | null {
+  if (!CALCOM_USERNAME) return null;
+  return `${CALCOM_USERNAME}/${slug}`;
+}

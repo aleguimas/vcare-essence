@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { toast } from 'sonner';
 import { candidaturaSchema, type CandidaturaInput } from '@/lib/validations/candidatura';
 import { cn } from '@/lib/utils';
+import { trackEvent } from '@/lib/analytics';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/routes';
 
@@ -32,6 +33,7 @@ export function CandidaturaResidente() {
 
       if (!res.ok) throw new Error('Erro ao enviar');
 
+      trackEvent('form_submit', { form_name: 'candidatura_residente' });
       toast.success('Candidatura enviada. Entraremos em contato em até 5 dias úteis.');
       reset();
     } catch {
