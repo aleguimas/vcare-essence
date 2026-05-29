@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Paleta VCare Essence */
+  --color-cream: #F5F1EA;
+  --color-cream-50: #FAF7F2;
+  --color-cream-100: #F5F1EA;
+  --color-cream-200: #EDE6D9;
+
+  --color-sand: #D9CFBE;
+  --color-sand-100: #E8E0D1;
+  --color-sand-200: #D9CFBE;
+  --color-sand-300: #C7B89E;
+
+  --color-bronze: #8C7853;
+  --color-bronze-100: #B5A47F;
+  --color-bronze-200: #A18E68;
+  --color-bronze-300: #8C7853;
+  --color-bronze-400: #6E5E40;
+  --color-bronze-500: #54472F;
+
+  --color-moss: #3A4A3F;
+  --color-moss-100: #647368;
+  --color-moss-200: #4D5D52;
+  --color-moss-300: #3A4A3F;
+  --color-moss-400: #2A3830;
+  --color-moss-500: #1D2823;
+
+  --color-navy: #1F2A44;
+  --color-navy-100: #3C4660;
+  --color-navy-200: #2D3852;
+  --color-navy-300: #1F2A44;
+
+  --color-ink: #1A1A1A;
+  --color-muted: #6B6B6B;
+  --color-line: #E5E0D6;
+
+  /* Fontes */
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: #F5F1EA;
+  color: #1A1A1A;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  min-height: 100dvh;
+}
+
+/* Seleção de texto */
+::selection {
+  background-color: #8C7853;
+  color: #F5F1EA;
+}
+
+/* Respeita preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

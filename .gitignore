@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ide
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# os
+.DS_Store
+
+# assets brutos (não otimizados — processar antes de commitar)
+public/_raw/
+*.heic
+*.HEIC
