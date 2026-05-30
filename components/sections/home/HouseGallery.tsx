@@ -9,24 +9,38 @@ import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { ROUTES } from '@/lib/routes';
 import { scaleIn, fadeInUp, stagger, viewportConfig } from '@/lib/motion';
 
-// Fotos da pasta Drive — inventário completo no Sprint 06
-// Por enquanto usa as 2 confirmadas + placeholders com bg-sand
+// Fotos reais do espaço da VCare Essence
 const GALLERY_ITEMS = [
   {
-    src: '/images/ambiente/ceu-estrelado-hero.webp',
-    alt: 'Teto da VCare Essence com efeito de céu estrelado em fibra óptica',
+    src: '/images/ambiente/sala-01-teto-led-sensorial.webp',
+    alt: 'Sala de atendimento sob o céu estrelado em fibra óptica, com luz quente e poltronas claras',
     aspect: 'row-span-2',
     sizes: '(max-width: 768px) 100vw, 40vw',
   },
   {
-    src: '/images/ambiente/detalhes-tateis-01.webp',
-    alt: 'Detalhes táteis da recepção — planta, esfera de fibra óptica e pirâmides decorativas',
+    src: '/images/ambiente/entrada-vcare-essence.webp',
+    alt: 'Entrada da VCare Essence com logo retroiluminado em parede de madeira',
     aspect: '',
     sizes: '(max-width: 768px) 100vw, 30vw',
   },
-  { src: '', alt: 'Sala de consulta da VCare Essence', aspect: '', sizes: '' },
-  { src: '', alt: 'Recepção da VCare Essence', aspect: '', sizes: '' },
-  { src: '', alt: 'Detalhe da iluminação quente da clínica', aspect: '', sizes: '' },
+  {
+    src: '/images/ambiente/sala-02-iluminacao-dia-vista.webp',
+    alt: 'Sala de atendimento com janela ampla e vista da cidade ao entardecer',
+    aspect: '',
+    sizes: '(max-width: 768px) 100vw, 30vw',
+  },
+  {
+    src: '/images/ambiente/sala-01-iluminacao-dia.webp',
+    alt: 'Sala de atendimento à luz do dia, com madeira, mármore e materiais naturais',
+    aspect: '',
+    sizes: '(max-width: 768px) 100vw, 30vw',
+  },
+  {
+    src: '/images/ambiente/sala-02-teto-led-sensorial.webp',
+    alt: 'Detalhe do teto com efeito de céu estrelado em fibra óptica',
+    aspect: '',
+    sizes: '(max-width: 768px) 100vw, 30vw',
+  },
 ] as const;
 
 export function HouseGallery() {

@@ -20,24 +20,24 @@ const CARDS = [
     title: 'Experiência Sensorial',
     description: 'Como o ambiente é projetado para os cinco sentidos — e por que isso é parte do cuidado.',
     href: ROUTES.experienciaSensorial,
-    imageSrc: '/images/ambiente/ceu-estrelado-hero.webp',
-    imageAlt: 'Teto da VCare Essence com efeito de céu estrelado em fibra óptica',
+    imageSrc: '/images/ambiente/sala-01-teto-led-sensorial.webp',
+    imageAlt: 'Sala de atendimento sob o céu estrelado em fibra óptica, com luz quente',
     featured: true,
   },
   {
     title: 'Endereço',
     description: 'RioMar Trade Center, Torre 4. Pina, Recife. Como chegar.',
     href: ROUTES.endereco,
-    imageSrc: '',
-    imageAlt: 'Fachada da VCare Essence',
+    imageSrc: '/images/ambiente/entrada-vcare-essence.webp',
+    imageAlt: 'Entrada da VCare Essence com logo retroiluminado e corredor',
     featured: false,
   },
   {
     title: 'Tour pela Casa',
     description: 'Galeria editorial do espaço — salas, recepção, detalhes.',
     href: ROUTES.tour,
-    imageSrc: '/images/ambiente/detalhes-tateis-01.webp',
-    imageAlt: 'Detalhes táteis da recepção da VCare Essence',
+    imageSrc: '/images/ambiente/sala-02-iluminacao-dia-vista.webp',
+    imageAlt: 'Sala de atendimento com janela ampla e vista da cidade',
     featured: false,
   },
 ] as const;
@@ -70,19 +70,13 @@ export default function ACasaPage() {
                 className={`group block rounded-2xl overflow-hidden border border-line bg-cream hover:border-bronze/30 hover:shadow-lg transition-all duration-400 ease-soft ${card.featured ? 'md:col-span-2' : ''}`}
               >
                 <div className={`relative bg-sand ${card.featured ? 'aspect-[16/9]' : 'aspect-[4/3]'}`}>
-                  {card.imageSrc ? (
-                    <Image
-                      src={card.imageSrc}
-                      alt={card.imageAlt}
-                      fill
-                      sizes={card.featured ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'}
-                      className="object-cover object-center"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-end p-4">
-                      <p className="text-small text-muted/40 italic font-sans">{card.imageAlt}</p>
-                    </div>
-                  )}
+                  <Image
+                    src={card.imageSrc}
+                    alt={card.imageAlt}
+                    fill
+                    sizes={card.featured ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'}
+                    className="object-cover object-center"
+                  />
                 </div>
                 <div className="p-6">
                   <h2 className="font-sans font-medium text-moss group-hover:text-bronze-400 transition-colors duration-300">

@@ -15,33 +15,47 @@ export const metadata: Metadata = {
   alternates: { canonical: ROUTES.tour },
 };
 
-// Inventário visual da pasta Drive — as 16 fotos catalogadas
-// TODO: após converter HEIC → WebP (ver 05_assets_guide.md), renomear descritivamente
-// As 2 confirmadas usam src real; as demais têm src vazio (placeholder)
-const GALLERY_ITEMS = [
+// Fotos reais do espaço da VCare Essence
+const RECEPCAO_E_SENSORIAL = [
   {
-    src: '/images/ambiente/ceu-estrelado-hero.webp',
-    alt: 'Teto da recepção com efeito de céu estrelado em fibra óptica',
-    caption: 'Recepção — céu estrelado em fibra óptica',
+    src: '/images/ambiente/entrada-vcare-essence.webp',
+    alt: 'Entrada da VCare Essence com logo retroiluminado em parede de madeira e corredor',
+    caption: 'A chegada',
+    span: 'normal' as const,
+  },
+  {
+    src: '/images/ambiente/sala-01-teto-led-sensorial.webp',
+    alt: 'Sala de atendimento sob o céu estrelado em fibra óptica, com luz quente',
+    caption: 'Céu estrelado em fibra óptica',
     span: 'wide' as const,
   },
   {
-    src: '/images/ambiente/detalhes-tateis-01.webp',
-    alt: 'Detalhes táteis — planta, esfera de fibra óptica e elementos decorativos',
-    caption: 'Detalhes sensoriais',
+    src: '/images/ambiente/sala-02-teto-led-sensorial.webp',
+    alt: 'Detalhe do teto com efeito de céu estrelado em fibra óptica',
+    caption: 'O teto sensorial',
     span: 'normal' as const,
   },
-  // TODO: adicionar fotos após conversão HEIC → WebP (Sprint 06 — tarefa manual)
-  { src: '', alt: 'Sala de atendimento 1 — VCare Essence', caption: 'Sala de atendimento', span: 'normal' as const },
-  { src: '', alt: 'Recepção da VCare Essence — vista geral', caption: 'Recepção', span: 'wide' as const },
-  { src: '', alt: 'Detalhe de iluminação quente da clínica', caption: 'Iluminação', span: 'normal' as const },
-  { src: '', alt: 'Sala de atendimento 2 — sofá e mobiliário', caption: 'Sala 2', span: 'tall' as const },
-  { src: '', alt: 'Detalhe de materiais naturais — madeira e cerâmica', caption: 'Materiais', span: 'normal' as const },
-  { src: '', alt: 'Corredor de acesso às salas', caption: 'Circulação interna', span: 'normal' as const },
-  { src: '', alt: 'Vista do espaço de espera', caption: 'Espaço de espera', span: 'wide' as const },
-  { src: '', alt: 'Planta e elementos naturais da decoração', caption: 'Natureza viva', span: 'normal' as const },
-  { src: '', alt: 'Detalhe de textura — tecido e madeira', caption: 'Textura', span: 'normal' as const },
-  { src: '', alt: 'Ritual de recepção — água e chá', caption: 'O ritual da chegada', span: 'normal' as const },
+];
+
+const SALAS = [
+  {
+    src: '/images/ambiente/sala-02-iluminacao-dia-vista.webp',
+    alt: 'Sala de atendimento com janela ampla e vista da cidade ao entardecer',
+    caption: 'Sala com vista',
+    span: 'wide' as const,
+  },
+  {
+    src: '/images/ambiente/sala-01-iluminacao-dia.webp',
+    alt: 'Sala de atendimento à luz do dia, com madeira, mármore e materiais naturais',
+    caption: 'Materiais naturais',
+    span: 'normal' as const,
+  },
+  {
+    src: '/images/ambiente/sala-01-angulo-2-iluminacao-dia.webp',
+    alt: 'Sala de atendimento da VCare Essence em outro ângulo, com mesa e poltronas',
+    caption: 'Outro ângulo',
+    span: 'normal' as const,
+  },
 ];
 
 export default function TourPage() {
@@ -60,11 +74,11 @@ export default function TourPage() {
         </Container>
       </Section>
 
-      {/* Recepção */}
+      {/* A chegada e o sensorial */}
       <Section tone="cream" size="sm">
         <Container>
-          <Eyebrow className="mb-6">A recepção</Eyebrow>
-          <EditorialGallery items={GALLERY_ITEMS.slice(0, 5)} />
+          <Eyebrow className="mb-6">A chegada e o sensorial</Eyebrow>
+          <EditorialGallery items={RECEPCAO_E_SENSORIAL} />
         </Container>
       </Section>
 
@@ -72,15 +86,7 @@ export default function TourPage() {
       <Section tone="sand" size="sm">
         <Container>
           <Eyebrow className="mb-6">As salas</Eyebrow>
-          <EditorialGallery items={GALLERY_ITEMS.slice(5, 9)} />
-        </Container>
-      </Section>
-
-      {/* Os detalhes */}
-      <Section tone="cream" size="sm">
-        <Container>
-          <Eyebrow className="mb-6">Os detalhes</Eyebrow>
-          <EditorialGallery items={GALLERY_ITEMS.slice(9)} />
+          <EditorialGallery items={SALAS} />
         </Container>
       </Section>
 

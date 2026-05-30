@@ -17,8 +17,8 @@ export function Hero() {
       {/* Imagem de fundo */}
       <div className="absolute inset-0">
         <Image
-          src="/images/ambiente/ceu-estrelado-hero.webp"
-          alt="Teto da recepção da VCare Essence com efeito de céu estrelado em fibra óptica"
+          src="/images/ambiente/sala-01-teto-led-sensorial.webp"
+          alt="Sala de atendimento da VCare Essence sob o céu estrelado em fibra óptica, com luz quente e poltronas claras"
           fill
           priority
           sizes="100vw"
