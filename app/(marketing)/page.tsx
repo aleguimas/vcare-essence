@@ -9,7 +9,6 @@ import { JournalPreview } from '@/components/sections/home/JournalPreview';
 import { Testimonials } from '@/components/sections/home/Testimonials';
 import { OnlineCTA } from '@/components/sections/home/OnlineCTA';
 import { FinalCTA } from '@/components/sections/home/FinalCTA';
-import { SITE } from '@/lib/routes';
 
 export const metadata: Metadata = {
   title: 'VCare Essence — A primeira clínica sensorial de Recife',
@@ -24,31 +23,10 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'MedicalClinic',
-  name: SITE.name,
-  url: SITE.url,
-  description: SITE.description,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: `${SITE.address.street}, ${SITE.address.complement}`,
-    addressLocality: SITE.address.city,
-    addressRegion: SITE.address.state,
-    postalCode: SITE.address.zip,
-    addressCountry: SITE.address.country,
-  },
-  // TODO: telephone, openingHours, priceRange — aguardar decisão das sócias
-};
-
 export default function HomePage() {
+  // O schema MedicalClinic + WebSite é injetado globalmente no layout.
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       <Hero />
       <SensoryIntro />
       <MethodsIntro />

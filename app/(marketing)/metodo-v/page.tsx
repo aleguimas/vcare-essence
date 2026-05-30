@@ -9,7 +9,14 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Início', path: ROUTES.home },
+  { name: 'Método V', path: ROUTES.metodoV },
+]);
 
 // TODO: substituir pelo nome final do método — aguardar decisão das sócias
 export const metadata: Metadata = {
@@ -120,6 +127,7 @@ const FAQ_V = [
 export default function MetodoVPage() {
   return (
     <>
+      <JsonLd data={breadcrumb} />
       {/* 01 · Hero editorial — sem CTA imediato */}
       <MethodHero
         eyebrow="Método Vanessa Albuquerque" // TODO: nome final das sócias

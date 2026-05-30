@@ -10,6 +10,8 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildMedicalTherapySchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
@@ -18,6 +20,20 @@ export const metadata: Metadata = {
     'Psicoterapia clínica para adolescentes e adultos em Recife e online. Abordagens baseadas em evidências: TCC e Análise do Comportamento. Atendimento no RioMar Trade Center.',
   alternates: { canonical: ROUTES.psicoterapia },
 };
+
+const schema = [
+  buildMedicalTherapySchema({
+    name: 'Psicoterapia',
+    description:
+      'Psicoterapia clínica para adolescentes e adultos, com base em Análise do Comportamento e Terapia Cognitivo-Comportamental.',
+    path: ROUTES.psicoterapia,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'Cuidados', path: ROUTES.cuidados },
+    { name: 'Psicoterapia', path: ROUTES.psicoterapia },
+  ]),
+];
 
 const PROFESSIONALS = [
   {
@@ -71,6 +87,7 @@ const FAQ = [
 export default function PsicoterapiaPage() {
   return (
     <>
+      <JsonLd data={schema} />
       <VerticalHero
         eyebrow="Cuidados · Psicoterapia"
         headline="Psicoterapia, no ritmo que seu processo precisa."

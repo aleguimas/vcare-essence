@@ -9,6 +9,8 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildMedicalTherapySchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
@@ -17,6 +19,20 @@ export const metadata: Metadata = {
     'Orientação familiar em Recife baseada em Terapêutica Sistêmica. Para famílias com adolescente em conflito, pós-diagnóstico de TDAH e cuidadores. Camila Clemente, psicóloga.',
   alternates: { canonical: ROUTES.orientacaoFamiliar },
 };
+
+const schema = [
+  buildMedicalTherapySchema({
+    name: 'Orientação Familiar',
+    description:
+      'Orientação familiar com base em Terapêutica Sistêmica — para famílias em conflito, pós-diagnóstico e cuidadores.',
+    path: ROUTES.orientacaoFamiliar,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'Cuidados', path: ROUTES.cuidados },
+    { name: 'Orientação Familiar', path: ROUTES.orientacaoFamiliar },
+  ]),
+];
 
 const PROFESSIONALS = [
   {
@@ -79,6 +95,7 @@ const FAQ = [
 export default function OrientacaoFamiliarPage() {
   return (
     <>
+      <JsonLd data={schema} />
       <VerticalHero
         eyebrow="Cuidados · Orientação Familiar"
         headline="Cuidar de quem cuida."

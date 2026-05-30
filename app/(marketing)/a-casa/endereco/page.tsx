@@ -6,6 +6,8 @@ import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { Button } from '@/components/ui/button';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES, SITE } from '@/lib/routes';
 
 export const metadata: Metadata = {
@@ -15,40 +17,19 @@ export const metadata: Metadata = {
   alternates: { canonical: ROUTES.endereco },
 };
 
-// Schema LocalBusiness / MedicalClinic com geo
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'MedicalClinic',
-  '@id': `${SITE.url}/#clinic`,
-  name: SITE.name,
-  url: SITE.url,
-  description: SITE.description,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: `${SITE.address.street} — ${SITE.address.complement}`,
-    addressLocality: SITE.address.city,
-    addressRegion: SITE.address.state,
-    postalCode: SITE.address.zip,
-    addressCountry: SITE.address.country,
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: -8.1244, // TODO: verificar coordenadas exatas
-    longitude: -34.9028,
-  },
-  telephone: SITE.phone || undefined,
-  // openingHoursSpecification: [] — TODO: aguardar decisão das sócias
-};
+// O MedicalClinic (com geo) é injetado globalmente no layout.
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Início', path: ROUTES.home },
+  { name: 'A Casa', path: ROUTES.aCasa },
+  { name: 'Endereço', path: ROUTES.endereco },
+]);
 
 export default function EnderecoPage() {
   const fullAddress = `${SITE.address.street}, ${SITE.address.complement}, ${SITE.address.neighborhood}, ${SITE.address.city} — ${SITE.address.state}`;
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
+      <JsonLd data={breadcrumb} />
 
       <Section tone="cream" size="md" className="border-b border-line">
         <Container>

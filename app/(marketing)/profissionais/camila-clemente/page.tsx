@@ -7,7 +7,9 @@ import { ProfessionalCTA } from '@/components/sections/professional/Professional
 import { Quote } from '@/components/editorial/Quote';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { ROUTES, SITE } from '@/lib/routes';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildPersonSchema, buildBreadcrumbSchema } from '@/lib/schemas';
+import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
   title: 'Camila Clemente — Psicóloga · VCare Essence',
@@ -49,31 +51,27 @@ const VERTICALS = [
   },
 ];
 
-const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Camila Clemente',
-  jobTitle: 'Psicóloga',
-  worksFor: {
-    '@type': 'MedicalClinic',
-    name: SITE.name,
-    url: SITE.url,
-  },
-  hasCredential: {
-    '@type': 'EducationalOccupationalCredential',
-    credentialCategory: 'Conselho Regional de Psicologia',
-    identifier: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
-  },
-  url: `${SITE.url}${ROUTES.camila}`,
-};
+const schema = [
+  buildPersonSchema({
+    name: 'Camila Clemente',
+    jobTitle: 'Psicóloga',
+    description:
+      'Psicóloga com 10 anos de prática, especialista em Análise do Comportamento, Psicomotricidade Relacional, TDAH e Terapêutica Sistêmica.',
+    path: ROUTES.camila,
+    image: '/images/profissionais/camila-editorial-01.webp',
+    crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'Profissionais', path: ROUTES.profissionais },
+    { name: 'Camila Clemente', path: ROUTES.camila },
+  ]),
+];
 
 export default function CamilaPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
+      <JsonLd data={schema} />
 
       <ProfessionalHero
         name="Camila Clemente"

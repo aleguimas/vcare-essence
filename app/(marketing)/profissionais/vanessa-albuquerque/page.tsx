@@ -7,7 +7,9 @@ import { ProfessionalCTA } from '@/components/sections/professional/Professional
 import { Quote } from '@/components/editorial/Quote';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { ROUTES, SITE } from '@/lib/routes';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildPersonSchema, buildBreadcrumbSchema } from '@/lib/schemas';
+import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
   title: 'Vanessa Albuquerque — Hipnoterapeuta · VCare Essence',
@@ -36,31 +38,27 @@ const VERTICALS = [
   },
 ];
 
-const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Vanessa Albuquerque',
-  jobTitle: 'Hipnoterapeuta',
-  worksFor: {
-    '@type': 'MedicalClinic',
-    name: SITE.name,
-    url: SITE.url,
-  },
-  hasCredential: {
-    '@type': 'EducationalOccupationalCredential',
-    credentialCategory: 'Conselho Regional de Psicologia',
-    identifier: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
-  },
-  url: `${SITE.url}${ROUTES.vanessa}`,
-};
+const schema = [
+  buildPersonSchema({
+    name: 'Vanessa Albuquerque',
+    jobTitle: 'Hipnoterapeuta',
+    description:
+      'Hipnoterapeuta com 14 anos de prática, especializada em destravar empresários(as) através de método autoral.',
+    path: ROUTES.vanessa,
+    image: '/images/profissionais/vanessa-editorial-01.webp',
+    crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'Profissionais', path: ROUTES.profissionais },
+    { name: 'Vanessa Albuquerque', path: ROUTES.vanessa },
+  ]),
+];
 
 export default function VanessaPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
+      <JsonLd data={schema} />
 
       <ProfessionalHero
         name="Vanessa Albuquerque"

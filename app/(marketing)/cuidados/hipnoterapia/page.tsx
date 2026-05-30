@@ -12,6 +12,8 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildMedicalTherapySchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
@@ -20,6 +22,20 @@ export const metadata: Metadata = {
     'Hipnoterapia clínica em Recife. Sem mística, com método. Atendimento regulamentado para ansiedade, fobias, hábitos e trauma. Vanessa Albuquerque, 14 anos de prática.',
   alternates: { canonical: ROUTES.hipnoterapia },
 };
+
+const schema = [
+  buildMedicalTherapySchema({
+    name: 'Hipnoterapia Clínica',
+    description:
+      'Hipnoterapia clínica regulamentada pelo Conselho Federal de Psicologia, indicada para ansiedade, fobias, hábitos automáticos e trauma.',
+    path: ROUTES.hipnoterapia,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'Cuidados', path: ROUTES.cuidados },
+    { name: 'Hipnoterapia Clínica', path: ROUTES.hipnoterapia },
+  ]),
+];
 
 const PROFESSIONALS = [
   {
@@ -83,6 +99,7 @@ const FAQ = [
 export default function HipnoterapiaPage() {
   return (
     <>
+      <JsonLd data={schema} />
       <VerticalHero
         eyebrow="Cuidados · Hipnoterapia Clínica"
         headline="Hipnoterapia clínica. Sem mística. Com método."

@@ -9,6 +9,8 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildMedicalTherapySchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
@@ -17,6 +19,20 @@ export const metadata: Metadata = {
     'Teste vocacional em Recife para adolescentes no pré-vestibular e adultos em reposicionamento de carreira. Abordagem clínica, não coaching. Camila Clemente, psicóloga.',
   alternates: { canonical: ROUTES.testeVocacional },
 };
+
+const schema = [
+  buildMedicalTherapySchema({
+    name: 'Teste Vocacional',
+    description:
+      'Processo de orientação vocacional com base clínica, para adolescentes no pré-vestibular e adultos em reposicionamento de carreira.',
+    path: ROUTES.testeVocacional,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'Cuidados', path: ROUTES.cuidados },
+    { name: 'Teste Vocacional', path: ROUTES.testeVocacional },
+  ]),
+];
 
 const PROFESSIONALS = [
   {
@@ -63,6 +79,7 @@ const FAQ = [
 export default function TesteVocacionalPage() {
   return (
     <>
+      <JsonLd data={schema} />
       <VerticalHero
         eyebrow="Cuidados · Teste Vocacional"
         headline="Escolher caminho não precisa ser sozinho."

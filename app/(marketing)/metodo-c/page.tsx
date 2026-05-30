@@ -8,7 +8,14 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Início', path: ROUTES.home },
+  { name: 'Método C', path: ROUTES.metodoC },
+]);
 
 // TODO: substituir pelo nome final do método — aguardar decisão das sócias
 export const metadata: Metadata = {
@@ -102,6 +109,7 @@ const FAQ_C = [
 export default function MetodoCPage() {
   return (
     <>
+      <JsonLd data={breadcrumb} />
       {/* 01 · Hero — fala com pais/mães */}
       <MethodHero
         eyebrow="Método Camila Clemente" // TODO: nome final das sócias
