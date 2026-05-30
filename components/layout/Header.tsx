@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -80,10 +81,15 @@ export function Header() {
           className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-sm"
           aria-label="VCare Essence — página inicial"
         >
-          {/* TODO: substituir por <Image> com SVG do logo quando disponível */}
-          <span className="font-serif text-moss tracking-tight text-[1.1rem] leading-none">
-            VCare<span className="text-bronze"> Essence</span>
-          </span>
+          {/* TODO: substituir por SVG vetorizado quando disponível (ver 05_assets_guide.md) */}
+          <Image
+            src="/images/logo/logo-horizontal.webp"
+            alt="VCare Essence"
+            width={499}
+            height={160}
+            priority
+            className="h-9 w-auto md:h-10"
+          />
         </Link>
 
         {/* Navegação desktop */}
@@ -147,9 +153,13 @@ export function Header() {
                       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     >
                       <div className="flex items-center justify-between px-6 py-5 border-b border-line">
-                        <span className="font-serif text-moss text-[1.1rem]">
-                          VCare<span className="text-bronze"> Essence</span>
-                        </span>
+                        <Image
+                          src="/images/logo/logo-horizontal.webp"
+                          alt="VCare Essence"
+                          width={499}
+                          height={160}
+                          className="h-8 w-auto"
+                        />
                         <Dialog.Close asChild>
                           <button
                             className="p-2 -mr-2 text-moss rounded-full transition-colors hover:bg-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze"

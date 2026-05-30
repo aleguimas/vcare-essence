@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ROUTES, SITE } from '@/lib/routes';
 
 const FOOTER_COLS = [
@@ -61,10 +62,16 @@ export function Footer() {
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <Link
               href={ROUTES.home}
-              className="inline-block font-serif text-cream text-xl tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-moss rounded-sm"
+              className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-moss rounded-sm"
               aria-label="VCare Essence — página inicial"
             >
-              VCare<span className="text-bronze-100"> Essence</span>
+              <Image
+                src="/images/logo/logo-horizontal.webp"
+                alt="VCare Essence"
+                width={499}
+                height={160}
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="mt-3 text-small text-cream/60 max-w-xs leading-relaxed">
               {SITE.tagline}
