@@ -70,7 +70,7 @@ export default function AgendarPage() {
           </Heading>
           <dl className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze">
+              <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze-400">
                 Endereço
               </dt>
               <dd className="mt-2 text-body text-ink/80 font-sans leading-relaxed">
@@ -82,7 +82,7 @@ export default function AgendarPage() {
               </dd>
             </div>
             <div>
-              <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze">
+              <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze-400">
                 Horário
               </dt>
               {/* TODO: confirmar horários com as sócias */}
@@ -93,7 +93,7 @@ export default function AgendarPage() {
               </dd>
             </div>
             <div>
-              <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze">
+              <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze-400">
                 Pagamento
               </dt>
               <dd className="mt-2 text-body text-ink/80 font-sans leading-relaxed">
@@ -101,7 +101,7 @@ export default function AgendarPage() {
               </dd>
             </div>
             <div>
-              <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze">
+              <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze-400">
                 Convênio
               </dt>
               <dd className="mt-2 text-body text-ink/80 font-sans leading-relaxed">

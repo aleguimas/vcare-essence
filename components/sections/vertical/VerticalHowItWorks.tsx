@@ -46,7 +46,7 @@ export function VerticalHowItWorks({ items, children, tone = 'sand' }: VerticalH
           <motion.dl variants={fadeInUp} className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {items.map((item) => (
               <div key={item.label} className="bg-cream rounded-xl p-6 border border-line">
-                <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze">
+                <dt className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze-400">
                   {item.label}
                 </dt>
                 <dd className="mt-2 text-body font-sans font-medium text-moss">{item.value}</dd>

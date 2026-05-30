@@ -93,7 +93,7 @@ export function JournalPreview() {
                   <Eyebrow tone="muted" className="text-[0.65rem]">
                     {post.category}
                   </Eyebrow>
-                  <h3 className="mt-3 font-serif text-h3 text-moss text-balance leading-snug group-hover:text-bronze transition-colors duration-300">
+                  <h3 className="mt-3 font-serif text-h3 text-moss text-balance leading-snug group-hover:text-bronze-400 transition-colors duration-300">
                     {post.title}
                   </h3>
                   <p className="mt-3 text-small text-muted leading-relaxed line-clamp-3">

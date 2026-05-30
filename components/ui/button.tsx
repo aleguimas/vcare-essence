@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         primary: 'bg-moss text-cream hover:bg-moss-400',
         secondary:
-          'bg-transparent border border-bronze text-bronze hover:bg-bronze hover:text-cream',
+          'bg-transparent border border-bronze text-bronze-400 hover:bg-bronze hover:text-cream',
         ghost: 'text-bronze hover:text-bronze-400 underline-offset-4 hover:underline',
       },
       size: {

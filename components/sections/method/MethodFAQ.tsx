@@ -76,7 +76,7 @@ export function MethodFAQ({ questions, tone = 'cream' }: MethodFAQProps) {
               <motion.div key={i} variants={fadeInUp}>
                 <Accordion.Item value={`item-${i}`}>
                   <Accordion.Trigger className="group flex w-full items-start justify-between gap-6 py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-sm">
-                    <span className="font-sans font-medium text-body text-moss group-hover:text-bronze transition-colors duration-300">
+                    <span className="font-sans font-medium text-body text-moss group-hover:text-bronze-400 transition-colors duration-300">
                       {item.question}
                     </span>
                     <span className="shrink-0 mt-0.5 text-bronze" aria-hidden="true">

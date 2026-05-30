@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { Fraunces, Inter } from 'next/font/google';
+import Script from 'next/script';
 import { Toaster } from 'sonner';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import './globals.css';
 import { buildMetadata } from '@/lib/seo';
+import { CookieConsent } from '@/components/layout/CookieConsent';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
@@ -30,8 +32,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${fraunces.variable} ${inter.variable}`}>
+      <head>
+        {/* Google Consent Mode v2 — padrão negado até consentimento explícito (LGPD) */}
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500
+            });
+          `}
+        </Script>
+      </head>
       <body className="antialiased">
         {children}
+        <CookieConsent />
         <Toaster
           position="bottom-center"
           toastOptions={{

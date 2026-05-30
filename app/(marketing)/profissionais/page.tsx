@@ -67,7 +67,7 @@ export default function ProfissionaisPage() {
                   </div>
                 </div>
                 <div className="p-7">
-                  <h2 className="font-serif text-h2 text-moss group-hover:text-bronze transition-colors duration-300">
+                  <h2 className="font-serif text-h2 text-moss group-hover:text-bronze-400 transition-colors duration-300">
                     {p.name}
                   </h2>
                   <p className="mt-1.5 text-small text-muted font-sans">

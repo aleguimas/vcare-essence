@@ -62,7 +62,7 @@ export function VerticalProfessionals({
               >
                 {/* Foto placeholder — Sprint 05 */}
                 <div className="w-14 h-14 rounded-full bg-sand mb-4" aria-hidden="true" />
-                <p className="font-sans font-medium text-moss group-hover:text-bronze transition-colors duration-300">
+                <p className="font-sans font-medium text-moss group-hover:text-bronze-400 transition-colors duration-300">
                   {p.name}
                 </p>
                 <p className="mt-1 text-small text-muted">{p.role}</p>

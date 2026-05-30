@@ -85,7 +85,7 @@ export default function ACasaPage() {
                   )}
                 </div>
                 <div className="p-6">
-                  <h2 className="font-sans font-medium text-moss group-hover:text-bronze transition-colors duration-300">
+                  <h2 className="font-sans font-medium text-moss group-hover:text-bronze-400 transition-colors duration-300">
                     {card.title}
                   </h2>
                   <p className="mt-2 text-small text-muted leading-relaxed">{card.description}</p>

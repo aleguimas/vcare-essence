@@ -28,7 +28,7 @@ export default function AgendadoPage() {
         </p>
 
         <div className="mt-12 border-t border-line pt-10">
-          <p className="text-small font-semibold uppercase tracking-[0.15em] text-bronze mb-4">
+          <p className="text-small font-semibold uppercase tracking-[0.15em] text-bronze-400 mb-4">
             O que esperar
           </p>
           <div className="space-y-5 text-body text-ink/80 leading-relaxed">

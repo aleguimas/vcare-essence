@@ -234,7 +234,7 @@ function DesktopDropdown({
               className={cn(
                 'block px-4 py-2.5 text-small font-sans transition-colors duration-200',
                 currentPath === child.href
-                  ? 'text-bronze font-medium'
+                  ? 'text-bronze-400 font-medium'
                   : 'text-ink hover:text-moss hover:bg-cream-200',
               )}
             >

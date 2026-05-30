@@ -88,7 +88,7 @@ export default async function BairroPage({ params }: PageProps) {
                 href={item.href}
                 className="group flex flex-col p-7 rounded-2xl border border-line bg-cream-50 hover:border-bronze/30 hover:shadow-md transition-all duration-400 ease-soft"
               >
-                <p className="font-sans font-medium text-moss group-hover:text-bronze transition-colors duration-300">
+                <p className="font-sans font-medium text-moss group-hover:text-bronze-400 transition-colors duration-300">
                   {item.title}
                 </p>
                 <p className="mt-2 text-small text-muted leading-relaxed flex-1">{item.reason}</p>
@@ -147,7 +147,7 @@ export default async function BairroPage({ params }: PageProps) {
               <Link
                 key={v.href}
                 href={v.href}
-                className="px-4 py-2 rounded-full border border-line bg-cream-50 text-small font-sans text-moss hover:border-bronze/40 hover:text-bronze transition-colors duration-300"
+                className="px-4 py-2 rounded-full border border-line bg-cream-50 text-small font-sans text-moss hover:border-bronze/40 hover:text-bronze-400 transition-colors duration-300"
               >
                 {v.label}
               </Link>

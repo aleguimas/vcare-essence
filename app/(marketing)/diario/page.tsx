@@ -40,7 +40,7 @@ export default function DiarioPage() {
         </p>
 
         <div className="mt-12 border-t border-line pt-10">
-          <p className="text-small font-semibold uppercase tracking-[0.15em] text-bronze mb-6">
+          <p className="text-small font-semibold uppercase tracking-[0.15em] text-bronze-400 mb-6">
             Pilares editoriais
           </p>
           <ul className="space-y-3">

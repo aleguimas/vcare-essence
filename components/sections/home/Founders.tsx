@@ -81,7 +81,7 @@ export function Founders() {
         >
           <Link
             href={ROUTES.convidados}
-            className="text-small text-muted hover:text-bronze transition-colors duration-300"
+            className="text-small text-muted hover:text-bronze-400 transition-colors duration-300"
           >
             Também recebemos profissionais convidados, sob curadoria. →
           </Link>

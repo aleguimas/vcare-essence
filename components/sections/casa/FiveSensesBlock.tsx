@@ -38,7 +38,7 @@ export function FiveSensesBlock({ sense, headline, body, imageSrc, imageAlt, rev
 
       {/* Texto */}
       <div className={reverse ? 'lg:order-first' : ''}>
-        <motion.p variants={fadeInUp} className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze">
+        <motion.p variants={fadeInUp} className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze-400">
           {sense}
         </motion.p>
         <motion.h3 variants={fadeInUp} className="mt-4 font-serif text-h2 text-moss text-balance">

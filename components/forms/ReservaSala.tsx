@@ -233,7 +233,7 @@ export function ReservaSala() {
       </button>
 
       <p className="text-small text-muted font-sans">
-        Campos marcados com <span className="text-bronze">*</span> são obrigatórios.
+        Campos marcados com <span className="text-bronze-400">*</span> são obrigatórios.
         Confirmamos disponibilidade em até 24 horas úteis.
       </p>
     </form>

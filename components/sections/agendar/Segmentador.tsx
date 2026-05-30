@@ -1,15 +1,29 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, CalendarDays, Mail, Check } from 'lucide-react';
-import { CalendarEmbed } from './CalendarEmbed';
 import { Heading } from '@/components/editorial/Heading';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { buildWhatsAppLink, buildEmailLink } from '@/lib/whatsapp';
 import { buildCalLink, CAL_LINKS } from '@/lib/routes';
 import { trackEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
+
+// Cal.com é pesado — só carrega quando o usuário pede para agendar.
+const CalendarEmbed = dynamic(
+  () => import('./CalendarEmbed').then((m) => m.CalendarEmbed),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        className="h-[600px] rounded-2xl border border-line bg-sand/40 animate-pulse"
+        aria-label="Carregando agenda"
+      />
+    ),
+  },
+);
 
 type Journey = 'A' | 'B';
 
@@ -262,7 +276,7 @@ function ContactPaths({
       target="_blank"
       rel="noopener noreferrer"
       onClick={onWhatsApp}
-      className="group flex items-center gap-4 w-full p-5 rounded-xl border border-bronze text-bronze transition-all duration-300 ease-soft hover:bg-bronze hover:text-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2"
+      className="group flex items-center gap-4 w-full p-5 rounded-xl border border-bronze text-bronze-400 transition-all duration-300 ease-soft hover:bg-bronze hover:text-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2"
     >
       <MessageCircle size={22} strokeWidth={1.5} className="shrink-0" aria-hidden="true" />
       <span className="font-sans font-medium">Falar pelo WhatsApp</span>

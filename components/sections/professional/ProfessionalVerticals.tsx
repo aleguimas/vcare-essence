@@ -54,7 +54,7 @@ export function ProfessionalVerticals({ items, tone = 'cream' }: ProfessionalVer
                 href={item.href}
                 className="group block p-7 rounded-2xl border border-line bg-cream-50 hover:border-bronze/30 hover:shadow-md transition-all duration-400 ease-soft"
               >
-                <p className="font-sans font-medium text-moss group-hover:text-bronze transition-colors duration-300">
+                <p className="font-sans font-medium text-moss group-hover:text-bronze-400 transition-colors duration-300">
                   {item.name}
                 </p>
                 <p className="mt-2 text-small text-muted leading-relaxed">{item.description}</p>

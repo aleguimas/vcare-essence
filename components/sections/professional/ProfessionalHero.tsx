@@ -53,7 +53,7 @@ export function ProfessionalHero({
           >
             <motion.p
               variants={fadeInUp}
-              className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze"
+              className="text-eyebrow font-semibold uppercase tracking-[0.15em] text-bronze-400"
             >
               Profissional · VCare Essence
             </motion.p>

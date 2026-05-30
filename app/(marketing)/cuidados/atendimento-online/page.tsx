@@ -130,7 +130,7 @@ export default function AtendimentoOnlinePage() {
               <Link
                 key={v.href}
                 href={v.href}
-                className="p-4 rounded-xl border border-line bg-cream-50 hover:border-bronze/30 hover:text-bronze transition-all duration-300 text-body font-sans font-medium text-moss"
+                className="p-4 rounded-xl border border-line bg-cream-50 hover:border-bronze/30 hover:text-bronze-400 transition-all duration-300 text-body font-sans font-medium text-moss"
               >
                 {v.label} →
               </Link>
