@@ -17,8 +17,8 @@ export function Hero() {
       {/* Imagem de fundo */}
       <div className="absolute inset-0">
         <Image
-          src="/images/ambiente/sala-01-teto-led-sensorial.webp"
-          alt="Sala de atendimento da VCare Essence sob o céu estrelado em fibra óptica, com luz quente e poltronas claras"
+          src="/images/ambiente/sala-02-iluminacao-dia-vista.webp"
+          alt="Sala de atendimento da VCare Essence com janela ampla e vista da cidade ao entardecer, poltrona reclinável e luz quente"
           fill
           priority
           sizes="100vw"
