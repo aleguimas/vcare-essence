@@ -16,7 +16,7 @@ export const medicalClinicSchema = {
     'Clínica boutique de saúde mental no RioMar Trade Center, Recife. A primeira clínica sensorial da cidade.',
   url: SITE.url,
   logo: `${SITE.url}/images/logo/logo-vcare-essence.png`,
-  image: `${SITE.url}/images/og/og-home.jpg`,
+  image: `${SITE.url}/images/ambiente/sala-01-teto-led-sensorial.webp`,
   ...(SITE.phone ? { telephone: SITE.phone } : {}),
   ...(SITE.email ? { email: SITE.email } : {}),
   address: {

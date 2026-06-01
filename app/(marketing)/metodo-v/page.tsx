@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Método V — Para destravar emocionalmente · VCare Essence',
     description:
       'Trava emocional não é fraqueza, é informação. Hipnoterapia clínica para empresários.',
-    images: [{ url: '/images/og/og-metodo-v.jpg', width: 1200, height: 630 }],
+    // OG image gerada dinamicamente por opengraph-image.tsx
   },
 };
 

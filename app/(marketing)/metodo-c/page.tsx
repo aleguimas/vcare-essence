@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Método C — Para adolescentes em fase de escolha · VCare Essence',
     description:
       'Programa estruturado para adolescentes: rendimento escolar, vestibular, suporte emocional e acompanhamento familiar.',
-    images: [{ url: '/images/og/og-metodo-c.jpg', width: 1200, height: 630 }],
+    // OG image gerada dinamicamente por opengraph-image.tsx
   },
 };
 

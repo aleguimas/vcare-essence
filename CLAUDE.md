@@ -168,4 +168,4 @@ Detalhes em `01_tech_stack.md`.
 
 ## Status do projeto
 
-`Em desenvolvimento — Sprint 00`
+`Sprints 00–12 concluídos — pronto para deploy. Ver DEPLOY.md para pré-flight, env vars e pendências de conteúdo/decisão.`
