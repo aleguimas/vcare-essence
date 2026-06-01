@@ -24,12 +24,22 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Gradiente sutil para legibilidade do texto — sem overlay escuro */}
+        {/* Véu cream em duas camadas para legibilidade — sem overlay escuro.
+            Esquerda cobre o título; base cobre subtítulo e botões; a vista da
+            cidade permanece visível no canto superior direito. */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to right, rgba(245,241,234,0.55) 0%, rgba(245,241,234,0.15) 60%, transparent 100%)',
+              'linear-gradient(to right, rgba(245,241,234,0.92) 0%, rgba(245,241,234,0.6) 42%, rgba(245,241,234,0.15) 72%, transparent 100%)',
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to top, rgba(245,241,234,0.95) 0%, rgba(245,241,234,0.45) 38%, rgba(245,241,234,0) 70%)',
           }}
           aria-hidden="true"
         />
