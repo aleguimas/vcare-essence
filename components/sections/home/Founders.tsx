@@ -97,7 +97,7 @@ function FounderCard({ founder }: { founder: (typeof FOUNDERS)[number] }) {
       className="group block rounded-2xl overflow-hidden border border-line hover:border-bronze/30 transition-all duration-400 ease-soft"
     >
       {/* Imagem editorial */}
-      <div className="relative aspect-[4/3] bg-sand overflow-hidden">
+      <div className="relative aspect-[4/5] bg-sand overflow-hidden">
         <Image
           src={founder.imgSrc}
           alt={founder.imgAlt}

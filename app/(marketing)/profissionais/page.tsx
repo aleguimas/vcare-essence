@@ -64,7 +64,7 @@ export default function ProfissionaisPage() {
                 className="group block rounded-2xl overflow-hidden border border-line bg-cream hover:border-bronze/30 hover:shadow-lg transition-all duration-400 ease-soft"
               >
                 {/* Foto editorial */}
-                <div className="relative aspect-[4/3] bg-sand-100 overflow-hidden">
+                <div className="relative aspect-[4/5] bg-sand-100 overflow-hidden">
                   <Image
                     src={p.imgSrc}
                     alt={p.imgAlt}
