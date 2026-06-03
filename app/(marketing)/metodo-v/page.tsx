@@ -285,6 +285,7 @@ export default function MetodoVPage() {
         bio={VANESSA_BIO}
         signature="Não trato sintomas. Vou à raiz."
         profileHref={ROUTES.vanessa}
+        imgSrc="/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp"
         imgAlt="Vanessa Albuquerque, hipnoterapeuta da VCare Essence"
       />
 

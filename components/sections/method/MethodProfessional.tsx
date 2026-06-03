@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
@@ -15,6 +16,7 @@ interface MethodProfessionalProps {
   bio: string[];
   signature: string;
   profileHref: string;
+  imgSrc?: string;
   imgAlt: string;
 }
 
@@ -25,13 +27,14 @@ export function MethodProfessional({
   bio,
   signature,
   profileHref,
-  imgAlt: _imgAlt, // reservado para Sprint 05 — foto editorial real
+  imgSrc,
+  imgAlt,
 }: MethodProfessionalProps) {
   return (
     <Section tone="sand">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Foto editorial — placeholder até Sprint 05 */}
+          {/* Foto editorial */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -39,11 +42,21 @@ export function MethodProfessional({
             variants={fadeIn}
             className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-cream-200 lg:sticky lg:top-28"
           >
-            <div className="absolute inset-0 flex items-end p-6">
-              <p className="text-small text-muted/50 font-sans italic">
-                Ensaio editorial — Sprint 05
-              </p>
-            </div>
+            {imgSrc ? (
+              <Image
+                src={imgSrc}
+                alt={imgAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-top"
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-end p-6">
+                <p className="text-small text-muted/50 font-sans italic">
+                  Ensaio editorial — em produção
+                </p>
+              </div>
+            )}
           </motion.div>
 
           {/* Bio */}

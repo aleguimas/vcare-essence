@@ -207,6 +207,7 @@ export default function MetodoCPage() {
         bio={CAMILA_BIO}
         signature="Trato a falta de resultado como falta de motivação — não como preguiça."
         profileHref={ROUTES.camila}
+        imgSrc="/images/profissionais/camila-clemente-vcare-essence-01.webp"
         imgAlt="Camila Clemente, psicóloga da VCare Essence"
       />
 
