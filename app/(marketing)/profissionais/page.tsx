@@ -22,7 +22,7 @@ const PROFESSIONALS = [
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
     signature: 'Não trato sintomas. Vou à raiz.',
     href: ROUTES.vanessa,
-    imgSrc: '/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp',
+    imgSrc: '/images/profissionais/vanessa-albuquerque-vcare-essence-02.webp',
     imgAlt: 'Vanessa Albuquerque, hipnoterapeuta da VCare Essence — ensaio editorial',
   },
   {
@@ -32,7 +32,7 @@ const PROFESSIONALS = [
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
     signature: 'Trato a falta de resultado como falta de motivação — não como preguiça.',
     href: ROUTES.camila,
-    imgSrc: '/images/profissionais/camila-clemente-vcare-essence-01.webp',
+    imgSrc: '/images/profissionais/camila-clemente-vcare-essence-02.webp',
     imgAlt: 'Camila Clemente, psicóloga da VCare Essence — ensaio editorial',
   },
 ] as const;
