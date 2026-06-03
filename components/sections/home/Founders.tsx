@@ -8,7 +8,7 @@ import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { ROUTES } from '@/lib/routes';
-import { fadeInUp, stagger, viewportConfig } from '@/lib/motion';
+import { fadeInUp, fadeIn, stagger, viewportConfig } from '@/lib/motion';
 
 const FOUNDERS = [
   {
@@ -39,22 +39,45 @@ export function Founders() {
   return (
     <Section tone="cream">
       <Container>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          variants={stagger}
-          className="text-center mb-14"
-        >
-          <motion.div variants={fadeInUp}>
-            <Eyebrow>Quem recebe você aqui</Eyebrow>
+        {/* Intro — foto das duas juntas + apresentação */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-14">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            variants={fadeIn}
+            className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-sand"
+          >
+            <Image
+              src="/images/profissionais/camila-e-vanessa-01.webp"
+              alt="Vanessa Albuquerque e Camila Clemente, fundadoras da VCare Essence, na entrada da clínica"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center"
+            />
           </motion.div>
-          <motion.div variants={fadeInUp}>
-            <Heading as="h2" size="h1" className="mt-4">
-              As fundadoras
-            </Heading>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            variants={stagger}
+          >
+            <motion.div variants={fadeInUp}>
+              <Eyebrow>Quem recebe você aqui</Eyebrow>
+            </motion.div>
+            <motion.div variants={fadeInUp}>
+              <Heading as="h2" size="h1" className="mt-4">
+                As fundadoras
+              </Heading>
+            </motion.div>
+            {/* rascunho — aguardar validação das sócias */}
+            <motion.p variants={fadeInUp} className="mt-6 text-lead text-ink/80 max-w-prose">
+              Duas práticas que não se confundem, sob o mesmo teto. Cada uma conduz um caminho —
+              e foi essa diferença, não o acaso, que deu forma à casa.
+            </motion.p>
           </motion.div>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {FOUNDERS.map((founder, i) => (
