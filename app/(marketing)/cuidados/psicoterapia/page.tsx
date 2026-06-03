@@ -41,6 +41,7 @@ const PROFESSIONALS = [
     role: 'Psicóloga',
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
     href: ROUTES.camila,
+    imgSrc: '/images/profissionais/camila-clemente-vcare-essence-01.webp',
   },
 ];
 

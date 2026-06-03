@@ -43,6 +43,7 @@ const PROFESSIONALS = [
     role: 'Hipnoterapeuta Clínica',
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
     href: ROUTES.vanessa,
+    imgSrc: '/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp',
   },
 ];
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
@@ -21,6 +22,8 @@ const PROFESSIONALS = [
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
     signature: 'Não trato sintomas. Vou à raiz.',
     href: ROUTES.vanessa,
+    imgSrc: '/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp',
+    imgAlt: 'Vanessa Albuquerque, hipnoterapeuta da VCare Essence — ensaio editorial',
   },
   {
     name: 'Camila Clemente',
@@ -29,6 +32,8 @@ const PROFESSIONALS = [
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
     signature: 'Trato a falta de resultado como falta de motivação — não como preguiça.',
     href: ROUTES.camila,
+    imgSrc: '/images/profissionais/camila-clemente-vcare-essence-01.webp',
+    imgAlt: 'Camila Clemente, psicóloga da VCare Essence — ensaio editorial',
   },
 ] as const;
 
@@ -58,13 +63,15 @@ export default function ProfissionaisPage() {
                 href={p.href}
                 className="group block rounded-2xl overflow-hidden border border-line bg-cream hover:border-bronze/30 hover:shadow-lg transition-all duration-400 ease-soft"
               >
-                {/* Foto placeholder */}
-                <div className="relative aspect-[4/3] bg-sand-100">
-                  <div className="absolute inset-0 flex items-end p-5">
-                    <p className="text-small text-muted/40 font-sans italic">
-                      Ensaio editorial — em produção
-                    </p>
-                  </div>
+                {/* Foto editorial */}
+                <div className="relative aspect-[4/3] bg-sand-100 overflow-hidden">
+                  <Image
+                    src={p.imgSrc}
+                    alt={p.imgAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top transition-transform duration-500 ease-soft group-hover:scale-[1.03]"
+                  />
                 </div>
                 <div className="p-7">
                   <h2 className="font-serif text-h2 text-moss group-hover:text-bronze-400 transition-colors duration-300">

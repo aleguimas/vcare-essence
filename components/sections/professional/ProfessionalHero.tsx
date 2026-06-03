@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
@@ -19,28 +20,40 @@ export function ProfessionalHero({
   title,
   subtitle,
   crp,
+  imageSrc,
   imageAlt,
 }: ProfessionalHeroProps) {
   return (
     <Section tone="cream" size="lg" className="border-b border-line overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-end">
-          {/* Foto editorial — placeholder até ensaio */}
+          {/* Foto editorial */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeIn}
             className="relative order-last lg:order-first"
           >
-            <div
-              className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-sand"
-              aria-label={imageAlt}
-            >
-              <div className="absolute inset-0 flex flex-col items-center justify-end p-8">
-                <p className="text-small text-muted/50 font-sans italic text-center">
-                  Ensaio editorial — em produção
-                </p>
-              </div>
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-sand">
+              {imageSrc ? (
+                <Image
+                  src={imageSrc}
+                  alt={imageAlt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-top"
+                />
+              ) : (
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-end p-8"
+                  aria-label={imageAlt}
+                >
+                  <p className="text-small text-muted/50 font-sans italic text-center">
+                    Ensaio editorial — em produção
+                  </p>
+                </div>
+              )}
             </div>
           </motion.div>
 

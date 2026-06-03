@@ -58,7 +58,7 @@ const schema = [
     description:
       'Psicóloga com 10 anos de prática, especialista em Análise do Comportamento, Psicomotricidade Relacional, TDAH e Terapêutica Sistêmica.',
     path: ROUTES.camila,
-    image: '/images/profissionais/camila-editorial-01.webp',
+    image: '/images/profissionais/camila-clemente-vcare-essence-01.webp',
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
   }),
   buildBreadcrumbSchema([
@@ -78,7 +78,7 @@ export default function CamilaPage() {
         title="Psicóloga"
         subtitle="10 anos de prática"
         crp="CRP XX/XXXXX" // TODO: aguardar dados das sócias
-        imageSrc="/images/profissionais/camila-editorial-01.webp"
+        imageSrc="/images/profissionais/camila-clemente-vcare-essence-01.webp"
         imageAlt="Camila Clemente, psicóloga da VCare Essence — ensaio editorial"
       />
 

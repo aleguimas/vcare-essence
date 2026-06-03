@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
@@ -13,6 +14,7 @@ export interface ProfessionalRef {
   role: string;
   crp: string;
   href: string;
+  imgSrc?: string;
 }
 
 interface VerticalProfessionalsProps {
@@ -60,8 +62,20 @@ export function VerticalProfessionals({
                 href={p.href}
                 className="group block p-6 rounded-2xl border border-line bg-cream-50 hover:border-bronze/30 hover:shadow-md transition-all duration-400 ease-soft"
               >
-                {/* Foto placeholder — Sprint 05 */}
-                <div className="w-14 h-14 rounded-full bg-sand mb-4" aria-hidden="true" />
+                {/* Foto da profissional */}
+                {p.imgSrc ? (
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden mb-4 bg-sand">
+                    <Image
+                      src={p.imgSrc}
+                      alt=""
+                      fill
+                      sizes="56px"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-14 h-14 rounded-full bg-sand mb-4" aria-hidden="true" />
+                )}
                 <p className="font-sans font-medium text-moss group-hover:text-bronze-400 transition-colors duration-300">
                   {p.name}
                 </p>

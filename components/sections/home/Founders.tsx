@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
@@ -17,10 +18,9 @@ const FOUNDERS = [
     quote: 'Não trato sintomas. Vou à raiz.',
     cta: 'Conhecer Vanessa',
     href: ROUTES.vanessa,
-    imgSrc: '/images/profissionais/vanessa-editorial-01.webp',
+    imgSrc: '/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp',
     imgAlt:
       'Vanessa Albuquerque, hipnoterapeuta da VCare Essence — foto editorial em ambiente da clínica',
-    // TODO: ensaio editorial Sprint 05
   },
   {
     name: 'Camila Clemente',
@@ -29,10 +29,9 @@ const FOUNDERS = [
     quote: 'Trato a falta de resultado como falta de motivação — não como preguiça.',
     cta: 'Conhecer Camila',
     href: ROUTES.camila,
-    imgSrc: '/images/profissionais/camila-editorial-01.webp',
+    imgSrc: '/images/profissionais/camila-clemente-vcare-essence-01.webp',
     imgAlt:
       'Camila Clemente, psicóloga da VCare Essence — foto editorial em ambiente da clínica',
-    // TODO: ensaio editorial Sprint 05
   },
 ] as const;
 
@@ -97,23 +96,14 @@ function FounderCard({ founder }: { founder: (typeof FOUNDERS)[number] }) {
       href={founder.href}
       className="group block rounded-2xl overflow-hidden border border-line hover:border-bronze/30 transition-all duration-400 ease-soft"
     >
-      {/* Imagem editorial — placeholder até Sprint 05 */}
+      {/* Imagem editorial */}
       <div className="relative aspect-[4/3] bg-sand overflow-hidden">
-        {/* Placeholder com texto até chegarem os ensaios */}
-        <div className="absolute inset-0 flex items-end p-6">
-          <p className="text-small text-muted/60 font-sans italic">
-            Ensaio editorial — Sprint 05
-          </p>
-        </div>
-        {/* A imagem cobre o placeholder quando disponível */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={founder.imgSrc}
           alt={founder.imgAlt}
-          className="absolute inset-0 w-full h-full object-cover object-top opacity-0 [&[src]]:opacity-100 transition-opacity duration-500"
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.display = 'none';
-          }}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover object-top transition-transform duration-500 ease-soft group-hover:scale-[1.03]"
         />
       </div>
 
