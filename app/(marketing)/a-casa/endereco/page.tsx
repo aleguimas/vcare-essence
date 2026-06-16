@@ -11,21 +11,21 @@ import { buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES, SITE } from '@/lib/routes';
 
 export const metadata: Metadata = {
-  title: 'Endereço · A Casa · VCare Essence',
+  title: 'Endereço · A Clínica · VCare Essence',
   description:
-    'VCare Essence no RioMar Trade Center, Torre 4 — Av. República do Líbano, 251, Pina, Recife. Como chegar, estacionamento e horários de atendimento.',
+    'VCare Essence no RioMar Trade Center, Torre 4, Av. República do Líbano, 251, Pina, Recife. Como chegar, estacionamento e horários de atendimento.',
   alternates: { canonical: ROUTES.endereco },
 };
 
 // O MedicalClinic (com geo) é injetado globalmente no layout.
 const breadcrumb = buildBreadcrumbSchema([
   { name: 'Início', path: ROUTES.home },
-  { name: 'A Casa', path: ROUTES.aCasa },
+  { name: 'A Clínica', path: ROUTES.aCasa },
   { name: 'Endereço', path: ROUTES.endereco },
 ]);
 
 export default function EnderecoPage() {
-  const fullAddress = `${SITE.address.street}, ${SITE.address.complement}, ${SITE.address.neighborhood}, ${SITE.address.city} — ${SITE.address.state}`;
+  const fullAddress = `${SITE.address.street}, ${SITE.address.complement}, ${SITE.address.neighborhood}, ${SITE.address.city}, ${SITE.address.state}`;
 
   return (
     <>
@@ -33,14 +33,14 @@ export default function EnderecoPage() {
 
       <Section tone="cream" size="md" className="border-b border-line">
         <Container>
-          <Eyebrow>A Casa · Endereço</Eyebrow>
+          <Eyebrow>A Clínica · Endereço</Eyebrow>
           <Heading as="h1" size="display-md" className="mt-5 max-w-prose-wide">
             Nos encontre no RioMar Trade Center.
           </Heading>
           <address className="mt-6 not-italic text-lead text-ink/70 font-sans leading-relaxed">
             Av. República do Líbano, 251<br />
             RioMar Trade Center, Torre 4<br />
-            Pina, Recife — PE
+            Pina, Recife, PE
           </address>
         </Container>
       </Section>
@@ -70,12 +70,12 @@ export default function EnderecoPage() {
                 body: 'O RioMar Trade Center tem estacionamento próprio coberto com amplas vagas. A entrada principal é pela Av. República do Líbano. Após estacionar, acesse a Torre 4 pelo saguão interno do complexo.',
               },
               {
-                title: 'A pé — vindo do RioMar Shopping',
-                body: 'O Trade Center é integrado ao RioMar Shopping pelo piso L1. Siga as indicações internas até a Torre 4 — são aproximadamente 5 minutos a pé pelo complexo.',
+                title: 'A pé, vindo do RioMar Shopping',
+                body: 'O Trade Center é integrado ao RioMar Shopping pelo piso L1. Siga as indicações internas até a Torre 4, são aproximadamente 5 minutos a pé pelo complexo.',
               },
               {
                 title: 'Transporte público / aplicativo',
-                body: 'Vários ônibus circulam pela Av. República do Líbano. Para Uber e 99, use o endereço "RioMar Trade Center, Pina, Recife" como destino — o complexo tem área de embarque e desembarque.',
+                body: 'Vários ônibus circulam pela Av. República do Líbano. Para Uber e 99, use o endereço "RioMar Trade Center, Pina, Recife" como destino, o complexo tem área de embarque e desembarque.',
               },
             ].map((item) => (
               <div key={item.title} className="border-b border-line pb-8 last:border-0">
@@ -121,7 +121,7 @@ export default function EnderecoPage() {
               </Heading>
               <p className="mt-4 text-body text-ink/70 leading-relaxed">
                 A melhor forma de entender a diferença da VCare Essence é estar aqui. O espaço
-                não se descreve — se experimenta.
+                não se descreve, se experimenta.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild size="lg">

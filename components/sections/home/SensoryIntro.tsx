@@ -64,7 +64,7 @@ export function SensoryIntro() {
           >
             <Image
               src="/images/ambiente/entrada-vcare-essence.webp"
-              alt="Entrada da VCare Essence — logo retroiluminado em parede de madeira e corredor com luz quente"
+              alt="Entrada da VCare Essence, logo retroiluminado em parede de madeira e corredor com luz quente"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"

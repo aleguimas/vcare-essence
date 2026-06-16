@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Fraunces, Inter } from 'next/font/google';
 import Script from 'next/script';
 import { Toaster } from 'sonner';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
@@ -10,19 +9,6 @@ import { CookieConsent } from '@/components/layout/CookieConsent';
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-fraunces',
-  axes: ['opsz', 'SOFT'],
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-});
-
 export const metadata: Metadata = buildMetadata();
 
 export default function RootLayout({
@@ -31,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="pt-BR">
       <head>
-        {/* Google Consent Mode v2 — padrão negado até consentimento explícito (LGPD) */}
+        {/* Google Consent Mode v2, padrão negado até consentimento explícito (LGPD) */}
         <Script id="consent-default" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];

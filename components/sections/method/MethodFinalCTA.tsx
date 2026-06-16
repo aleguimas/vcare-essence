@@ -1,13 +1,15 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { Button } from '@/components/ui/button';
-import { ROUTES, SITE } from '@/lib/routes';
+import { ROUTES } from '@/lib/routes';
+import { whatsappNumberForPath } from '@/lib/whatsapp';
 import { fadeInUp, stagger, viewportConfig } from '@/lib/motion';
 
 interface MethodFinalCTAProps {
@@ -23,6 +25,7 @@ export function MethodFinalCTA({
   subtext,
   ctaLabel,
 }: MethodFinalCTAProps) {
+  const whatsapp = whatsappNumberForPath(usePathname());
   return (
     <Section tone="moss" size="lg" className="min-h-[50vh] flex items-center">
       <Container>
@@ -53,11 +56,11 @@ export function MethodFinalCTA({
             </Button>
           </motion.div>
 
-          {SITE.whatsapp ? (
+          {whatsapp ? (
             <motion.p variants={fadeInUp} className="mt-6 text-small text-cream/50">
               Ou{' '}
               <a
-                href={`https://wa.me/${SITE.whatsapp}`}
+                href={`https://wa.me/${whatsapp}`}
                 className="underline underline-offset-4 hover:text-cream/80 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"

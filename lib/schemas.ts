@@ -2,16 +2,16 @@ import { SITE, ROUTES } from './routes';
 
 const CLINIC_ID = `${SITE.url}/#clinic`;
 
-// Coordenadas aproximadas do RioMar Trade Center — TODO: confirmar exatas
+// Coordenadas aproximadas do RioMar Trade Center, TODO: confirmar exatas
 export const CLINIC_GEO = { latitude: -8.1237, longitude: -34.9013 } as const;
 
-/** Schema raiz da clínica — injetado globalmente no layout. */
+/** Schema raiz da clínica, injetado globalmente no layout. */
 export const medicalClinicSchema = {
   '@context': 'https://schema.org',
   '@type': ['MedicalClinic', 'MentalHealthCenter'],
   '@id': CLINIC_ID,
   name: SITE.name,
-  alternateName: 'VCare Essence — Casa Boutique de Saúde Mental',
+  alternateName: 'VCare Essence, Clínica Boutique de Saúde Mental',
   description:
     'Clínica boutique de saúde mental no RioMar Trade Center, Recife. A primeira clínica sensorial da cidade.',
   url: SITE.url,
@@ -21,7 +21,7 @@ export const medicalClinicSchema = {
   ...(SITE.email ? { email: SITE.email } : {}),
   address: {
     '@type': 'PostalAddress',
-    streetAddress: `${SITE.address.street} — ${SITE.address.complement}`,
+    streetAddress: `${SITE.address.street}, ${SITE.address.complement}`,
     addressLocality: SITE.address.city,
     addressRegion: SITE.address.state,
     postalCode: SITE.address.zip,

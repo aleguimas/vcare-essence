@@ -50,7 +50,7 @@ export function ProfessionalHero({
                   aria-label={imageAlt}
                 >
                   <p className="text-small text-muted/50 font-sans italic text-center">
-                    Ensaio editorial — em produção
+                    Ensaio editorial, em produção
                   </p>
                 </div>
               )}

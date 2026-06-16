@@ -57,7 +57,7 @@ export default async function BairroPage({ params }: PageProps) {
           </Heading>
           <p className="mt-6 text-lead text-ink/70 max-w-prose">{bairro.intro}</p>
           <p className="mt-3 text-small text-muted font-sans">
-            VCare Essence — {bairro.distance}.
+            VCare Essence, {bairro.distance}.
           </p>
         </Container>
       </Section>
@@ -106,7 +106,7 @@ export default async function BairroPage({ params }: PageProps) {
         <Container narrow>
           <Eyebrow>Como chegar</Eyebrow>
           <Heading as="h2" size="h2" className="mt-4">
-            De {bairro.name} até a casa.
+            De {bairro.name} até a clínica.
           </Heading>
           <div className="mt-6 space-y-4 text-body text-ink/80 leading-relaxed">
             {bairro.howToArrive.map((p, i) => (
@@ -114,7 +114,7 @@ export default async function BairroPage({ params }: PageProps) {
             ))}
           </div>
           <address className="mt-8 not-italic text-body text-muted font-sans">
-            Av. República do Líbano, 251 — RioMar Trade Center, Torre 4. Pina, Recife — PE.
+            Av. República do Líbano, 251, RioMar Trade Center, Torre 4. Pina, Recife, PE.
           </address>
           <p className="mt-2">
             <Link
@@ -140,7 +140,7 @@ export default async function BairroPage({ params }: PageProps) {
               { label: 'Hipnoterapia clínica', href: ROUTES.hipnoterapia },
               { label: 'Teste vocacional', href: ROUTES.testeVocacional },
               { label: 'Orientação familiar', href: ROUTES.orientacaoFamiliar },
-              { label: 'Método V', href: ROUTES.metodoV },
+              { label: 'MEP', href: ROUTES.metodoV },
               { label: 'Método C', href: ROUTES.metodoC },
               { label: 'Atendimento online', href: ROUTES.atendimentoOnline },
             ].map((v) => (

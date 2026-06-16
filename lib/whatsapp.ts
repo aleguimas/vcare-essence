@@ -1,9 +1,9 @@
-import { SITE } from './routes';
+import { SITE, ROUTES } from './routes';
 
 const BASE_MESSAGE = 'Olá! Cheguei pelo site da VCare Essence.';
 
 const VERTICAL_MESSAGES: Record<string, string> = {
-  'metodo-v': `${BASE_MESSAGE} Tenho interesse em conhecer o Método V (Vanessa).`,
+  'metodo-v': `${BASE_MESSAGE} Tenho interesse em conhecer o MEP (Vanessa).`,
   'metodo-c': `${BASE_MESSAGE} Tenho interesse no Método C (Camila) para um adolescente da família.`,
   psicoterapia: `${BASE_MESSAGE} Gostaria de informações sobre psicoterapia.`,
   hipnoterapia: `${BASE_MESSAGE} Gostaria de informações sobre hipnoterapia clínica.`,
@@ -12,14 +12,34 @@ const VERTICAL_MESSAGES: Record<string, string> = {
 };
 
 /**
- * Monta o link wa.me com mensagem pré-preenchida por vertical.
- * Retorna null enquanto o número da clínica não estiver configurado
- * (SITE.whatsapp vazio) — os componentes degradam graciosamente.
+ * Páginas conduzidas pela Vanessa usam o WhatsApp dela; o restante do site
+ * (home, páginas da Camila e verticais clínicas dela) usa o número padrão (Camila).
  */
-export function buildWhatsAppLink(vertical?: string): string | null {
-  if (!SITE.whatsapp) return null;
+const VANESSA_PATHS: readonly string[] = [
+  ROUTES.vanessa,
+  ROUTES.metodoV, // /mep
+  ROUTES.hipnoterapia,
+];
+
+/** Número de WhatsApp adequado ao caminho atual. Vazio se não configurado. */
+export function whatsappNumberForPath(pathname?: string | null): string {
+  if (pathname && VANESSA_PATHS.some((p) => pathname.startsWith(p))) {
+    return SITE.whatsappVanessa;
+  }
+  return SITE.whatsapp;
+}
+
+/**
+ * Monta o link wa.me com mensagem pré-preenchida por vertical, usando o número
+ * correspondente ao caminho (Vanessa nas páginas dela, Camila no restante).
+ * Retorna null enquanto o número não estiver configurado, os componentes
+ * degradam graciosamente.
+ */
+export function buildWhatsAppLink(vertical?: string, pathname?: string | null): string | null {
+  const number = whatsappNumberForPath(pathname);
+  if (!number) return null;
   const message = (vertical && VERTICAL_MESSAGES[vertical]) || BASE_MESSAGE;
-  return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
 /** Email com assunto pré-preenchido. Null se não configurado. */

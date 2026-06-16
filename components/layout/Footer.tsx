@@ -4,9 +4,9 @@ import { ROUTES, SITE } from '@/lib/routes';
 
 const FOOTER_COLS = [
   {
-    title: 'A Casa',
+    title: 'A Clínica',
     links: [
-      { label: 'A Casa', href: ROUTES.aCasa },
+      { label: 'A Clínica', href: ROUTES.aCasa },
       { label: 'Experiência Sensorial', href: ROUTES.experienciaSensorial },
       { label: 'Endereço', href: ROUTES.endereco },
       { label: 'Tour', href: ROUTES.tour },
@@ -36,7 +36,7 @@ const FOOTER_EXTRA = [
   {
     title: 'Métodos',
     links: [
-      { label: 'Método V', href: ROUTES.metodoV }, // TODO: nome final das sócias
+      { label: 'MEP', href: ROUTES.metodoV }, // TODO: nome final das sócias
       { label: 'Método C', href: ROUTES.metodoC }, // TODO: nome final das sócias
     ],
   },
@@ -63,7 +63,7 @@ export function Footer() {
             <Link
               href={ROUTES.home}
               className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-moss rounded-sm"
-              aria-label="VCare Essence — página inicial"
+              aria-label="VCare Essence, página inicial"
             >
               <Image
                 src="/images/logo/logo-horizontal.webp"
@@ -81,7 +81,7 @@ export function Footer() {
               <br />
               {SITE.address.complement}
               <br />
-              {SITE.address.neighborhood}, {SITE.address.city} — {SITE.address.state}
+              {SITE.address.neighborhood}, {SITE.address.city}, {SITE.address.state}
             </p>
           </div>
 
@@ -136,8 +136,8 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-cream/10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap gap-x-6 gap-y-1 text-small text-cream/40">
             {/* TODO: CRPs e CNPJ a confirmar com as sócias */}
-            <span>CRP XX/XXXXX — Vanessa Albuquerque</span>
-            <span>CRP XX/XXXXX — Camila Clemente</span>
+            <span>CRP XX/XXXXX, Vanessa Albuquerque</span>
+            <span>CRP XX/XXXXX, Camila Clemente</span>
             <span>CNPJ XX.XXX.XXX/0001-XX</span>
           </div>
 

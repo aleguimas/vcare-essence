@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     if (!process.env.RESEND_API_KEY) {
       // Em desenvolvimento sem API key: loga e retorna sucesso
-      console.warn('[candidatura] RESEND_API_KEY não configurada — email não enviado');
+      console.warn('[candidatura] RESEND_API_KEY não configurada, email não enviado');
       console.warn('[candidatura] Dados recebidos (dev):', data.nome, data.email);
       return NextResponse.json({ success: true });
     }
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
       from: 'VCare Essence <noreply@vcareessence.com.br>',
       to: emailTo,
       replyTo: data.email,
-      subject: `Nova candidatura — ${data.nome} (${data.especialidade})`,
+      subject: `Nova candidatura, ${data.nome} (${data.especialidade})`,
       html: `
         <h2>Nova candidatura para consultório residente</h2>
         <table>
@@ -39,9 +39,9 @@ export async function POST(req: NextRequest) {
           <tr><td><strong>WhatsApp</strong></td><td>${data.whatsapp}</td></tr>
           <tr><td><strong>Especialidade</strong></td><td>${data.especialidade}</td></tr>
           <tr><td><strong>Registro</strong></td><td>${data.registro}</td></tr>
-          <tr><td><strong>Abordagem</strong></td><td>${data.abordagem ?? '—'}</td></tr>
-          <tr><td><strong>Anos de experiência</strong></td><td>${data.anosExperiencia ?? '—'}</td></tr>
-          <tr><td><strong>Perfil</strong></td><td>${data.linkPerfil ?? '—'}</td></tr>
+          <tr><td><strong>Abordagem</strong></td><td>${data.abordagem ?? ', '}</td></tr>
+          <tr><td><strong>Anos de experiência</strong></td><td>${data.anosExperiencia ?? ', '}</td></tr>
+          <tr><td><strong>Perfil</strong></td><td>${data.linkPerfil ?? ', '}</td></tr>
         </table>
         <h3>Por que quer integrar a VCare?</h3>
         <p>${data.motivacao}</p>

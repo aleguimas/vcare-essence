@@ -10,7 +10,7 @@ interface MethodHeroProps {
   eyebrow: string;
   headline: React.ReactNode;
   subheadline?: string;
-  /** Sem CTA — esta seção qualifica, não vende */
+  /** Sem CTA, esta seção qualifica, não vende */
   professionalPhoto?: React.ReactNode;
 }
 

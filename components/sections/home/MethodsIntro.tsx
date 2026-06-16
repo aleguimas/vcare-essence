@@ -13,16 +13,16 @@ import { cn } from '@/lib/utils';
 const METHODS = [
   {
     eyebrow: 'Para destravar',
-    title: 'Método V — para empresários com uma trava emocional.',
+    title: 'MEP, para empresários com uma trava emocional.',
     description:
-      'Encontros estruturados. Hipnoterapia clínica como ferramenta para acessar o inconsciente e ir à raiz do que está prendendo o próximo passo.',
+      'Encontros estruturados. Hipnoterapia clínica como ferramenta para acessar o inconsciente e ir à raiz do que está travando o próximo passo.',
     cta: 'Conhecer o Método',
     href: ROUTES.metodoV, // TODO: slug final das sócias
     tone: 'sand' as const,
   },
   {
     eyebrow: 'Para estruturar e acompanhar',
-    title: 'Método C — para adolescentes em fase decisiva.',
+    title: 'Método C, para adolescentes em fase decisiva.',
     description:
       'Programa estruturado para melhorar o rendimento escolar, preparar para o vestibular e organizar o emocional, com acompanhamento familiar.',
     cta: 'Conhecer o Método',
@@ -43,11 +43,11 @@ export function MethodsIntro() {
           className="text-center mb-12"
         >
           <motion.div variants={fadeInUp}>
-            <Eyebrow>Duas frentes, uma casa</Eyebrow>
+            <Eyebrow>Duas frentes, uma clínica</Eyebrow>
           </motion.div>
           <motion.div variants={fadeInUp}>
             <Heading as="h2" size="h1" className="mt-4 max-w-prose-wide mx-auto">
-              Cada pessoa que chega aqui é recebida por um cuidado diferente — porque cada
+              Cada pessoa que chega aqui é recebida por um cuidado diferente, porque cada
               essência pede um cuidado diferente.
             </Heading>
           </motion.div>

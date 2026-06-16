@@ -9,7 +9,7 @@ import { ROUTES, SITE } from '@/lib/routes';
 export const metadata: Metadata = {
   title: 'Política de Privacidade · VCare Essence',
   description:
-    'Como a VCare Essence coleta, usa e protege seus dados pessoais — incluindo dados sensíveis de saúde, conforme a LGPD.',
+    'Como a VCare Essence coleta, usa e protege seus dados pessoais, incluindo dados sensíveis de saúde, conforme a LGPD.',
   alternates: { canonical: ROUTES.politicaPrivacidade },
 };
 
@@ -18,7 +18,7 @@ const SECTIONS = [
   {
     title: '1. Quem somos',
     body: [
-      `A ${SITE.name} é uma clínica de saúde mental localizada no RioMar Trade Center, Torre 4 — Av. República do Líbano, 251, Pina, Recife — PE. Esta política descreve como tratamos os dados pessoais coletados por meio deste site e dos nossos canais de atendimento.`,
+      `A ${SITE.name} é uma clínica de saúde mental localizada no RioMar Trade Center, Torre 4, Av. República do Líbano, 251, Pina, Recife, PE. Esta política descreve como tratamos os dados pessoais coletados por meio deste site e dos nossos canais de atendimento.`,
       'Para questões sobre proteção de dados, entre em contato pelo email indicado ao final desta política.', // TODO: definir email/DPO com as sócias
     ],
   },

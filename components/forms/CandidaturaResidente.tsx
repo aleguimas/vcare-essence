@@ -174,7 +174,7 @@ export function CandidaturaResidente() {
         <textarea
           id="c-motivacao"
           rows={5}
-          placeholder="Conte em suas palavras — o que te atrai nesse projeto e como você se encaixa nele..."
+          placeholder="Conte em suas palavras, o que te atrai nesse projeto e como você se encaixa nele..."
           className={cn(inputClass, 'resize-none', errors.motivacao && 'border-red-400 focus:ring-red-200')}
           {...register('motivacao')}
         />

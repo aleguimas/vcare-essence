@@ -10,9 +10,9 @@ import { Quote } from '@/components/editorial/Quote';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
-  title: 'A Experiência Sensorial · A Casa · VCare Essence',
+  title: 'A Experiência Sensorial · A Clínica · VCare Essence',
   description:
-    'A VCare Essence é a primeira clínica sensorial de Recife. O ambiente é projetado para os cinco sentidos — e o ambiente é parte do tratamento.',
+    'A VCare Essence é a primeira clínica sensorial de Recife. O ambiente é projetado para os cinco sentidos, e o ambiente é parte do tratamento.',
   alternates: { canonical: ROUTES.experienciaSensorial },
 };
 
@@ -20,35 +20,35 @@ const SENSES = [
   {
     sense: 'Olfato',
     headline: 'Aroma como assinatura de marca.',
-    body: 'Cada espaço da casa recebe um aroma cuidadosamente escolhido. O olfato é o sentido mais ligado à memória e à emoção — e o mais negligenciado pelas clínicas comuns. Aqui, o cheiro da recepção já começa o cuidado.',
+    body: 'Cada espaço da clínica recebe um aroma cuidadosamente escolhido. O olfato é o sentido mais ligado à memória e à emoção, e o mais negligenciado pelas clínicas comuns. Aqui, o cheiro da recepção já começa o cuidado.',
     imageSrc: '/images/ambiente/entrada-vcare-essence.webp',
-    imageAlt: 'Entrada da VCare Essence — recepção com logo retroiluminado e luz quente',
+    imageAlt: 'Entrada da VCare Essence, recepção com logo retroiluminado e luz quente',
   },
   {
     sense: 'Audição',
     headline: 'A cidade fica do lado de fora.',
-    body: 'Isolamento acústico real protege as conversas e bloqueia o ruído urbano. Entre as paredes, ou silêncio projetado ou trilha discreta — nunca rádio, nunca a conversa de outro consultório infiltrando.',
+    body: 'Isolamento acústico real protege as conversas e bloqueia o ruído urbano. Entre as paredes, ou silêncio projetado ou trilha discreta, nunca rádio, nunca a conversa de outro consultório infiltrando.',
     imageSrc: '/images/ambiente/sala-02-iluminacao-dia-vista.webp',
-    imageAlt: 'Sala de atendimento com janela ampla — a cidade vista de dentro do silêncio',
+    imageAlt: 'Sala de atendimento com janela ampla, a cidade vista de dentro do silêncio',
   },
   {
     sense: 'Visão',
     headline: 'Luz quente. Céu estrelado. Nenhuma luz fria.',
-    body: 'Não há iluminação hospitalar aqui. A luz é quente, calibrada, suave. E olhe para cima na recepção: o céu estrelado em fibra óptica não é decoração — é a primeira pausa que a gente oferece.',
+    body: 'Não há iluminação hospitalar aqui. A luz é quente, calibrada, suave. E olhe para cima na recepção: o céu estrelado em fibra óptica não é decoração, é a primeira pausa que a gente oferece.',
     imageSrc: '/images/ambiente/sala-02-teto-led-sensorial.webp',
     imageAlt: 'Teto da VCare Essence com efeito de céu estrelado em fibra óptica',
   },
   {
     sense: 'Tato',
     headline: 'Materiais que convidam ao toque.',
-    body: 'Madeira, tecidos naturais, cerâmica, mantas. Temperatura constante. O corpo precisa se sentir abraçado antes de a mente conseguir falar — e os materiais da casa foram escolhidos com esse princípio.',
+    body: 'Madeira, tecidos naturais, cerâmica, mantas. Temperatura constante. O corpo precisa se sentir abraçado antes de a mente conseguir falar, e os materiais da clínica foram escolhidos com esse princípio.',
     imageSrc: '/images/ambiente/sala-01-iluminacao-dia.webp',
     imageAlt: 'Sala à luz do dia com madeira, mármore e tecidos naturais',
   },
   {
     sense: 'Paladar',
     headline: 'O ritual da chegada.',
-    body: 'Água aromatizada, chá, café especial. Não é cortesia institucional. É o gesto que marca a transição entre o estado de pressa e o estado de cuidado — a pausa antes do começo.',
+    body: 'Água aromatizada, chá, café especial. Não é cortesia institucional. É o gesto que marca a transição entre o estado de pressa e o estado de cuidado, a pausa antes do começo.',
     imageSrc: '/images/ambiente/sala-01-angulo-2-iluminacao-dia.webp',
     imageAlt: 'Sala de atendimento da VCare Essence em outro ângulo, com mesa e poltronas',
   },
@@ -61,7 +61,7 @@ export default function ExperienciaSensorialPage() {
       <Section tone="cream" size="lg" className="border-b border-line">
         <Container>
           <div className="max-w-prose-wide">
-            <Eyebrow>A Casa · Experiência Sensorial</Eyebrow>
+            <Eyebrow>A Clínica · Experiência Sensorial</Eyebrow>
             <Heading as="h1" size="display-lg" className="mt-5">
               Cuidar começa antes da primeira palavra.
             </Heading>
@@ -84,7 +84,7 @@ export default function ExperienciaSensorialPage() {
             <p>
               Antes de qualquer técnica terapêutica, existe uma condição prévia: o estado mental
               do paciente. Para que a hipnoterapia funcione, para que a psicoterapia produza
-              insight, para que a orientação familiar gere escuta real — o corpo precisa primeiro
+              insight, para que a orientação familiar gere escuta real, o corpo precisa primeiro
               sair do estado de alerta.
             </p>
             <p>
@@ -93,16 +93,16 @@ export default function ExperienciaSensorialPage() {
               familiar. Temperatura confortável. Algo gostoso para tomar.
             </p>
             <p>
-              Para um público que vive em estado de alerta crônico — empresários sob pressão,
-              adolescentes ansiosos, famílias em conflito — o desarme sensorial não é detalhe de
+              Para um público que vive em estado de alerta crônico, empresários sob pressão,
+              adolescentes ansiosos, famílias em conflito, o desarme sensorial não é detalhe de
               experiência. É o início do processo terapêutico.
             </p>
           </div>
 
           <div className="mt-10">
             <Quote>
-              Para um público que vive em estado de alerta — empresários sob pressão, adolescentes
-              ansiosos, mulheres em sobrecarga — o desarme sensorial é, em si, terapêutico.
+              Para um público que vive em estado de alerta, empresários sob pressão, adolescentes
+              ansiosos, mulheres em sobrecarga, o desarme sensorial é, em si, terapêutico.
             </Quote>
           </div>
         </Container>
@@ -121,7 +121,7 @@ export default function ExperienciaSensorialPage() {
           <div className="mt-8 space-y-5 text-body text-cream/70 leading-relaxed">
             <p>
               Pode-se copiar uma palavra-chave, uma tagline, um post. Não se copia a sensação de
-              entrar aqui sem refazer o próprio espaço do zero — o projeto acústico, a curadoria
+              entrar aqui sem refazer o próprio espaço do zero, o projeto acústico, a curadoria
               de aromas, o céu estrelado em fibra óptica, a escolha de cada material.
             </p>
             <p>

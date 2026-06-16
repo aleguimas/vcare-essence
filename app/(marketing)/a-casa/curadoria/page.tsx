@@ -6,9 +6,9 @@ import { Heading } from '@/components/editorial/Heading';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
-  title: 'A Curadoria · A Casa · VCare Essence',
+  title: 'A Curadoria · A Clínica · VCare Essence',
   description:
-    'A filosofia de curadoria da VCare Essence — como escolhemos cada profissional, método e detalhe do espaço.',
+    'A filosofia de curadoria da VCare Essence, como escolhemos cada profissional, método e detalhe do espaço.',
   alternates: { canonical: ROUTES.curadoria },
 };
 
@@ -16,7 +16,7 @@ export default function CuradoriaPage() {
   return (
     <Section tone="cream" size="lg">
       <Container narrow>
-        <Eyebrow>A Casa · Curadoria</Eyebrow>
+        <Eyebrow>A Clínica · Curadoria</Eyebrow>
         <Heading as="h1" size="display-md" className="mt-5">
           Cada escolha foi pensada.
         </Heading>
@@ -28,14 +28,14 @@ export default function CuradoriaPage() {
           </p>
           <p>
             Não trabalhamos com o que está disponível. Trabalhamos com o que é coerente com o
-            que a casa representa: cuidado boutique, profundidade clínica, discrição e
+            que a clínica representa: cuidado boutique, profundidade clínica, discrição e
             experiência sensorial.
           </p>
           <p>
             Para os profissionais: avaliação de formação, abordagem e alinhamento com os
-            princípios da casa antes de qualquer convite. Para o espaço: projeto intencional de
+            princípios da clínica antes de qualquer convite. Para o espaço: projeto intencional de
             cada sentido. Para os métodos: seleção com base em evidência clínica e adequação ao
-            público que a casa atende.
+            público que a clínica atende.
           </p>
         </div>
       </Container>

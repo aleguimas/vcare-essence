@@ -24,7 +24,7 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Véu cream em duas camadas para legibilidade — sem overlay escuro.
+        {/* Véu cream em duas camadas para legibilidade, sem overlay escuro.
             Esquerda cobre o título; base cobre subtítulo e botões; a vista da
             cidade permanece visível no canto superior direito. */}
         <div
@@ -66,13 +66,13 @@ export function Hero() {
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="mt-6 text-lead text-moss/80 max-w-prose">
-            Casa boutique de saúde mental no RioMar Trade Center. A primeira clínica sensorial de
+            Clínica boutique de saúde mental no RioMar Trade Center. A primeira clínica sensorial de
             Recife.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap gap-4">
             <Button asChild size="lg">
-              <Link href={ROUTES.aCasa}>Conhecer a casa</Link>
+              <Link href={ROUTES.aCasa}>Conhecer a clínica</Link>
             </Button>
             <Button asChild size="lg" variant="ghost">
               <Link href={ROUTES.agendar}>Agendar uma conversa</Link>

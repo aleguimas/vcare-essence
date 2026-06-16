@@ -9,7 +9,7 @@ import { ROUTES } from '@/lib/routes';
 export const metadata: Metadata = {
   title: 'Profissionais Convidados · VCare Essence',
   description:
-    'A VCare Essence recebe profissionais de saúde mental sob curadoria. Não é locação — é convite. Saiba mais sobre o programa de residência clínica.',
+    'A VCare Essence recebe profissionais de saúde mental sob curadoria. Não é locação, é convite. Saiba mais sobre o programa de residência clínica.',
   alternates: { canonical: ROUTES.convidados },
 };
 
@@ -20,10 +20,10 @@ export default function ConvidadosPage() {
         <Container>
           <Eyebrow>Profissionais · Convidados</Eyebrow>
           <Heading as="h1" size="display-md" className="mt-5 max-w-prose-wide">
-            Profissionais em residência da casa.
+            Profissionais em residência da clínica.
           </Heading>
           <p className="mt-6 text-lead text-ink/70 max-w-prose">
-            A casa recebe clínicos selecionados — não por disponibilidade de sala, mas por
+            A clínica recebe clínicos selecionados, não por disponibilidade de sala, mas por
             alinhamento com o que a VCare Essence representa.
           </p>
         </Container>
@@ -38,32 +38,32 @@ export default function ConvidadosPage() {
           <div className="mt-8 space-y-5 text-body text-ink/80 leading-relaxed">
             <p>
               Qualquer espaço pode ser alugado. A VCare Essence escolheu um caminho diferente:
-              os profissionais que atendem aqui são convidados — avaliados pela formação, pela
-              abordagem clínica e pelo alinhamento com os princípios da casa.
+              os profissionais que atendem aqui são convidados, avaliados pela formação, pela
+              abordagem clínica e pelo alinhamento com os princípios da clínica.
             </p>
             <p>
-              Isso significa que um paciente que chega à VCare Essence — seja para psicoterapia,
-              hipnoterapia ou qualquer outra vertical — encontra um padrão de cuidado consistente,
-              independentemente de qual profissional o atende. A casa é uma curadoria viva.
+              Isso significa que um paciente que chega à VCare Essence, seja para psicoterapia,
+              hipnoterapia ou qualquer outra vertical, encontra um padrão de cuidado consistente,
+              independentemente de qual profissional o atende. A clínica é uma curadoria viva.
             </p>
             <p>
               Atualmente, os atendimentos são conduzidos pelas fundadoras Vanessa Albuquerque e
               Camila Clemente. Novos profissionais convidados estão sendo integrados conforme a
-              casa cresce.
+              clínica cresce.
             </p>
           </div>
 
-          {/* Placeholder — em breve */}
+          {/* Placeholder, em breve */}
           <div className="mt-14 p-8 rounded-2xl border border-dashed border-bronze/30 bg-cream text-center">
             <p className="font-serif italic text-h3 text-moss/60">
-              Em breve: novos profissionais sendo convidados para integrar a casa.
+              Em breve: novos profissionais sendo convidados para integrar a clínica.
             </p>
           </div>
 
           {/* Link para sou-profissional */}
           <div className="mt-14 pt-10 border-t border-line">
             <p className="text-body text-ink/70">
-              Você é profissional de saúde mental e gostaria de fazer parte da casa?
+              Você é profissional de saúde mental e gostaria de fazer parte da clínica?
             </p>
             <Link
               href={ROUTES.consultorioResidente}

@@ -15,23 +15,23 @@ const FOUNDERS = [
     name: 'Vanessa Albuquerque',
     role: 'Hipnoterapeuta',
     experience: '14 anos de prática',
-    quote: 'Não trato sintomas. Vou à raiz.',
+    quote: 'Acesso a raiz e destravo o que te impede de avançar com Método Exclusivo e resultado imediato.',
     cta: 'Conhecer Vanessa',
     href: ROUTES.vanessa,
     imgSrc: '/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp',
     imgAlt:
-      'Vanessa Albuquerque, hipnoterapeuta da VCare Essence — foto editorial em ambiente da clínica',
+      'Vanessa Albuquerque, hipnoterapeuta da VCare Essence, foto editorial em ambiente da clínica',
   },
   {
     name: 'Camila Clemente',
     role: 'Psicóloga',
     experience: '10 anos de prática',
-    quote: 'Trato a falta de resultado como falta de motivação — não como preguiça.',
+    quote: 'Trato a falta de resultado como falta de motivação, não como preguiça.',
     cta: 'Conhecer Camila',
     href: ROUTES.camila,
     imgSrc: '/images/profissionais/camila-clemente-vcare-essence-01.webp',
     imgAlt:
-      'Camila Clemente, psicóloga da VCare Essence — foto editorial em ambiente da clínica',
+      'Camila Clemente, psicóloga da VCare Essence, foto editorial em ambiente da clínica',
   },
 ] as const;
 
@@ -39,7 +39,7 @@ export function Founders() {
   return (
     <Section tone="cream">
       <Container>
-        {/* Intro — foto das duas juntas + apresentação */}
+        {/* Intro, foto das duas juntas + apresentação */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-14">
           <motion.div
             initial="hidden"
@@ -71,10 +71,10 @@ export function Founders() {
                 As fundadoras
               </Heading>
             </motion.div>
-            {/* rascunho — aguardar validação das sócias */}
+            {/* rascunho, aguardar validação das sócias */}
             <motion.p variants={fadeInUp} className="mt-6 text-lead text-ink/80 max-w-prose">
-              Duas práticas que não se confundem, sob o mesmo teto. Cada uma conduz um caminho —
-              e foi essa diferença, não o acaso, que deu forma à casa.
+              Duas práticas que não se confundem, sob o mesmo teto. Cada uma conduz um caminho,
+              e foi essa diferença, não o acaso, que deu forma à clínica.
             </motion.p>
           </motion.div>
         </div>

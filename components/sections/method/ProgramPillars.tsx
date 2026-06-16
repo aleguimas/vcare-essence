@@ -8,7 +8,7 @@ import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { fadeInUp, stagger, viewportConfig } from '@/lib/motion';
 
-// Mapa interno — passa-se string serializable do Server Component
+// Mapa interno, passa-se string serializable do Server Component
 const ICON_MAP: Record<string, LucideIcon> = { BookOpen, Brain, Users, Target };
 
 export interface Pillar {

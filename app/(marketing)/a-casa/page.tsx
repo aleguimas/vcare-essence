@@ -9,16 +9,16 @@ import { Button } from '@/components/ui/button';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
-  title: 'A Casa · VCare Essence',
+  title: 'A Clínica · VCare Essence',
   description:
-    'Conheça a VCare Essence — a primeira clínica sensorial de Recife. Ambiente projetado para os cinco sentidos, no RioMar Trade Center, Torre 4, Pina.',
+    'Conheça a VCare Essence, a primeira clínica sensorial de Recife. Ambiente projetado para os cinco sentidos, no RioMar Trade Center, Torre 4, Pina.',
   alternates: { canonical: ROUTES.aCasa },
 };
 
 const CARDS = [
   {
     title: 'Experiência Sensorial',
-    description: 'Como o ambiente é projetado para os cinco sentidos — e por que isso é parte do cuidado.',
+    description: 'Como o ambiente é projetado para os cinco sentidos, e por que isso é parte do cuidado.',
     href: ROUTES.experienciaSensorial,
     imageSrc: '/images/ambiente/sala-01-teto-led-sensorial.webp',
     imageAlt: 'Sala de atendimento sob o céu estrelado em fibra óptica, com luz quente',
@@ -33,8 +33,8 @@ const CARDS = [
     featured: false,
   },
   {
-    title: 'Tour pela Casa',
-    description: 'Galeria editorial do espaço — salas, recepção, detalhes.',
+    title: 'Tour pela Clínica',
+    description: 'Galeria editorial do espaço, salas, recepção, detalhes.',
     href: ROUTES.tour,
     imageSrc: '/images/ambiente/sala-02-iluminacao-dia-vista.webp',
     imageAlt: 'Sala de atendimento com janela ampla e vista da cidade',
@@ -47,12 +47,12 @@ export default function ACasaPage() {
     <>
       <Section tone="cream" size="md" className="border-b border-line">
         <Container>
-          <Eyebrow>A Casa</Eyebrow>
+          <Eyebrow>A Clínica</Eyebrow>
           <Heading as="h1" size="display-md" className="mt-5 max-w-prose-wide">
-            A casa boutique da mente.
+            A clínica boutique da mente.
           </Heading>
           <p className="mt-6 text-lead text-ink/70 max-w-prose">
-            A VCare Essence não é uma clínica como as outras. O ambiente é parte do tratamento —
+            A VCare Essence não é uma clínica como as outras. O ambiente é parte do tratamento,
             não cenário. Cada detalhe foi projetado para que o cuidado comece antes da primeira
             palavra ser dita.
           </p>
@@ -100,7 +100,7 @@ export default function ACasaPage() {
             <div className="mt-8 space-y-5 text-body text-ink/80 leading-relaxed">
               <p>
                 Uma clínica boutique não tem esse nome por ser pequena. Tem esse nome porque
-                cada escolha foi curada — o espaço, os profissionais, os métodos, os materiais,
+                cada escolha foi curada, o espaço, os profissionais, os métodos, os materiais,
                 a luz, o aroma.
               </p>
               <p>
@@ -109,7 +109,7 @@ export default function ACasaPage() {
                 para que a mente entre em estado de cuidado desde o momento da chegada.
               </p>
               <p>
-                Essa combinação — cuidado boutique com projeto sensorial — não existe em outra
+                Essa combinação, cuidado boutique com projeto sensorial, não existe em outra
                 clínica de saúde mental em Recife. É o que nos permite afirmar: a primeira clínica
                 sensorial da cidade.
               </p>

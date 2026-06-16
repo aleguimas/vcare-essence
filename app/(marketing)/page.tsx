@@ -10,14 +10,14 @@ import { OnlineCTA } from '@/components/sections/home/OnlineCTA';
 import { FinalCTA } from '@/components/sections/home/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'VCare Essence — A primeira clínica sensorial de Recife',
+  title: 'VCare Essence, A primeira clínica sensorial de Recife',
   description:
-    'Casa boutique de saúde mental no RioMar Trade Center. Cuidamos do que ninguém vê: a mente, o emocional, a essência. Atendimento presencial em Recife e online.',
+    'Clínica boutique de saúde mental no RioMar Trade Center. Cuidamos do que ninguém vê: a mente, o emocional, a essência. Atendimento presencial em Recife e online.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'VCare Essence — A primeira clínica sensorial de Recife',
+    title: 'VCare Essence, A primeira clínica sensorial de Recife',
     description:
-      'Casa boutique de saúde mental no RioMar Trade Center. Cuidamos do que ninguém vê: a mente, o emocional, a essência.',
+      'Clínica boutique de saúde mental no RioMar Trade Center. Cuidamos do que ninguém vê: a mente, o emocional, a essência.',
     // OG image gerada dinamicamente por app/opengraph-image.tsx
   },
 };

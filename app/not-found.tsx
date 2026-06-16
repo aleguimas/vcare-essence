@@ -19,7 +19,7 @@ export default function NotFound() {
         </p>
         <div className="mt-10 flex justify-center">
           <Button asChild size="lg">
-            <Link href={ROUTES.home}>Voltar à casa</Link>
+            <Link href={ROUTES.home}>Voltar à clínica</Link>
           </Button>
         </div>
       </Container>

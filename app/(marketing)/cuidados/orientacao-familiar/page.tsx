@@ -24,7 +24,7 @@ const schema = [
   buildMedicalTherapySchema({
     name: 'Orientação Familiar',
     description:
-      'Orientação familiar com base em Terapêutica Sistêmica — para famílias em conflito, pós-diagnóstico e cuidadores.',
+      'Orientação familiar com base em Terapêutica Sistêmica, para famílias em conflito, pós-diagnóstico e cuidadores.',
     path: ROUTES.orientacaoFamiliar,
   }),
   buildBreadcrumbSchema([
@@ -48,19 +48,19 @@ const SCENARIOS = [
   {
     title: 'Famílias com adolescente em conflito',
     description:
-      'Quando a comunicação entre pais e filho está quebrada — e cada conversa sobre escola, comportamento ou futuro vira confronto. O trabalho sistêmico ajuda a identificar os padrões de relação que estão alimentando o conflito e a reconstruir a comunicação de forma que cada parte se sinta ouvida.',
+      'Quando a comunicação entre pais e filho está quebrada, e cada conversa sobre escola, comportamento ou futuro vira confronto. O trabalho sistêmico ajuda a identificar os padrões de relação que estão alimentando o conflito e a reconstruir a comunicação de forma que cada parte se sinta ouvida.',
     context: 'Conflito de comunicação · Comportamento · Adolescência',
   },
   {
     title: 'Pós-diagnóstico de TDAH ou outra condição',
     description:
-      'Quando um diagnóstico chega — de TDAH, TEA, ansiedade severa ou outra condição — a família precisa de suporte para entender o que isso significa na prática: como adaptar expectativas, como comunicar para a escola, como a dinâmica em casa precisa mudar. Camila tem formação específica em TDAH e reabilitação neuropsicológica.',
+      'Quando um diagnóstico chega, de TDAH, TEA, ansiedade severa ou outra condição, a família precisa de suporte para entender o que isso significa na prática: como adaptar expectativas, como comunicar para a escola, como a dinâmica em casa precisa mudar. Camila tem formação específica em TDAH e reabilitação neuropsicológica.',
     context: 'TDAH · TEA · Diagnóstico recente · Expectativas',
   },
   {
     title: 'Cuidadores de familiares em adoecimento',
     description:
-      'Cuidar de alguém que adoece — seja por saúde mental, demência, dependência ou condição crônica — é exaustivo de formas que raramente são reconhecidas. A orientação familiar aqui oferece suporte ao cuidador, ferramentas para lidar com a dinâmica familiar que se reorganiza em torno do adoecimento, e espaço para o que não se consegue dizer em nenhum outro lugar.',
+      'Cuidar de alguém que adoece, seja por saúde mental, demência, dependência ou condição crônica, é exaustivo de formas que raramente são reconhecidas. A orientação familiar aqui oferece suporte ao cuidador, ferramentas para lidar com a dinâmica familiar que se reorganiza em torno do adoecimento, e espaço para o que não se consegue dizer em nenhum outro lugar.',
     context: 'Cuidador · Adoecimento crônico · Suporte emocional',
   },
 ] as const;
@@ -69,7 +69,7 @@ const FAQ = [
   {
     question: 'O que é Terapêutica Sistêmica?',
     answer:
-      'Terapêutica Sistêmica é uma abordagem clínica que entende o indivíduo como parte de um sistema — família, escola, trabalho. Em vez de tratar apenas o "problema" de uma pessoa isolada, trabalha com as relações e padrões que o sustentam. É especialmente eficaz para conflitos familiares, comunicação entre gerações e dinâmicas relacionais.',
+      'Terapêutica Sistêmica é uma abordagem clínica que entende o indivíduo como parte de um sistema, família, escola, trabalho. Em vez de tratar apenas o "problema" de uma pessoa isolada, trabalha com as relações e padrões que o sustentam. É especialmente eficaz para conflitos familiares, comunicação entre gerações e dinâmicas relacionais.',
   },
   {
     question: 'Todos da família precisam comparecer?',
@@ -79,12 +79,12 @@ const FAQ = [
   {
     question: 'Pode ajudar com adolescentes com TDAH?',
     answer:
-      'Sim. Camila tem formação em reabilitação neuropsicológica e TDAH. O trabalho familiar para pós-diagnóstico de TDAH inclui orientação sobre a condição, adaptações práticas e suporte emocional para toda a família — em parceria com o acompanhamento médico já existente.',
+      'Sim. Camila tem formação em reabilitação neuropsicológica e TDAH. O trabalho familiar para pós-diagnóstico de TDAH inclui orientação sobre a condição, adaptações práticas e suporte emocional para toda a família, em parceria com o acompanhamento médico já existente.',
   },
   {
     question: 'Como funciona o suporte ao cuidador?',
     answer:
-      'O cuidador de um familiar em adoecimento frequentemente vivencia exaustão, culpa, isolamento e luto antecipado — sem ter espaço para processar isso. O atendimento oferece um espaço exclusivo para o cuidador, além de ferramentas para gerenciar a dinâmica familiar em torno do adoecimento.',
+      'O cuidador de um familiar em adoecimento frequentemente vivencia exaustão, culpa, isolamento e luto antecipado, sem ter espaço para processar isso. O atendimento oferece um espaço exclusivo para o cuidador, além de ferramentas para gerenciar a dinâmica familiar em torno do adoecimento.',
   },
   {
     question: 'Tem diferença em relação à terapia familiar tradicional?',
@@ -100,20 +100,20 @@ export default function OrientacaoFamiliarPage() {
       <VerticalHero
         eyebrow="Cuidados · Orientação Familiar"
         headline="Cuidar de quem cuida."
-        subtitle="Suporte estruturado para famílias em diferentes fases — com base em Terapêutica Sistêmica."
+        subtitle="Suporte estruturado para famílias em diferentes fases, com base em Terapêutica Sistêmica."
       />
 
-      <VerticalDefinition eyebrow="O que é" headline="A família como sistema — não como soma de problemas individuais.">
+      <VerticalDefinition eyebrow="O que é" headline="A família como sistema, não como soma de problemas individuais.">
         <p>
           Orientação familiar é um trabalho clínico que olha para as relações, não apenas para
           os indivíduos. Em vez de perguntar "o que está errado com essa pessoa", pergunta "o que
-          está acontecendo nesse sistema" — e como cada parte está contribuindo, de formas que
+          está acontecendo nesse sistema", e como cada parte está contribuindo, de formas que
           muitas vezes não percebe, para o padrão que causa sofrimento.
         </p>
         <p>
           A base é a Terapêutica Sistêmica: uma abordagem que entende que o comportamento de
           uma pessoa faz sentido dentro do contexto das relações em que ela está inserida. Mudar
-          o contexto relacional muda o comportamento — de todos os envolvidos.
+          o contexto relacional muda o comportamento, de todos os envolvidos.
         </p>
         <p>
           O processo é conduzido por Camila Clemente, psicóloga com especialização em
@@ -160,7 +160,7 @@ export default function OrientacaoFamiliarPage() {
         tone="cream"
       >
         <p>
-          O processo começa com uma avaliação com os adultos responsáveis — para entender o
+          O processo começa com uma avaliação com os adultos responsáveis, para entender o
           contexto, o que está acontecendo e o que se espera do atendimento. A partir daí, o
           formato (quem participa, com que frequência) é definido conforme o caso.
         </p>

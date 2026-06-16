@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     const data = parsed.data;
 
     if (!process.env.RESEND_API_KEY) {
-      console.warn('[reserva-sala] RESEND_API_KEY não configurada — email não enviado');
+      console.warn('[reserva-sala] RESEND_API_KEY não configurada, email não enviado');
       console.warn('[reserva-sala] Dados recebidos (dev):', data.nome, data.tipoUso, data.dataDesejada);
       return NextResponse.json({ success: true });
     }
@@ -38,18 +38,18 @@ export async function POST(req: NextRequest) {
       from: 'VCare Essence <noreply@vcareessence.com.br>',
       to: emailTo,
       replyTo: data.email,
-      subject: `Solicitação de sala — ${data.nome} (${TIPO_LABELS[data.tipoUso]}, ${data.dataDesejada})`,
+      subject: `Solicitação de sala, ${data.nome} (${TIPO_LABELS[data.tipoUso]}, ${data.dataDesejada})`,
       html: `
-        <h2>Solicitação de reserva — sala para gravações</h2>
+        <h2>Solicitação de reserva, sala para gravações</h2>
         <table>
           <tr><td><strong>Nome</strong></td><td>${data.nome}</td></tr>
           <tr><td><strong>Email</strong></td><td>${data.email}</td></tr>
           <tr><td><strong>WhatsApp</strong></td><td>${data.whatsapp}</td></tr>
-          <tr><td><strong>Instagram</strong></td><td>${data.instagram ?? '—'}</td></tr>
+          <tr><td><strong>Instagram</strong></td><td>${data.instagram ?? ', '}</td></tr>
           <tr><td><strong>Tipo de uso</strong></td><td>${TIPO_LABELS[data.tipoUso]}</td></tr>
           <tr><td><strong>Data desejada</strong></td><td>${data.dataDesejada}</td></tr>
           <tr><td><strong>Turno</strong></td><td>${TURNO_LABELS[data.turno]}</td></tr>
-          <tr><td><strong>Equipamento</strong></td><td>${data.equipamento ?? '—'}</td></tr>
+          <tr><td><strong>Equipamento</strong></td><td>${data.equipamento ?? ', '}</td></tr>
         </table>
         ${data.informacoesAdicionais ? `<h3>Informações adicionais</h3><p>${data.informacoesAdicionais}</p>` : ''}
       `,

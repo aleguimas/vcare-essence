@@ -1,5 +1,5 @@
 /**
- * Injeta um ou mais blocos JSON-LD. Server component — sem 'use client'.
+ * Injeta um ou mais blocos JSON-LD. Server component, sem 'use client'.
  */
 export function JsonLd({ data }: { data: object | object[] }) {
   const arr = Array.isArray(data) ? data : [data];

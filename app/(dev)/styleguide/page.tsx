@@ -55,7 +55,7 @@ export default function StyleguidePage() {
           </Heading>
           <div className="space-y-6">
             <div>
-              <Eyebrow className="mb-2">display-xl · Fraunces serif</Eyebrow>
+              <Eyebrow className="mb-2">display-xl · Georgia serif</Eyebrow>
               <p className="text-display-xl font-serif text-moss leading-none">Por dentro.</p>
             </div>
             <div>
@@ -83,13 +83,13 @@ export default function StyleguidePage() {
             <div>
               <Eyebrow className="mb-2">h3</Eyebrow>
               <Heading as="h3" size="h3" serif={false}>
-                Método V — para empresários com uma trava emocional.
+                MEP, para empresários com uma trava emocional.
               </Heading>
             </div>
             <div>
               <Eyebrow className="mb-2">lead · Inter sans</Eyebrow>
               <p className="text-lead text-ink">
-                Casa boutique de saúde mental no RioMar Trade Center. A primeira clínica sensorial
+                Clínica boutique de saúde mental no RioMar Trade Center. A primeira clínica sensorial
                 de Recife.
               </p>
             </div>
@@ -142,7 +142,7 @@ export default function StyleguidePage() {
               <Eyebrow className="mb-4">Com asChild (Link)</Eyebrow>
               <div className="flex flex-wrap gap-4 items-center">
                 <Button asChild size="lg">
-                  <Link href="/">Conhecer a casa</Link>
+                  <Link href="/">Conhecer a clínica</Link>
                 </Button>
                 <Button asChild size="lg" variant="secondary">
                   <Link href="/">Agendar uma conversa</Link>
@@ -169,7 +169,7 @@ export default function StyleguidePage() {
           <Eyebrow className="mt-8 mb-4">Callout</Eyebrow>
           <Callout title="Importante">
             A hipnoterapia clínica é uma abordagem regulamentada e baseada em evidências. Não é
-            espetáculo, não é misticismo — é acesso ao inconsciente com método.
+            espetáculo, não é misticismo, é acesso ao inconsciente com método.
           </Callout>
         </Container>
       </Section>
@@ -178,7 +178,7 @@ export default function StyleguidePage() {
       <Section tone="moss" size="sm">
         <Container>
           <Heading as="h2" size="h2" className="mb-2 text-cream">
-            Section — tone moss
+            Section, tone moss
           </Heading>
           <p className="text-lead text-cream/70">
             Usado para seções de alto contraste e CTAs finais de página.

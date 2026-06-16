@@ -13,10 +13,10 @@ import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
   {
-    label: 'A Casa',
+    label: 'A Clínica',
     href: ROUTES.aCasa,
     children: [
-      { label: 'A Casa', href: ROUTES.aCasa },
+      { label: 'A Clínica', href: ROUTES.aCasa },
       { label: 'Experiência Sensorial', href: ROUTES.experienciaSensorial },
       { label: 'Endereço', href: ROUTES.endereco },
       { label: 'Tour', href: ROUTES.tour },
@@ -26,7 +26,7 @@ const NAV_ITEMS = [
     label: 'Métodos',
     href: ROUTES.metodoV,
     children: [
-      { label: 'Método V', href: ROUTES.metodoV }, // TODO: nome final das sócias
+      { label: 'MEP', href: ROUTES.metodoV }, // TODO: nome final das sócias
       { label: 'Método C', href: ROUTES.metodoC }, // TODO: nome final das sócias
     ],
   },
@@ -79,7 +79,7 @@ export function Header() {
         <Link
           href={ROUTES.home}
           className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-sm"
-          aria-label="VCare Essence — página inicial"
+          aria-label="VCare Essence, página inicial"
         >
           {/* TODO: substituir por SVG vetorizado quando disponível (ver 05_assets_guide.md) */}
           <Image
@@ -120,7 +120,7 @@ export function Header() {
             <Link href={ROUTES.agendar}>Agendar</Link>
           </Button>
 
-          {/* Hamburger — apenas mobile */}
+          {/* Hamburger, apenas mobile */}
           <Dialog.Root open={mobileOpen} onOpenChange={setMobileOpen}>
             <Dialog.Trigger asChild>
               <button

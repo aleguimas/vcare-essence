@@ -4,6 +4,20 @@
 
 ---
 
+## ⚠️ Ajustes do cliente aplicados em 2026-06-15 (NÃO regredir)
+
+Rodada de ajustes a partir do doc "AJUSTES SITE VCARE.pdf". Estas decisões já estão no código e **substituem** indicações anteriores deste arquivo:
+
+1. **Tipografia: Georgia (títulos) + Arial (corpo).** Fraunces/Inter foram REMOVIDOS. Stack web-safe em `app/globals.css` (`--font-serif`/`--font-sans`); `next/font` saiu do `app/layout.tsx`. Não reintroduzir Fraunces/Inter.
+2. **"Casa" → "Clínica" em toda copy visível.** "Casa Boutique" → "Clínica Boutique"; nav "A Casa" → "A Clínica". **Preservar:** rotas `/a-casa`, key `ROUTES.aCasa`, imports `components/sections/casa/`, o bairro **Casa Forte** (slug `casa-forte`) e "casa" quando = lar do paciente (ex.: "conforto de casa").
+3. **"Método V" → "MEP" (Mapeamento Emocional Profundo).** URL `/metodo-v` → **`/mep`** (pasta `app/(marketing)/mep/`). `ROUTES.metodoV` mantém o nome da key, mas `value = '/mep'`. **Método C (Camila) não foi renomeado.**
+4. **Travessões (—) banidos do site** (davam "cara de IA"): use vírgula (ou `·` em títulos de página). Não usar `—` em copy.
+5. **WhatsApp por pessoa:** `SITE.whatsapp` = `5581997671049` (Camila, padrão/home) e `SITE.whatsappVanessa` = `5581999022649`. `whatsappNumberForPath()` em `lib/whatsapp.ts` escolhe Vanessa nas páginas dela (vanessa, /mep, hipnoterapia), Camila no resto.
+6. **CRP Camila Clemente = 02/19121** (preenchido). CRP da Vanessa ainda é TODO.
+7. **Hipnoterapia:** não usar a palavra "mística" (nem para desmistificar); enquadrar como "com ciência, resultado rápido e eficaz".
+
+---
+
 ## Identidade do projeto
 
 **Cliente:** VCare Essence — clínica boutique de saúde mental
@@ -15,7 +29,7 @@
 
 ## Posicionamento essencial
 
-A VCare Essence reivindica uma categoria nova em Recife: **a Casa Boutique da Mente — a primeira clínica sensorial da cidade**. Não é uma clínica como as outras — o ambiente é parte do tratamento, não cenário. Atende dois polos distintos do mercado premium de saúde mental:
+A VCare Essence reivindica uma categoria nova em Recife: **a Clínica Boutique da Mente, a primeira clínica sensorial da cidade**. Não é uma clínica como as outras: o ambiente é parte do tratamento, não cenário. Atende dois polos distintos do mercado premium de saúde mental:
 
 1. **Vanessa Albuquerque** — hipnoterapeuta, 14 anos de prática. Atende empresários(as) 30-55 anos com **trava emocional**. Método autoral usando hipnoterapia clínica. Encontros estruturados, ticket alto, conversão presencial 60-80%. **A hipnoterapia É o método dela** — não é serviço à parte.
 
@@ -46,8 +60,8 @@ Tudo que importa começa por dentro: a calma, o foco, a alegria, a escolha. E qu
 ## As sete verticais de oferta
 
 **Métodos autorais (premium):**
-1. **Método [Vanessa]** — hipnoterapia para destravar empresários. Página dedicada robusta.
-2. **Método [Camila]** — programa estruturado para adolescentes (rendimento + vestibular + suporte + família). Página dedicada robusta.
+1. **MEP — Mapeamento Emocional Profundo** (Vanessa): hipnoterapia para destravar empresários. Rota `/mep`. Página dedicada robusta.
+2. **Método C** (Camila): programa estruturado para adolescentes (rendimento + vestibular + suporte + família). Rota `/metodo-c`. Página dedicada robusta.
 
 **Verticais clínicas:**
 3. **Psicoterapia tradicional** — Camila e convidados, adolescentes e adultos
@@ -83,12 +97,12 @@ Toda decisão de UX/copy deve respeitar essa distinção.
 - **Acolhedora** sem ser piegas: "Você não precisa começar com respostas."
 - **Técnica** sem ser fria: "Trabalhamos com TCC, AC, hipnoterapia clínica, sistêmica."
 - **Anti-moralista**: "Trava, não preguiça." "Falta de motivação, não preguiça."
-- **Direta**: "Não trato sintomas. Vou à raiz."
+- **Direta**: "Acesso a raiz e destravo o que te impede de avançar."
 - **Confiante** sem arrogância: "Encontros, não anos de terapia."
 - **Sensorial**: "Luz baixa, silêncio, tempo. A sessão começa antes da consulta."
 - **Discreta**: "O que se fala aqui, fica aqui."
 
-**Evitar absolutamente:** emojis em copy institucional, exclamações, jargão de auto-ajuda, depoimentos em primeiro plano com foto, "promoções", linguagem hospitalar fria.
+**Evitar absolutamente:** travessões (—) na copy (usar vírgula; dão "cara de IA"), a palavra "mística", emojis em copy institucional, exclamações, jargão de auto-ajuda, depoimentos em primeiro plano com foto, "promoções", linguagem hospitalar fria.
 
 ---
 
@@ -102,10 +116,11 @@ Toda decisão de UX/copy deve respeitar essa distinção.
 - `--navy`: `#1F2A44` — uso pontual, títulos institucionais
 - `--gray-text`: `#6B6B6B` — texto secundário
 
-**Tipografia:**
-- Títulos: serifa moderna — **Fraunces** (Google Fonts, self-hosted)
-- Corpo: sans-serif humanista — **Inter** (Google Fonts, self-hosted)
-- Detalhe: itálicos do Fraunces para citações e ênfases
+**Tipografia (atualizada 2026-06-15):**
+- Títulos: **Georgia** (serifa web-safe) — `--font-serif`
+- Corpo: **Arial** (sans web-safe) — `--font-sans`
+- Detalhe: itálicos da Georgia para citações e ênfases
+- Fraunces/Inter foram removidos por decisão do cliente. Não reintroduzir.
 
 **Logo:**
 - Símbolo: flor estilizada com pétalas em traços finos, "coração" formado por linhas que terminam em V (referência sutil ao V da marca e ao Vanessa+Camila)
@@ -124,10 +139,10 @@ Toda decisão de UX/copy deve respeitar essa distinção.
 - **Estilo:** Tailwind CSS v4 com tokens customizados + shadcn/ui (base) + Framer Motion (animações)
 - **CMS:** Sanity (recomendado) — fallback MDX se equipe preferir simplicidade
 - **Imagens:** `next/image` com `sharp` para otimização
-- **Fontes:** self-hosted via `next/font/local` (Fraunces + Inter)
+- **Fontes:** Georgia (títulos) + Arial (corpo), web-safe via stack CSS em `globals.css` (sem `next/font`)
 - **Hospedagem:** Vercel
 - **Analytics:** GA4 + Google Tag Manager + Microsoft Clarity
-- **Forms/WhatsApp:** integração direta + n8n para roteamento opcional
+- **Forms/WhatsApp:** integração direta (número por pessoa via `whatsappNumberForPath()`, ver callout no topo) + n8n para roteamento opcional
 - **Agendamento:** Cal.com (open source, autorrouting) ou Doctoralia API
 
 Detalhes em `01_tech_stack.md`.

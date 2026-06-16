@@ -14,7 +14,7 @@ export interface Bairro {
   distance: string;
   /** Subtítulo do hero */
   intro: string;
-  /** Parágrafos editoriais sobre o bairro e o atendimento — conteúdo único */
+  /** Parágrafos editoriais sobre o bairro e o atendimento, conteúdo único */
   about: string[];
   /** Verticais reforçadas para o perfil do bairro */
   emphasis: BairroEmphasis[];
@@ -29,15 +29,15 @@ export const BAIRROS: Bairro[] = [
     zona: 'Zona Sul',
     distance: 'cerca de 5 a 10 minutos do RioMar Trade Center',
     intro:
-      'Atendimento psicológico e hipnoterapia clínica para quem vive e trabalha em Boa Viagem — a poucos minutos da orla.',
+      'Atendimento psicológico e hipnoterapia clínica para quem vive e trabalha em Boa Viagem, a poucos minutos da orla.',
     about: [
-      'Boa Viagem é o coração da Zona Sul do Recife: orla, avenidas movimentadas e uma concentração expressiva de executivos, empresários e profissionais liberais. É um bairro que vive em ritmo acelerado — e esse ritmo cobra um preço que nem sempre aparece de imediato.',
-      'Para quem mora ou trabalha em Boa Viagem, a VCare Essence fica a poucos minutos: no RioMar Trade Center, no Pina, na divisa entre os dois bairros. A proximidade importa para um público que tem agenda cheia e pouca tolerância a deslocamento — chegar à clínica não deveria ser mais uma fonte de estresse.',
-      'É também em Boa Viagem que encontramos muitos dos perfis para os quais o Método V foi desenhado: pessoas que já conquistaram muito e sentem algo invisível travando o próximo passo. Não é cansaço comum — é uma trava emocional que pede um trabalho diferente do que a terapia semanal genérica oferece.',
+      'Boa Viagem é o coração da Zona Sul do Recife: orla, avenidas movimentadas e uma concentração expressiva de executivos, empresários e profissionais liberais. É um bairro que vive em ritmo acelerado, e esse ritmo cobra um preço que nem sempre aparece de imediato.',
+      'Para quem mora ou trabalha em Boa Viagem, a VCare Essence fica a poucos minutos: no RioMar Trade Center, no Pina, na divisa entre os dois bairros. A proximidade importa para um público que tem agenda cheia e pouca tolerância a deslocamento, chegar à clínica não deveria ser mais uma fonte de estresse.',
+      'É também em Boa Viagem que encontramos muitos dos perfis para os quais o MEP foi desenhado: pessoas que já conquistaram muito e sentem algo invisível travando o próximo passo. Não é cansaço comum, é uma trava emocional que pede um trabalho diferente do que a terapia semanal genérica oferece.',
     ],
     emphasis: [
       {
-        title: 'Método V — destravar empresários',
+        title: 'MEP, destravar empresários',
         href: ROUTES.metodoV,
         reason:
           'Para o perfil executivo de Boa Viagem que sente uma trava emocional impedindo o próximo passo.',
@@ -45,7 +45,7 @@ export const BAIRROS: Bairro[] = [
       {
         title: 'Hipnoterapia clínica',
         href: ROUTES.hipnoterapia,
-        reason: 'Para ansiedade, fobias e hábitos — questões pontuais que pedem método.',
+        reason: 'Para ansiedade, fobias e hábitos, questões pontuais que pedem método.',
       },
       {
         title: 'Psicoterapia',
@@ -62,13 +62,13 @@ export const BAIRROS: Bairro[] = [
     slug: 'pina',
     name: 'Pina',
     zona: 'Zona Sul',
-    distance: 'no próprio bairro — o RioMar Trade Center fica no Pina',
+    distance: 'no próprio bairro, o RioMar Trade Center fica no Pina',
     intro:
       'A VCare Essence fica no Pina, no RioMar Trade Center. Atendimento de saúde mental no seu bairro, sem deslocamento.',
     about: [
-      'O Pina vive um momento de transformação. Antiga vila de pescadores, hoje é um dos bairros que mais se valorizam no Recife — com o complexo RioMar, torres comerciais e residenciais, e uma mistura rara de vida de bairro com infraestrutura premium.',
-      'Para quem mora no Pina, a VCare Essence é, literalmente, o atendimento de saúde mental do bairro. Estamos no RioMar Trade Center, Torre 4 — o que significa que a primeira sessão pode acontecer sem deslocamento, sem trânsito, sem a fricção que muitas vezes adia o cuidado.',
-      'Essa proximidade é parte do conceito da casa. Acreditamos que o ambiente é parte do tratamento, e que cuidar começa antes da primeira palavra — desde a chegada tranquila ao espaço. Estar no seu bairro torna esse começo ainda mais leve.',
+      'O Pina vive um momento de transformação. Antiga vila de pescadores, hoje é um dos bairros que mais se valorizam no Recife, com o complexo RioMar, torres comerciais e residenciais, e uma mistura rara de vida de bairro com infraestrutura premium.',
+      'Para quem mora no Pina, a VCare Essence é, literalmente, o atendimento de saúde mental do bairro. Estamos no RioMar Trade Center, Torre 4, o que significa que a primeira sessão pode acontecer sem deslocamento, sem trânsito, sem a fricção que muitas vezes adia o cuidado.',
+      'Essa proximidade é parte do conceito da clínica. Acreditamos que o ambiente é parte do tratamento, e que cuidar começa antes da primeira palavra, desde a chegada tranquila ao espaço. Estar no seu bairro torna esse começo ainda mais leve.',
     ],
     emphasis: [
       {
@@ -79,12 +79,12 @@ export const BAIRROS: Bairro[] = [
       {
         title: 'Atendimento online',
         href: ROUTES.atendimentoOnline,
-        reason: 'Mesmo perto, há quem prefira o conforto de casa — também oferecemos online.',
+        reason: 'Mesmo perto, há quem prefira o conforto de casa, também oferecemos online.',
       },
       {
         title: 'Hipnoterapia clínica',
         href: ROUTES.hipnoterapia,
-        reason: 'Para questões pontuais, com método e sem mística.',
+        reason: 'Para questões pontuais, com ciência, resultado rápido e eficaz.',
       },
     ],
     howToArrive: [
@@ -98,22 +98,22 @@ export const BAIRROS: Bairro[] = [
     zona: 'Zona Sul',
     distance: 'cerca de 10 minutos do RioMar Trade Center',
     intro:
-      'Atendimento para famílias de Setúbal — teste vocacional, programa para adolescentes e orientação familiar.',
+      'Atendimento para famílias de Setúbal, teste vocacional, programa para adolescentes e orientação familiar.',
     about: [
-      'Setúbal é uma das áreas mais residenciais e familiares da Zona Sul, na porção sul de Boa Viagem. É um bairro de famílias estabelecidas, com forte presença de adolescentes em fase escolar e pré-vestibular — exatamente o público para o qual o Método C foi construído.',
-      'Para os pais de Setúbal que percebem que o filho era bom aluno e agora não consegue mais estudar, ou que a ansiedade pré-prova virou paralisia, a VCare Essence oferece um programa estruturado — não tutoria, não coaching, mas acompanhamento psicológico que envolve o adolescente e a família.',
-      'A poucos minutos do bairro, no RioMar Trade Center, o atendimento combina proximidade com um ambiente projetado para acolher conversas difíceis — sobre escolhas, rendimento e o emocional de quem está crescendo.',
+      'Setúbal é uma das áreas mais residenciais e familiares da Zona Sul, na porção sul de Boa Viagem. É um bairro de famílias estabelecidas, com forte presença de adolescentes em fase escolar e pré-vestibular, exatamente o público para o qual o Método C foi construído.',
+      'Para os pais de Setúbal que percebem que o filho era bom aluno e agora não consegue mais estudar, ou que a ansiedade pré-prova virou paralisia, a VCare Essence oferece um programa estruturado, não tutoria, não coaching, mas acompanhamento psicológico que envolve o adolescente e a família.',
+      'A poucos minutos do bairro, no RioMar Trade Center, o atendimento combina proximidade com um ambiente projetado para acolher conversas difíceis, sobre escolhas, rendimento e o emocional de quem está crescendo.',
     ],
     emphasis: [
       {
-        title: 'Método C — programa para adolescentes',
+        title: 'Método C, programa para adolescentes',
         href: ROUTES.metodoC,
         reason: 'Para famílias com adolescentes em pré-vestibular e queda de rendimento.',
       },
       {
         title: 'Teste vocacional',
         href: ROUTES.testeVocacional,
-        reason: 'Apoio clínico na escolha de carreira — para ENEM e vestibular.',
+        reason: 'Apoio clínico na escolha de carreira, para ENEM e vestibular.',
       },
       {
         title: 'Orientação familiar',
@@ -132,15 +132,15 @@ export const BAIRROS: Bairro[] = [
     zona: 'Zona Norte',
     distance: 'cerca de 20 a 25 minutos do RioMar Trade Center',
     intro:
-      'Atendimento para famílias de Casa Forte — programa para adolescentes, teste vocacional e orientação familiar, presencial ou online.',
+      'Atendimento para famílias de Casa Forte, programa para adolescentes, teste vocacional e orientação familiar, presencial ou online.',
     about: [
-      'Casa Forte é um dos bairros mais tradicionais da Zona Norte do Recife: arborizado, residencial, marcado por famílias estabelecidas e por uma vida de bairro que resistiu ao tempo. É um lugar de raízes — e de adolescentes que crescem sob expectativas que nem sempre conseguem nomear.',
+      'Casa Forte é um dos bairros mais tradicionais da Zona Norte do Recife: arborizado, residencial, marcado por famílias estabelecidas e por uma vida de bairro que resistiu ao tempo. É um lugar de raízes, e de adolescentes que crescem sob expectativas que nem sempre conseguem nomear.',
       'Para as famílias de Casa Forte, a VCare Essence oferece tanto o atendimento presencial no Pina quanto a opção online, que elimina o deslocamento entre zonas da cidade sem perder profundidade clínica. Para muitos pais da Zona Norte, essa flexibilidade é o que torna o cuidado viável na rotina.',
       'O Método C, o teste vocacional e a orientação familiar são especialmente relevantes para o perfil do bairro: famílias que querem apoiar o filho na travessia da adolescência e da escolha de carreira, com lastro clínico e não com fórmulas prontas.',
     ],
     emphasis: [
       {
-        title: 'Método C — programa para adolescentes',
+        title: 'Método C, programa para adolescentes',
         href: ROUTES.metodoC,
         reason: 'Para adolescentes de Casa Forte em fase de vestibular e organização emocional.',
       },
@@ -166,11 +166,11 @@ export const BAIRROS: Bairro[] = [
     zona: 'Zona Norte',
     distance: 'cerca de 15 a 20 minutos do RioMar Trade Center',
     intro:
-      'Psicoterapia e orientação familiar para quem vive no Espinheiro — presencial no Pina ou online.',
+      'Psicoterapia e orientação familiar para quem vive no Espinheiro, presencial no Pina ou online.',
     about: [
-      'O Espinheiro é um bairro residencial tradicional da área central-norte do Recife, vizinho às Graças e ao Aflitos. Tem perfil de classe média e média-alta consolidada, com moradores que valorizam discrição e qualidade — o tipo de público que a VCare Essence atende.',
+      'O Espinheiro é um bairro residencial tradicional da área central-norte do Recife, vizinho às Graças e ao Aflitos. Tem perfil de classe média e média-alta consolidada, com moradores que valorizam discrição e qualidade, o tipo de público que a VCare Essence atende.',
       'Para os moradores do Espinheiro, a clínica oferece psicoterapia com abordagem científica e orientação familiar com base na Terapêutica Sistêmica. São verticais que respondem às demandas mais comuns de quem vive em um bairro de famílias estabelecidas: processos pessoais, transições de vida e dinâmicas familiares que pedem mediação.',
-      'O atendimento acontece no Pina, no RioMar Trade Center, ou online — uma alternativa prática para quem prefere não atravessar a cidade. A escolha do formato é parte da primeira conversa.',
+      'O atendimento acontece no Pina, no RioMar Trade Center, ou online, uma alternativa prática para quem prefere não atravessar a cidade. A escolha do formato é parte da primeira conversa.',
     ],
     emphasis: [
       {
@@ -200,15 +200,15 @@ export const BAIRROS: Bairro[] = [
     zona: 'Zona Norte',
     distance: 'cerca de 15 a 20 minutos do RioMar Trade Center',
     intro:
-      'Atendimento de saúde mental para quem vive nas Graças — psicoterapia, hipnoterapia e o Método V.',
+      'Atendimento de saúde mental para quem vive nas Graças, psicoterapia, hipnoterapia e o MEP.',
     about: [
       'As Graças é um dos bairros mais valorizados da área central do Recife: tradicional, arborizado e com forte presença de profissionais liberais, médicos e empresários. É um bairro de perfil exigente, que valoriza referência e discrição na hora de escolher um cuidado.',
-      'Para os moradores das Graças, a VCare Essence oferece desde psicoterapia e hipnoterapia clínica até o Método V — o programa autoral de Vanessa Albuquerque para empresários e empresárias com uma trava emocional. O perfil profissional do bairro frequentemente encontra ressonância nesse trabalho.',
+      'Para os moradores das Graças, a VCare Essence oferece desde psicoterapia e hipnoterapia clínica até o MEP, o programa autoral de Vanessa Albuquerque para empresários e empresárias com uma trava emocional. O perfil profissional do bairro frequentemente encontra ressonância nesse trabalho.',
       'O atendimento é presencial no Pina, no RioMar Trade Center, ou online. Para um público que preza por tempo e discrição, as duas opções foram pensadas para reduzir fricção sem comprometer a profundidade do cuidado.',
     ],
     emphasis: [
       {
-        title: 'Método V — destravar empresários',
+        title: 'MEP, destravar empresários',
         href: ROUTES.metodoV,
         reason: 'Para o perfil profissional e empresarial das Graças.',
       },
@@ -220,7 +220,7 @@ export const BAIRROS: Bairro[] = [
       {
         title: 'Hipnoterapia clínica',
         href: ROUTES.hipnoterapia,
-        reason: 'Para questões pontuais — ansiedade, fobias, hábitos.',
+        reason: 'Para questões pontuais, ansiedade, fobias, hábitos.',
       },
     ],
     howToArrive: [

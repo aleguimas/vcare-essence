@@ -8,7 +8,7 @@ import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { trackEvent } from '@/lib/analytics';
 import { ROUTES } from '@/lib/routes';
 
-// Páginas onde o botão NÃO aparece — os métodos autorais não convertem
+// Páginas onde o botão NÃO aparece, os métodos autorais não convertem
 // por WhatsApp e o botão poluiria a jornada de qualificação.
 const HIDDEN_PATHS = [ROUTES.metodoV, ROUTES.metodoC];
 
@@ -16,7 +16,7 @@ export function WhatsAppFloat() {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
 
-  const link = buildWhatsAppLink();
+  const link = buildWhatsAppLink(undefined, pathname);
   const isHidden = HIDDEN_PATHS.some((p) => pathname.startsWith(p));
 
   useEffect(() => {

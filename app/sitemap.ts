@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/a-casa/endereco',
     '/a-casa/tour',
     '/a-casa/curadoria',
-    '/metodo-v',
+    '/mep',
     '/metodo-c',
     '/cuidados',
     '/cuidados/psicoterapia',

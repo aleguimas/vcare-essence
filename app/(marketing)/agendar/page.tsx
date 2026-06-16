@@ -10,7 +10,7 @@ import { ROUTES, SITE } from '@/lib/routes';
 export const metadata: Metadata = {
   title: 'Agendar · VCare Essence',
   description:
-    'Agende seu atendimento na VCare Essence — presencial no RioMar Trade Center ou online. A primeira conversa é uma escuta, não compromisso.',
+    'Agende seu atendimento na VCare Essence, presencial no RioMar Trade Center ou online. A primeira conversa é uma escuta, não compromisso.',
   alternates: { canonical: ROUTES.agendar },
 };
 
@@ -21,7 +21,7 @@ const FAQ = [
   },
   {
     q: 'Preciso de indicação médica?',
-    a: 'Não. Você pode agendar diretamente, sem encaminhamento. Em alguns casos clínicos específicos, podemos sugerir acompanhamento médico em paralelo — mas isso é avaliado durante o processo.',
+    a: 'Não. Você pode agendar diretamente, sem encaminhamento. Em alguns casos clínicos específicos, podemos sugerir acompanhamento médico em paralelo, mas isso é avaliado durante o processo.',
   },
   {
     q: 'Como funciona o pagamento?',
@@ -49,7 +49,7 @@ export default function AgendarPage() {
           </Heading>
           <p className="mt-6 text-lead text-ink/70 max-w-prose">
             Atendemos presencialmente no RioMar Trade Center e online. A primeira conversa é uma
-            escuta — não compromisso.
+            escuta, não compromisso.
           </p>
         </Container>
       </Section>
@@ -78,7 +78,7 @@ export default function AgendarPage() {
                 <br />
                 {SITE.address.complement}
                 <br />
-                {SITE.address.neighborhood}, {SITE.address.city} — {SITE.address.state}
+                {SITE.address.neighborhood}, {SITE.address.city}, {SITE.address.state}
               </dd>
             </div>
             <div>
@@ -87,7 +87,7 @@ export default function AgendarPage() {
               </dt>
               {/* TODO: confirmar horários com as sócias */}
               <dd className="mt-2 text-body text-ink/80 font-sans leading-relaxed">
-                Segunda a sexta — a confirmar
+                Segunda a sexta, a confirmar
                 <br />
                 Atendimento por agendamento
               </dd>
@@ -105,7 +105,7 @@ export default function AgendarPage() {
                 Convênio
               </dt>
               <dd className="mt-2 text-body text-ink/80 font-sans leading-relaxed">
-                Não atendemos por convênio — apenas particular.
+                Não atendemos por convênio, apenas particular.
               </dd>
             </div>
           </dl>
@@ -137,7 +137,7 @@ export default function AgendarPage() {
             </Link>{' '}
             ou explore{' '}
             <Link href={ROUTES.aCasa} className="text-bronze underline underline-offset-4 hover:text-bronze-400 transition-colors">
-              a casa
+              a clínica
             </Link>
             .
           </p>

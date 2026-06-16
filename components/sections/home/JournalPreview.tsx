@@ -9,14 +9,14 @@ import { Heading } from '@/components/editorial/Heading';
 import { ROUTES } from '@/lib/routes';
 import { fadeInUp, stagger, viewportConfig } from '@/lib/motion';
 
-// Mock data — substituído por dados do Sanity CMS no Sprint 08
+// Mock data, substituído por dados do Sanity CMS no Sprint 08
 const POSTS = [
   {
     slug: 'quando-a-paralisia-nao-e-preguica',
     category: 'Trava & Empresariedade',
-    title: 'Quando a paralisia não é preguiça — é trava emocional',
+    title: 'Quando a paralisia não é preguiça, é trava emocional',
     excerpt:
-      'Empresários bem-sucedidos chegam a um ponto em que parar não é opção — e seguir, também não. O que está acontecendo por baixo disso.',
+      'Empresários bem-sucedidos chegam a um ponto em que parar não é opção, e seguir, também não. O que está acontecendo por baixo disso.',
     date: '2026-05-10',
     readTime: '7 min',
   },
@@ -86,7 +86,7 @@ export function JournalPreview() {
                 href={`${ROUTES.diario}/${post.slug}`}
                 className="group block h-full rounded-2xl border border-line bg-cream-50 overflow-hidden hover:border-bronze/30 hover:shadow-md transition-all duration-400 ease-soft"
               >
-                {/* Thumbnail placeholder — substituído por imagem real no Sprint 08 */}
+                {/* Thumbnail placeholder, substituído por imagem real no Sprint 08 */}
                 <div className="aspect-video bg-sand w-full" />
 
                 <div className="p-6">

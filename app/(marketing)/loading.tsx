@@ -1,7 +1,7 @@
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 
-// Skeleton sutil em sand — exibido durante navegação entre páginas do site.
+// Skeleton sutil em sand, exibido durante navegação entre páginas do site.
 export default function Loading() {
   return (
     <Section tone="cream" size="lg" aria-busy="true" aria-label="Carregando">

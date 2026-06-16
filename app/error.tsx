@@ -28,7 +28,7 @@ export default function Error({
           Tropeçamos em uma pedra no caminho.
         </Heading>
         <p className="mt-4 text-lead text-muted max-w-prose mx-auto">
-          Algo não funcionou como deveria. Você pode tentar novamente — ou falar com a gente pelo
+          Algo não funcionou como deveria. Você pode tentar novamente, ou falar com a gente pelo
           WhatsApp se o problema continuar.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -36,7 +36,7 @@ export default function Error({
             Tentar novamente
           </Button>
           <Button asChild size="lg" variant="secondary">
-            <Link href={ROUTES.home}>Voltar à casa</Link>
+            <Link href={ROUTES.home}>Voltar à clínica</Link>
           </Button>
         </div>
       </Container>

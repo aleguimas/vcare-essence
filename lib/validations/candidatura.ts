@@ -11,7 +11,7 @@ export const candidaturaSchema = z.object({
   linkPerfil: z.string().url('URL inválida').optional().or(z.literal('')),
   motivacao: z
     .string()
-    .min(50, 'Conte um pouco mais — mínimo 50 caracteres')
+    .min(50, 'Conte um pouco mais, mínimo 50 caracteres')
     .max(1000, 'Máximo 1000 caracteres'),
   consentimento: z.literal(true, { message: 'Você precisa aceitar os termos para enviar' }),
 });

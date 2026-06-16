@@ -9,9 +9,9 @@ import { ROUTES } from '@/lib/routes';
 import { Video, Mic, BookOpen, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Sala para Gravações — Sou Profissional · VCare Essence',
+  title: 'Sala para Gravações · Sou Profissional · VCare Essence',
   description:
-    'Cenário com atmosfera e endereço premium para criadores de conteúdo de saúde e bem-estar. Sem equipamento técnico — traga seu kit. RioMar Trade Center, Recife.',
+    'Cenário com atmosfera e endereço premium para criadores de conteúdo de saúde e bem-estar. Sem equipamento técnico, traga seu kit. RioMar Trade Center, Recife.',
   alternates: { canonical: ROUTES.salaGravacoes },
 };
 
@@ -52,18 +52,18 @@ export default function SalaGracoesPage() {
             Cenário, identidade, endereço premium. Você traz seu equipamento.
           </p>
 
-          {/* Grade de fotos placeholder — substituir com fotos reais do Sprint 06 */}
+          {/* Grade de fotos placeholder, substituir com fotos reais do Sprint 06 */}
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
             {Array.from({ length: 4 }).map((_, i) => (
               <div key={i} className={`bg-sand rounded-xl ${i === 0 ? 'col-span-2 aspect-video' : 'aspect-square'} flex items-end p-3`}>
-                <p className="text-small text-muted/40 font-sans italic">Foto — Sprint 06</p>
+                <p className="text-small text-muted/40 font-sans italic">Foto, Sprint 06</p>
               </div>
             ))}
           </div>
         </Container>
       </Section>
 
-      {/* Transparência crítica — primeiro bloco */}
+      {/* Transparência crítica, primeiro bloco */}
       <Section tone="sand" size="sm">
         <Container narrow>
           <Callout title="Importante antes de reservar">
@@ -156,12 +156,12 @@ export default function SalaGracoesPage() {
           <Eyebrow>Perguntas frequentes</Eyebrow>
           <div className="mt-8 space-y-0">
             {[
-              { q: 'A sala tem ar-condicionado?', a: 'Sim. Temperatura controlada é parte da experiência sensorial da casa.' },
+              { q: 'A sala tem ar-condicionado?', a: 'Sim. Temperatura controlada é parte da experiência sensorial da clínica.' },
               { q: 'Quantas pessoas cabem confortavelmente?', a: 'A sala foi projetada para 2 a 4 pessoas. Para grupos maiores, consulte disponibilidade de configuração.' },
-              { q: 'Posso visitar antes de reservar?', a: 'Sim. Agende uma visita de reconhecimento — gratuita, sem compromisso.' },
+              { q: 'Posso visitar antes de reservar?', a: 'Sim. Agende uma visita de reconhecimento, gratuita, sem compromisso.' },
               { q: 'E se eu precisar cancelar?', a: 'Cancelamentos com mais de 24h de antecedência não têm custo. Cancelamentos de última hora seguem política informada no momento da reserva.' },
               { q: 'Vocês podem indicar fotógrafos ou técnicos de som locais?', a: 'Temos parceiros de confiança em Recife. Na confirmação da reserva, compartilhamos referências quando solicitado.' },
-              { q: 'Vocês trabalham com produtores externos?', a: 'Sim, desde que o uso seja compatível com os termos da reserva e os valores da casa.' },
+              { q: 'Vocês trabalham com produtores externos?', a: 'Sim, desde que o uso seja compatível com os termos da reserva e os valores da clínica.' },
             ].map((item) => (
               <div key={item.q} className="py-6 border-b border-line last:border-0">
                 <p className="font-sans font-medium text-moss">{item.q}</p>

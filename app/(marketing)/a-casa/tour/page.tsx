@@ -9,9 +9,9 @@ import { Button } from '@/components/ui/button';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
-  title: 'Tour pela Casa · A Casa · VCare Essence',
+  title: 'Tour pela Clínica · A Clínica · VCare Essence',
   description:
-    'Galeria visual do espaço da VCare Essence — recepção, salas de atendimento e detalhes sensoriais. A primeira clínica sensorial de Recife.',
+    'Galeria visual do espaço da VCare Essence, recepção, salas de atendimento e detalhes sensoriais. A primeira clínica sensorial de Recife.',
   alternates: { canonical: ROUTES.tour },
 };
 
@@ -63,9 +63,9 @@ export default function TourPage() {
     <>
       <Section tone="cream" size="md" className="border-b border-line">
         <Container>
-          <Eyebrow>A Casa · Tour</Eyebrow>
+          <Eyebrow>A Clínica · Tour</Eyebrow>
           <Heading as="h1" size="display-md" className="mt-5 max-w-prose-wide">
-            A casa em detalhes.
+            A clínica em detalhes.
           </Heading>
           <p className="mt-6 text-lead text-ink/70 max-w-prose">
             Cada detalhe foi escolhido com intenção. A galeria abaixo mostra o que as palavras
@@ -99,7 +99,7 @@ export default function TourPage() {
               A melhor forma de conhecer a VCare Essence é estar aqui.
             </Heading>
             <p className="mt-4 text-lead text-cream/70">
-              O espaço não se descreve em fotos — se experimenta. Agende uma visita ou uma
+              O espaço não se descreve em fotos, se experimenta. Agende uma visita ou uma
               primeira conversa.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">

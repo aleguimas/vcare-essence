@@ -7,7 +7,7 @@ import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { fadeInUp, stagger, viewportConfig } from '@/lib/motion';
 
-// Depoimentos anonimizados — conforme 04_content_inventory.md
+// Depoimentos anonimizados, conforme 04_content_inventory.md
 // Sem fotos, sem nomes completos, tom de carta literária
 const TESTIMONIALS = [
   {
@@ -19,7 +19,7 @@ const TESTIMONIALS = [
     author: 'Empresário, 48 anos · Recife',
   },
   {
-    text: 'Meu filho voltou a estudar sem eu precisar cobrar. Parece simples assim. Mas foi meses de processo, de escuta, de método. Não foi mágica — foi trabalho de verdade.',
+    text: 'Meu filho voltou a estudar sem eu precisar cobrar. Parece simples assim. Mas foi meses de processo, de escuta, de método. Não foi mágica, foi trabalho de verdade.',
     author: 'Mãe, 44 anos · Casa Forte',
   },
 ] as const;

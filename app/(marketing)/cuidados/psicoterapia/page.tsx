@@ -56,22 +56,22 @@ const FAQ = [
   {
     question: 'Qual a diferença entre psicoterapia e coaching?',
     answer:
-      'Psicoterapia é realizada por psicólogo(a) com formação clínica regulamentada pelo CFP. Trabalha aspectos emocionais, comportamentais e relacionais com base em método científico. Coaching é uma prática de desenvolvimento pessoal sem regulamentação clínica. Para questões de saúde mental — ansiedade, comportamento, processo emocional — a psicoterapia é o caminho adequado.',
+      'Psicoterapia é realizada por psicólogo(a) com formação clínica regulamentada pelo CFP. Trabalha aspectos emocionais, comportamentais e relacionais com base em método científico. Coaching é uma prática de desenvolvimento pessoal sem regulamentação clínica. Para questões de saúde mental, ansiedade, comportamento, processo emocional, a psicoterapia é o caminho adequado.',
   },
   {
     question: 'Quais abordagens são utilizadas?',
     answer:
-      'Camila Clemente trabalha com Análise do Comportamento (AC) e Terapia Cognitivo-Comportamental (TCC), com especialização em Psicomotricidade Relacional. Para adolescentes, o atendimento pode integrar elementos do Método C quando há necessidade de estruturação mais ampla. Profissionais convidados da casa trazem outras abordagens — a definir conforme disponibilidade.',
+      'Camila Clemente trabalha com Análise do Comportamento (AC) e Terapia Cognitivo-Comportamental (TCC), com especialização em Psicomotricidade Relacional. Para adolescentes, o atendimento pode integrar elementos do Método C quando há necessidade de estruturação mais ampla. Profissionais convidados da clínica trazem outras abordagens, a definir conforme disponibilidade.',
   },
   {
     question: 'Atende adolescentes e adultos?',
     answer:
-      'Sim. Camila atende adolescentes (especialmente em fases de transição — pré-vestibular, mudanças de comportamento) e adultos. Para adolescentes que precisam de suporte mais estruturado e acompanhamento familiar, o Método C pode ser mais indicado — o que é avaliado na primeira sessão.',
+      'Sim. Camila atende adolescentes (especialmente em fases de transição, pré-vestibular, mudanças de comportamento) e adultos. Para adolescentes que precisam de suporte mais estruturado e acompanhamento familiar, o Método C pode ser mais indicado, o que é avaliado na primeira sessão.',
   },
   {
     question: 'Funciona online com a mesma qualidade?',
     answer:
-      'Sim. A psicoterapia online funciona bem para a maioria dos casos quando há espaço adequado e boa conexão. Alguns casos clínicos pedem presencial — isso é avaliado individualmente. A plataforma utilizada segue protocolos de segurança e LGPD.',
+      'Sim. A psicoterapia online funciona bem para a maioria dos casos quando há espaço adequado e boa conexão. Alguns casos clínicos pedem presencial, isso é avaliado individualmente. A plataforma utilizada segue protocolos de segurança e LGPD.',
   },
   {
     question: 'Como é a primeira sessão?',
@@ -81,7 +81,7 @@ const FAQ = [
   {
     question: 'Quanto custa?',
     answer:
-      'O valor das sessões não está publicado — varia conforme formato (individual, familiar) e periodicidade. Entre em contato para informações sobre investimento.',
+      'O valor das sessões não está publicado, varia conforme formato (individual, familiar) e periodicidade. Entre em contato para informações sobre investimento.',
   },
 ];
 
@@ -92,7 +92,7 @@ export default function PsicoterapiaPage() {
       <VerticalHero
         eyebrow="Cuidados · Psicoterapia"
         headline="Psicoterapia, no ritmo que seu processo precisa."
-        subtitle="Atendimento clínico individual baseado em evidências. Para quem quer entender o que está acontecendo por dentro — e encontrar um caminho para atravessar."
+        subtitle="Atendimento clínico individual baseado em evidências. Para quem quer entender o que está acontecendo por dentro, e encontrar um caminho para atravessar."
       />
 
       <VerticalDefinition eyebrow="O que é" headline="Psicoterapia não é fraqueza. É método.">
@@ -100,7 +100,7 @@ export default function PsicoterapiaPage() {
           Psicoterapia é o trabalho clínico com um(a) psicólogo(a) para entender e transformar
           padrões de comportamento, pensamento e emoção que estão causando sofrimento ou
           impedindo o desenvolvimento. É diferente de desabafar com um amigo, de autoajuda, de
-          coaching — e de tomar medicação.
+          coaching, e de tomar medicação.
         </p>
         <p>
           É um processo estruturado, com método, baseado em abordagens reconhecidas pela
@@ -116,7 +116,7 @@ export default function PsicoterapiaPage() {
 
       <VerticalForWho
         headline="Para quem a psicoterapia é indicada"
-        intro="Não existe perfil único. Psicoterapia é para quem percebe que algo interno está travando — seja em relações, no trabalho, no corpo ou na forma como enfrenta decisões."
+        intro="Não existe perfil único. Psicoterapia é para quem percebe que algo interno está travando, seja em relações, no trabalho, no corpo ou na forma como enfrenta decisões."
         indications={[
           'Ansiedade persistente que interfere no dia a dia',
           'Dificuldade para manter relações ou comunicar-se de forma saudável',
@@ -140,19 +140,15 @@ export default function PsicoterapiaPage() {
             {[
               {
                 name: 'Análise do Comportamento (AC)',
-                desc: 'Abordagem científica que investiga a relação entre comportamento, ambiente e história de vida. Trabalha padrões comportamentais com base em dados — não em interpretações. Camila Clemente é especialista nessa abordagem.',
+                desc: 'Abordagem científica que investiga a relação entre comportamento, ambiente e história de vida. Trabalha padrões comportamentais com base em dados, não em interpretações. Camila Clemente é especialista nessa abordagem.',
               },
               {
                 name: 'Terapia Cognitivo-Comportamental (TCC)',
                 desc: 'Uma das abordagens mais estudadas na literatura científica. Trabalha a relação entre pensamentos, emoções e comportamentos. Eficaz para ansiedade, depressão, fobias e outros quadros.',
               },
               {
-                name: 'Psicomotricidade Relacional',
-                desc: 'Abordagem que integra corpo e movimento no processo terapêutico — especialmente indicada para crianças e adolescentes. Camila tem formação específica nessa área.',
-              },
-              {
                 name: 'Profissionais convidados',
-                desc: 'A casa recebe psicólogos(as) com outras abordagens sob curadoria. A diversidade metodológica amplia as possibilidades de atendimento.',
+                desc: 'A clínica recebe psicólogos(as) com outras abordagens sob curadoria. A diversidade metodológica amplia as possibilidades de atendimento.',
               },
             ].map((a) => (
               <div key={a.name} className="border-b border-line pb-6 last:border-0">
@@ -166,7 +162,7 @@ export default function PsicoterapiaPage() {
 
       <VerticalHowItWorks items={HOW_ITEMS} tone="sand">
         <p>
-          A psicoterapia é um processo, não um evento. A frequência mais comum é semanal — o
+          A psicoterapia é um processo, não um evento. A frequência mais comum é semanal, o
           que dá continuidade ao trabalho entre as sessões. Para alguns casos, quinzenal é
           adequado. Isso é definido na primeira sessão.
         </p>
@@ -179,7 +175,7 @@ export default function PsicoterapiaPage() {
 
       <VerticalProfessionals
         professionals={PROFESSIONALS}
-        note="Profissionais convidados são incorporados à casa sob curadoria. Consulte disponibilidade."
+        note="Profissionais convidados são incorporados à clínica sob curadoria. Consulte disponibilidade."
         tone="cream"
       />
 

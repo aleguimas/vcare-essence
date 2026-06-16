@@ -12,7 +12,7 @@ import { fadeInUp, fadeIn, stagger, viewportConfig } from '@/lib/motion';
 interface MethodProfessionalProps {
   name: string;
   role: string;
-  crp: string; // ex: "CRP XX/XXXXX" — TODO: aguardar dados das sócias
+  crp: string; // ex: "CRP XX/XXXXX", TODO: aguardar dados das sócias
   bio: string[];
   signature: string;
   profileHref: string;
@@ -53,7 +53,7 @@ export function MethodProfessional({
             ) : (
               <div className="absolute inset-0 flex items-end p-6">
                 <p className="text-small text-muted/50 font-sans italic">
-                  Ensaio editorial — em produção
+                  Ensaio editorial, em produção
                 </p>
               </div>
             )}

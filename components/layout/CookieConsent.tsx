@@ -75,7 +75,7 @@ export function CookieConsent() {
         >
           <p className="text-body text-ink/80 font-sans leading-relaxed">
             Usamos cookies para entender como o site é usado e melhorar sua experiência. Você pode
-            aceitar ou recusar — dados de saúde nunca são coletados por aqui. Saiba mais na{' '}
+            aceitar ou recusar, dados de saúde nunca são coletados por aqui. Saiba mais na{' '}
             <Link
               href={ROUTES.politicaPrivacidade}
               className="text-bronze-400 underline underline-offset-2 hover:text-bronze-500 transition-colors"

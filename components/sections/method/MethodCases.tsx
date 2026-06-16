@@ -37,8 +37,8 @@ export function MethodCases({ cases }: MethodCasesProps) {
             </Heading>
           </motion.div>
           <motion.p variants={fadeInUp} className="mt-4 text-body text-muted">
-            Nomes, profissões e detalhes identificáveis foram alterados. O essencial — o que
-            estava prendendo e o que se moveu — permanece intacto.
+            Nomes, profissões e detalhes identificáveis foram alterados. O essencial, o que
+            estava prendendo e o que se moveu, permanece intacto.
           </motion.p>
         </motion.div>
 

@@ -1,16 +1,19 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { Button } from '@/components/ui/button';
-import { ROUTES, SITE } from '@/lib/routes';
+import { ROUTES } from '@/lib/routes';
+import { whatsappNumberForPath } from '@/lib/whatsapp';
 import { fadeInUp, stagger, viewportConfig } from '@/lib/motion';
 
 export function FinalCTA() {
+  const whatsapp = whatsappNumberForPath(usePathname());
   return (
     <Section
       tone="moss"
@@ -42,10 +45,10 @@ export function FinalCTA() {
               <Link href={ROUTES.agendar}>Agendar</Link>
             </Button>
 
-            {SITE.whatsapp ? (
+            {whatsapp ? (
               <Button asChild size="lg" variant="ghost">
                 <a
-                  href={`https://wa.me/${SITE.whatsapp}`}
+                  href={`https://wa.me/${whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -53,8 +56,8 @@ export function FinalCTA() {
                 </a>
               </Button>
             ) : (
-              // TODO: substituir pelo número real — aguardar decisão das sócias
-              <Button size="lg" variant="ghost" disabled aria-label="WhatsApp — número a confirmar">
+              // TODO: substituir pelo número real, aguardar decisão das sócias
+              <Button size="lg" variant="ghost" disabled aria-label="WhatsApp, número a confirmar">
                 Falar pelo WhatsApp
               </Button>
             )}

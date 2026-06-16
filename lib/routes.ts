@@ -5,7 +5,7 @@ export const ROUTES = {
   endereco: '/a-casa/endereco',
   tour: '/a-casa/tour',
   curadoria: '/a-casa/curadoria',
-  metodoV: '/metodo-v', // TODO: aguardar decisão das sócias
+  metodoV: '/mep', // MEP, Mapeamento Emocional Profundo (antes "Método V")
   metodoC: '/metodo-c', // TODO: aguardar decisão das sócias
   cuidados: '/cuidados',
   psicoterapia: '/cuidados/psicoterapia',
@@ -31,7 +31,7 @@ export const SITE = {
   url: 'https://vcareessence.com.br',
   tagline: 'A primeira clínica sensorial de Recife.',
   description:
-    'Casa boutique de saúde mental no RioMar Trade Center. Cuidamos do que ninguém vê: a mente, o emocional, a essência. Atendimento presencial em Recife e online.',
+    'Clínica boutique de saúde mental no RioMar Trade Center. Cuidamos do que ninguém vê: a mente, o emocional, a essência. Atendimento presencial em Recife e online.',
   address: {
     street: 'Av. República do Líbano, 251',
     complement: 'RioMar Trade Center, Torre 4',
@@ -42,7 +42,8 @@ export const SITE = {
     zip: '51110-160', // TODO: verificar CEP exato com as sócias
   },
   phone: '', // TODO: aguardar decisão das sócias
-  whatsapp: '', // TODO: aguardar decisão das sócias (formato 5581XXXXXXXXX)
+  whatsapp: '5581997671049', // Camila Clemente, número padrão (home e geral)
+  whatsappVanessa: '5581999022649', // Vanessa Albuquerque, páginas dela
   instagram: '', // TODO: aguardar decisão das sócias
   email: '', // TODO: aguardar decisão das sócias
   cnpj: '', // TODO: aguardar decisão das sócias
@@ -54,9 +55,9 @@ export const SITE = {
  */
 export const CALCOM_USERNAME = process.env.NEXT_PUBLIC_CALCOM_USERNAME ?? '';
 
-/** calLinks por vertical — usados pelo embed do Cal.com. */
+/** calLinks por vertical, usados pelo embed do Cal.com. */
 export const CAL_LINKS = {
-  metodoV: 'primeiro-encontro-metodo-v',
+  metodoV: 'primeiro-encontro-mep',
   metodoC: 'conversa-inicial-metodo-c',
   psicoterapia: 'psicoterapia-camila',
   hipnoterapia: 'hipnoterapia-vanessa',

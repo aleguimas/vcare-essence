@@ -61,7 +61,7 @@ export function HouseGallery() {
             variants={fadeInUp}
             className="mt-4 font-serif text-h1 text-moss text-balance max-w-prose"
           >
-            Luz, silêncio e detalhe — projetados para o cuidado.
+            Experiência Sensorial, Alto Padrão e Exclusividade.
           </motion.h2>
         </motion.div>
 
@@ -87,7 +87,7 @@ export function HouseGallery() {
               ) : (
                 <div className="absolute inset-0 flex items-end p-4">
                   <p className="text-small text-muted/50 italic font-sans">
-                    Foto — Sprint 06
+                    Foto, Sprint 06
                   </p>
                 </div>
               )}
@@ -112,7 +112,7 @@ export function HouseGallery() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-end p-4">
-                  <p className="text-small text-muted/50 italic font-sans">Foto — Sprint 06</p>
+                  <p className="text-small text-muted/50 italic font-sans">Foto, Sprint 06</p>
                 </div>
               )}
             </div>
@@ -127,7 +127,7 @@ export function HouseGallery() {
           className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
         >
           <p className="text-small text-muted font-sans">
-            RioMar Trade Center, Torre 4 — Pina, Recife. Estacionamento e acessibilidade.
+            RioMar Trade Center, Torre 4, Pina, Recife. Estacionamento e acessibilidade.
           </p>
           <Link
             href={ROUTES.tour}

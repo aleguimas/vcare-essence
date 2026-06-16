@@ -33,7 +33,7 @@ export default function AgendadoPage() {
           </p>
           <div className="space-y-5 text-body text-ink/80 leading-relaxed">
             <p>
-              A primeira conversa é uma escuta. Você não precisa chegar com respostas prontas —
+              A primeira conversa é uma escuta. Você não precisa chegar com respostas prontas,
               chegar já é o primeiro passo.
             </p>
             <p>
@@ -45,7 +45,7 @@ export default function AgendadoPage() {
 
         <div className="mt-12 flex flex-wrap gap-4">
           <Button asChild size="lg">
-            <Link href={ROUTES.aCasa}>Conhecer a casa enquanto isso</Link>
+            <Link href={ROUTES.aCasa}>Conhecer a clínica enquanto isso</Link>
           </Button>
           <Button asChild size="lg" variant="ghost">
             <Link href={ROUTES.home}>Voltar à home</Link>

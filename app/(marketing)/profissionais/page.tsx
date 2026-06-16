@@ -20,20 +20,20 @@ const PROFESSIONALS = [
     title: 'Hipnoterapeuta',
     experience: '14 anos de prática',
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
-    signature: 'Não trato sintomas. Vou à raiz.',
+    signature: 'Acesso a raiz e destravo o que te impede de avançar com Método Exclusivo e resultado imediato.',
     href: ROUTES.vanessa,
     imgSrc: '/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp',
-    imgAlt: 'Vanessa Albuquerque, hipnoterapeuta da VCare Essence — ensaio editorial',
+    imgAlt: 'Vanessa Albuquerque, hipnoterapeuta da VCare Essence, ensaio editorial',
   },
   {
     name: 'Camila Clemente',
     title: 'Psicóloga',
     experience: '10 anos de prática',
     crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
-    signature: 'Trato a falta de resultado como falta de motivação — não como preguiça.',
+    signature: 'Trato a falta de resultado como falta de motivação, não como preguiça.',
     href: ROUTES.camila,
     imgSrc: '/images/profissionais/camila-clemente-vcare-essence-01.webp',
-    imgAlt: 'Camila Clemente, psicóloga da VCare Essence — ensaio editorial',
+    imgAlt: 'Camila Clemente, psicóloga da VCare Essence, ensaio editorial',
   },
 ] as const;
 
@@ -48,7 +48,7 @@ export default function ProfissionaisPage() {
           </Heading>
           <p className="mt-6 text-lead text-ink/70 max-w-prose">
             A VCare Essence não é uma clínica de passagem. Cada profissional foi escolhido pelo
-            que faz, por como faz, e pelo alinhamento com o que a casa representa.
+            que faz, por como faz, e pelo alinhamento com o que a clínica representa.
           </p>
         </Container>
       </Section>
@@ -99,7 +99,7 @@ export default function ProfissionaisPage() {
                 Profissionais convidados em residência.
               </Heading>
               <p className="mt-5 text-body text-ink/70 leading-relaxed">
-                A casa recebe profissionais de saúde mental sob curadoria — não por locação. Cada
+                A clínica recebe profissionais de saúde mental sob curadoria, não por locação. Cada
                 convidado(a) é escolhido(a) pela abordagem, pela ética e pelo alinhamento com o
                 que a VCare Essence representa. Não é qualquer profissional que ocupa esse espaço.
               </p>

@@ -7,11 +7,11 @@ import { MessageCircle, CalendarDays, Mail, Check } from 'lucide-react';
 import { Heading } from '@/components/editorial/Heading';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { buildWhatsAppLink, buildEmailLink } from '@/lib/whatsapp';
-import { buildCalLink, CAL_LINKS } from '@/lib/routes';
+import { buildCalLink, CAL_LINKS, ROUTES } from '@/lib/routes';
 import { trackEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
 
-// Cal.com é pesado — só carrega quando o usuário pede para agendar.
+// Cal.com é pesado, só carrega quando o usuário pede para agendar.
 const CalendarEmbed = dynamic(
   () => import('./CalendarEmbed').then((m) => m.CalendarEmbed),
   {
@@ -42,7 +42,7 @@ interface Vertical {
 const VERTICALS: Vertical[] = [
   {
     id: 'metodo-v',
-    label: 'Método V — destravamento emocional para empresários',
+    label: 'MEP, destravamento emocional para empresários',
     hint: 'Com Vanessa Albuquerque',
     journey: 'A',
     calSlug: CAL_LINKS.metodoV,
@@ -50,7 +50,7 @@ const VERTICALS: Vertical[] = [
   },
   {
     id: 'metodo-c',
-    label: 'Método C — programa para adolescentes',
+    label: 'Método C, programa para adolescentes',
     hint: 'Com Camila Clemente',
     journey: 'A',
     calSlug: CAL_LINKS.metodoC,
@@ -108,9 +108,13 @@ export function Segmentador() {
     trackEvent('segmentador_select', { vertical: vertical.id });
   };
 
-  const whatsappLink = selected ? buildWhatsAppLink(selected.id) : null;
+  // Verticais conduzidas pela Vanessa usam o WhatsApp dela; demais, o da Camila.
+  const isVanessaVertical = selected?.id === 'metodo-v' || selected?.id === 'hipnoterapia';
+  const whatsappLink = selected
+    ? buildWhatsAppLink(selected.id, isVanessaVertical ? ROUTES.vanessa : undefined)
+    : null;
   const emailLink = selected
-    ? buildEmailLink(`Agendamento — ${selected.label}`)
+    ? buildEmailLink(`Agendamento, ${selected.label}`)
     : null;
   const calLink = selected?.calSlug ? buildCalLink(selected.calSlug) : null;
 
@@ -127,7 +131,7 @@ export function Segmentador() {
 
   return (
     <div>
-      {/* Passo 1 — segmentação */}
+      {/* Passo 1, segmentação */}
       <Eyebrow>O que você procura?</Eyebrow>
       <Heading as="h2" size="h2" className="mt-3 mb-8">
         Escolha o caminho e a gente mostra a melhor forma de começar.
@@ -173,7 +177,7 @@ export function Segmentador() {
         })}
       </div>
 
-      {/* Passo 2 — caminhos de contato */}
+      {/* Passo 2, caminhos de contato */}
       <AnimatePresence mode="wait">
         {selected && (
           <motion.div
@@ -189,7 +193,7 @@ export function Segmentador() {
             </Eyebrow>
             <p className="mt-3 text-body text-ink/70 max-w-prose">
               {selected.journey === 'A'
-                ? 'O primeiro encontro é uma conversa de diagnóstico — não compromisso. Agende abaixo, ou fale com a gente se preferir.'
+                ? 'O primeiro encontro é uma conversa de diagnóstico, não compromisso. Agende abaixo, ou fale com a gente se preferir.'
                 : 'O caminho mais rápido é o WhatsApp. Se preferir, agende online ou escreva um email.'}
             </p>
 
@@ -223,7 +227,7 @@ export function Segmentador() {
                         O agendamento online está sendo configurado.
                       </p>
                       <p className="mt-3 text-body text-muted">
-                        Por enquanto, fale com a gente pelo WhatsApp ou email — respondemos rápido.
+                        Por enquanto, fale com a gente pelo WhatsApp ou email, respondemos rápido.
                       </p>
                     </div>
                   )}
@@ -286,7 +290,7 @@ function ContactPaths({
     <div
       key="whatsapp-disabled"
       className="flex items-center gap-4 w-full p-5 rounded-xl border border-line text-muted/60"
-      aria-label="WhatsApp — em breve"
+      aria-label="WhatsApp, em breve"
     >
       <MessageCircle size={22} strokeWidth={1.5} className="shrink-0" aria-hidden="true" />
       <span className="font-sans font-medium">WhatsApp</span>

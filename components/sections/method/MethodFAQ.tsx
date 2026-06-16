@@ -23,7 +23,7 @@ interface MethodFAQProps {
 export function MethodFAQ({ questions, tone = 'cream' }: MethodFAQProps) {
   const [openItem, setOpenItem] = useState<string>('');
 
-  // JSON-LD FAQPage — Sprint 10 completa; aqui já entregamos a estrutura
+  // JSON-LD FAQPage, Sprint 10 completa; aqui já entregamos a estrutura
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

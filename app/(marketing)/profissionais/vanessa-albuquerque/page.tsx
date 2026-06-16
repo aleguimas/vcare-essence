@@ -12,29 +12,36 @@ import { buildPersonSchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
-  title: 'Vanessa Albuquerque — Hipnoterapeuta · VCare Essence',
+  title: 'Vanessa Albuquerque, Hipnoterapeuta · VCare Essence',
   description:
-    'Hipnoterapeuta com 14 anos de prática. Conduz o Método V para destravar empresários emocionalmente, na VCare Essence (RioMar Trade Center, Recife) e online.',
+    'Hipnoterapeuta com 14 anos de prática. Conduz o MEP para destravar empresários emocionalmente, na VCare Essence (RioMar Trade Center, Recife) e online.',
   alternates: { canonical: ROUTES.vanessa },
 };
 
-// TODO: formação a confirmar com Vanessa Albuquerque
 const FORMATION = [
-  { year: '20XX', degree: 'Graduação em Psicologia', institution: 'Instituição a confirmar' },
-  { year: '20XX', degree: 'Especialização em Hipnoterapia Clínica', institution: 'Instituição a confirmar' },
-  { year: '20XX', degree: '14 anos de prática clínica contínua em hipnoterapia', institution: '' },
+  { year: '2011', degree: 'Graduação em Psicologia', institution: 'FAFIRE / Recife' },
+  { year: '2015', degree: 'Pós-Graduação em Psicologia e Antropologia', institution: 'UFPE / Recife' },
+  { year: '2021', degree: 'Formação em Hipnose Profissional', institution: 'IACHC / Recife' },
+  { year: '2022', degree: 'Formação em Hipnose Clássica', institution: 'Omni Hypnosis Training Center / São Paulo' },
+  { year: '2023', degree: 'Formação Internacional em Hipnose Avançada', institution: 'Omni Hypnosis Training Center / São Paulo' },
+  { year: '2023', degree: 'Formação em OMNI Legacy: Desenvolvimento de Excelência, Liderança e Legado na Hipnoterapia individual e em grupo', institution: 'Omni Hypnosis Training Center / São Paulo' },
+  { year: '2023', degree: 'Formação em Realidade Virtual aplicada à Hipnoterapia', institution: 'Cortex Academy / Barueri' },
+  { year: '2024', degree: '2ª Formação em OMNI Legacy: Desenvolvimento de Excelência, Liderança e Legado na Hipnoterapia individual e em grupo', institution: 'Omni Hypnosis Training Center / São Paulo' },
+  { year: '2024', degree: 'Formação em Intervenção Hipnótica para Casos de Abuso e Trauma', institution: 'Omni Hypnosis Training Center / São Paulo' },
+  { year: '2024', degree: 'Treinamento Avançado de Excelência e Aprimoramento em Hipnoterapia', institution: 'Omni Hypnosis Training Center / São Paulo' },
+  { year: '2025', degree: 'Formação em HypnoBusiness para Empresas e Equipes', institution: 'Omni Hypnosis Training Center / São Paulo' },
 ];
 
 const VERTICALS = [
   {
-    name: 'Método V',
+    name: 'MEP',
     href: ROUTES.metodoV,
     description: 'Programa autoral para empresários com trava emocional. Encontros estruturados, hipnoterapia clínica como método central.',
   },
   {
     name: 'Hipnoterapia Clínica',
     href: ROUTES.hipnoterapia,
-    description: 'Hipnoterapia avulsa para questões pontuais — ansiedade, fobias, hábitos, bloqueios emocionais específicos.',
+    description: 'Hipnoterapia avulsa para questões pontuais, ansiedade, fobias, hábitos, bloqueios emocionais específicos.',
   },
 ];
 
@@ -66,38 +73,39 @@ export default function VanessaPage() {
         subtitle="14 anos de prática"
         crp="CRP XX/XXXXX" // TODO: aguardar dados das sócias
         imageSrc="/images/profissionais/vanessa-albuquerque-vcare-essence-02.webp"
-        imageAlt="Vanessa Albuquerque, hipnoterapeuta da VCare Essence — ensaio editorial"
+        imageAlt="Vanessa Albuquerque, hipnoterapeuta da VCare Essence, ensaio editorial"
       />
 
-      {/* Bio — rascunho a confirmar com Vanessa */}
       <ProfessionalBio headline="Hipnoterapeuta. Por escolha, não por acidente.">
         <p>
-          Comecei minha prática clínica há 14 anos. Por muito tempo me apresentei como
-          psicóloga que também usava hipnoterapia. Hoje me apresento de outro lugar: sou
-          hipnoterapeuta — e a hipnoterapia clínica não é uma técnica entre outras no meu
-          trabalho, é o método pelo qual escolho operar.
+          Hipnoterapeuta clínica e Psicóloga há 14 anos. Durante muito tempo, utilizei a
+          hipnoterapia como uma ferramenta complementar. Hoje, ela é o centro da minha atuação.
         </p>
         <p>
-          Trabalho com um público específico: empresários e empresárias que já conquistaram muito
-          e sentem algo invisível impedindo o próximo passo. Chamo isso de trava emocional. Não
-          é fraqueza. Não é falta de informação. É um padrão inconsciente que o pensamento
-          consciente não alcança — e que a hipnoterapia clínica foi feita para acessar.
+          Foi na hipnoterapia que encontrei a forma mais direta e eficiente de acessar a origem
+          emocional de sintomas, bloqueios e padrões repetitivos. Por isso, não trabalho apenas
+          com o que a pessoa sente. Trabalho com o que sustenta o que ela sente.
         </p>
         <p>
-          O trabalho que faço é em encontros estruturados, não em anos de sessões abertas. Cada
-          processo começa com um diagnóstico profundo. O que aparece nesse diagnóstico determina
-          o plano — e o plano é exclusivo para cada pessoa. Não existe uma fórmula, existe um
-          método.
+          Atendo principalmente empresários e empresárias que já conquistaram muito, mas percebem
+          algo invisível impedindo o próximo passo. Chamo isso de trava emocional. Não é falta de
+          capacidade ou informação. É um padrão inconsciente que precisa ser identificado e
+          transformado.
         </p>
         <p>
-          Atendo presencialmente na VCare Essence, no RioMar Trade Center, em Recife, e online
-          com a mesma profundidade clínica.
+          Meu trabalho acontece em encontros estruturados, não em processos indefinidos. Cada caso
+          começa com uma investigação aprofundada que direciona um plano terapêutico exclusivo. Não
+          existe fórmula pronta. Existe método.
+        </p>
+        <p>
+          Atendo presencialmente na VCare Essence, no RioMar Trade Center, em Recife, e também
+          online, com a mesma eficácia do presencial.
         </p>
       </ProfessionalBio>
 
       <ProfessionalFormation
         items={FORMATION}
-        approach="Hipnoterapia clínica como método central. Diagnóstico profundo, acesso ao inconsciente, plano exclusivo por caso. Não trabalho com técnica única — trabalho com o que cada caso pede, tendo a hipnoterapia como ferramenta principal de acesso."
+        approach="Trabalho com investigação, estratégia e personalização. Cada caso começa com uma análise aprofundada para identificar a origem emocional do problema. A partir dessa compreensão, construo um plano terapêutico exclusivo, utilizando a hipnoterapia clínica como principal ferramenta de acesso ao inconsciente e de transformação dos padrões que sustentam sintomas, bloqueios e limitações."
         tone="sand"
       />
 
@@ -106,13 +114,13 @@ export default function VanessaPage() {
       <Section tone="sand" size="sm">
         <Container narrow>
           <Quote author="Vanessa Albuquerque">
-            Não trato sintomas. Vou à raiz.
+            Acesso a raiz e destravo o que te impede de avançar com Método Exclusivo e resultado imediato.
           </Quote>
         </Container>
       </Section>
 
       <ProfessionalCTA
-        headline="Um primeiro encontro é uma conversa de diagnóstico — não compromisso."
+        headline="Um primeiro encontro é uma conversa de diagnóstico, não compromisso."
         subtext="A partir dele, decidimos juntos se há fit para um plano."
         ctaLabel="Agendar primeiro encontro"
       />

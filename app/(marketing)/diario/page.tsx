@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// Sprint 08 — CMS desabilitado por decisão do cliente.
+// Sprint 08, CMS desabilitado por decisão do cliente.
 // O Diário será implementado (Sanity ou MDX) em momento posterior.
 
 const CATEGORIES = [
@@ -34,7 +34,7 @@ export default function DiarioPage() {
         </Heading>
 
         <p className="mt-8 text-lead text-ink/70 leading-relaxed">
-          O Diário VCare está sendo preparado com cuidado — e em breve você encontrará aqui
+          O Diário VCare está sendo preparado com cuidado, e em breve você encontrará aqui
           textos autorais de Vanessa Albuquerque e Camila Clemente sobre saúde mental, trava
           emocional, adolescência e escolhas de vida.
         </p>
@@ -54,7 +54,7 @@ export default function DiarioPage() {
         </div>
 
         <p className="mt-12 text-small text-muted font-sans italic">
-          Não perca — acompanhe pelo Instagram quando os primeiros textos forem publicados.
+          Não perca, acompanhe pelo Instagram quando os primeiros textos forem publicados.
         </p>
       </Container>
     </Section>

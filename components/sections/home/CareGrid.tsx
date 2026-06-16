@@ -26,7 +26,7 @@ const CARE_ITEMS: Array<{
   {
     icon: Sparkles,
     label: 'Hipnoterapia',
-    description: 'Hipnoterapia clínica para questões pontuais — sem mística, com método.',
+    description: 'Hipnoterapia clínica para questões pontuais, com ciência, resultado rápido e eficaz.',
     href: ROUTES.hipnoterapia,
   },
   {
@@ -38,7 +38,7 @@ const CARE_ITEMS: Array<{
   {
     icon: Users,
     label: 'Orientação Familiar',
-    description: 'Suporte para famílias — base em Terapêutica Sistêmica.',
+    description: 'Suporte para famílias, base em Terapêutica Sistêmica.',
     href: ROUTES.orientacaoFamiliar,
   },
 ];
@@ -59,7 +59,7 @@ export function CareGrid() {
           </motion.div>
           <motion.div variants={fadeInUp}>
             <Heading as="h2" size="h2" className="mt-4">
-              Outras frentes de cuidado disponíveis na casa.
+              Outras frentes de cuidado disponíveis na clínica.
             </Heading>
           </motion.div>
         </motion.div>

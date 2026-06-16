@@ -12,32 +12,31 @@ import { buildPersonSchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
 
 export const metadata: Metadata = {
-  title: 'Camila Clemente — Psicóloga · VCare Essence',
+  title: 'Camila Clemente, Psicóloga · VCare Essence',
   description:
     'Psicóloga com 10 anos de prática, especialista em Análise do Comportamento, TDAH e Terapêutica Sistêmica. Conduz o Método C para adolescentes na VCare Essence, Recife.',
   alternates: { canonical: ROUTES.camila },
 };
 
-// TODO: formação a confirmar com Camila Clemente
 const FORMATION = [
-  { year: '20XX', degree: 'Graduação em Psicologia', institution: 'Instituição a confirmar' },
-  { year: '20XX', degree: 'Especialização em Análise do Comportamento', institution: 'Instituição a confirmar' },
-  { year: '20XX', degree: 'Especialização em Psicomotricidade Relacional', institution: 'Instituição a confirmar' },
-  { year: '20XX', degree: 'Formação em Reabilitação Neuropsicológica', institution: 'Instituição a confirmar' },
-  { year: '20XX', degree: 'Especialização em Terapêutica Sistêmica', institution: 'Instituição a confirmar' },
-  { year: '20XX', degree: '10 anos de prática clínica e docência', institution: '' },
+  { year: '2016', degree: 'Graduação em Psicologia', institution: 'Universidade Federal de Pernambuco' },
+  { year: '2016', degree: 'Início da prática clínica', institution: '' },
+  { year: '2018', degree: 'Especialização em Psicomotricidade', institution: 'Ícone Desenvolvimento Humano' },
+  { year: '2019', degree: 'Reabilitação Neuropsicológica', institution: 'Instituto de Neuropsicologia Aplicada' },
+  { year: '2023', degree: 'Terapia Sistêmica', institution: 'Instituto Constelar' },
+  { year: '2025', degree: 'Especialização em Análise do Comportamento', institution: 'Unyleya' },
 ];
 
 const VERTICALS = [
   {
     name: 'Método C',
     href: ROUTES.metodoC,
-    description: 'Programa estruturado para adolescentes em pré-vestibular — rendimento, organização emocional e acompanhamento familiar.',
+    description: 'Programa estruturado para adolescentes em pré-vestibular, rendimento, organização emocional e acompanhamento familiar.',
   },
   {
     name: 'Psicoterapia',
     href: ROUTES.psicoterapia,
-    description: 'Atendimento clínico individual para adolescentes e adultos com base em AC e TCC.',
+    description: 'Atendimento clínico individual para adolescentes e adultos com base em Análise do Comportamento.',
   },
   {
     name: 'Teste Vocacional',
@@ -47,7 +46,7 @@ const VERTICALS = [
   {
     name: 'Orientação Familiar',
     href: ROUTES.orientacaoFamiliar,
-    description: 'Suporte para famílias com base em Terapêutica Sistêmica — conflitos, pós-diagnóstico, dinâmica de cuidado.',
+    description: 'Suporte para famílias com base em Terapêutica Sistêmica, conflitos, pós-diagnóstico, dinâmica de cuidado.',
   },
 ];
 
@@ -59,7 +58,7 @@ const schema = [
       'Psicóloga com 10 anos de prática, especialista em Análise do Comportamento, Psicomotricidade Relacional, TDAH e Terapêutica Sistêmica.',
     path: ROUTES.camila,
     image: '/images/profissionais/camila-clemente-vcare-essence-02.webp',
-    crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
+    crp: 'CRP 02/19121',
   }),
   buildBreadcrumbSchema([
     { name: 'Início', path: ROUTES.home },
@@ -77,33 +76,33 @@ export default function CamilaPage() {
         name="Camila Clemente"
         title="Psicóloga"
         subtitle="10 anos de prática"
-        crp="CRP XX/XXXXX" // TODO: aguardar dados das sócias
+        crp="CRP 02/19121"
         imageSrc="/images/profissionais/camila-clemente-vcare-essence-02.webp"
-        imageAlt="Camila Clemente, psicóloga da VCare Essence — ensaio editorial"
+        imageAlt="Camila Clemente, psicóloga da VCare Essence, ensaio editorial"
       />
 
-      {/* Bio — rascunho a confirmar com Camila */}
+      {/* Bio, rascunho a confirmar com Camila */}
       <ProfessionalBio headline="Dez anos construindo um vocabulário para o que não se vê.">
         <p>
           Minha prática se construiu na interseção entre ciência e cuidado. Sou especialista em
           Análise do Comportamento, Psicomotricidade Relacional, Reabilitação Neuropsicológica,
-          TDAH e Terapêutica Sistêmica — formações que, juntas, me dão um vocabulário amplo para
+          TDAH e Terapêutica Sistêmica, formações que, juntas, me dão um vocabulário amplo para
           entender cada paciente de um lugar diferente.
         </p>
         <p>
-          Atendo adolescentes e adultos. Com adolescentes, conduzo um programa estruturado próprio
-          — voltado a quem precisa melhorar rendimento escolar, se preparar para o vestibular e
+          Atendo adolescentes e adultos. Com adolescentes, conduzo um programa estruturado próprio,
+          voltado a quem precisa melhorar rendimento escolar, se preparar para o vestibular e
           organizar o emocional, com acompanhamento familiar. É um trabalho que vai além da
           psicoterapia individual: envolve a família, a rotina, o comportamento de estudo e o
           emocional em conjunto.
         </p>
         <p>
-          Com adultos, faço psicoterapia tradicional com base em Análise do Comportamento e
-          Terapia Cognitivo-Comportamental, teste vocacional para reposicionamento de carreira e
-          orientação familiar com base na Terapêutica Sistêmica.
+          Com adultos, faço psicoterapia tradicional com base em Análise do Comportamento, teste
+          vocacional para reposicionamento de carreira e orientação familiar com base na
+          Terapêutica Sistêmica.
         </p>
         <p>
-          Também sou mentora e docente — porque acredito que compartilhar método é tão
+          Também sou mentora e docente, porque acredito que compartilhar método é tão
           importante quanto praticá-lo.
         </p>
         <p>
@@ -122,7 +121,7 @@ export default function CamilaPage() {
       <Section tone="sand" size="sm">
         <Container narrow>
           <Quote author="Camila Clemente">
-            Trato a falta de resultado como falta de motivação — não como preguiça.
+            Trato a falta de resultado como falta de motivação, não como preguiça.
           </Quote>
         </Container>
       </Section>

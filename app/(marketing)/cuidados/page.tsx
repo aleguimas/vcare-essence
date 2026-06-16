@@ -24,7 +24,7 @@ const VERTICALS = [
   {
     icon: Sparkles,
     label: 'Hipnoterapia Clínica',
-    description: 'Para questões pontuais. Sem mística, com método.',
+    description: 'Para questões pontuais, com ciência, resultado rápido e eficaz.',
     href: ROUTES.hipnoterapia,
   },
   {

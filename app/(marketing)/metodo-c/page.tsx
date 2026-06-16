@@ -17,14 +17,14 @@ const breadcrumb = buildBreadcrumbSchema([
   { name: 'Método C', path: ROUTES.metodoC },
 ]);
 
-// TODO: substituir pelo nome final do método — aguardar decisão das sócias
+// TODO: substituir pelo nome final do método, aguardar decisão das sócias
 export const metadata: Metadata = {
-  title: 'Método C — Para adolescentes em fase de escolha',
+  title: 'Método C · Para adolescentes em fase de escolha',
   description:
     'Seu filho não é preguiçoso. Pode estar desorganizado emocionalmente. Camila Clemente conduz um programa estruturado para adolescentes em pré-vestibular, com suporte psicológico, organização e acompanhamento familiar.',
   alternates: { canonical: ROUTES.metodoC },
   openGraph: {
-    title: 'Método C — Para adolescentes em fase de escolha · VCare Essence',
+    title: 'Método C · Para adolescentes em fase de escolha · VCare Essence',
     description:
       'Programa estruturado para adolescentes: rendimento escolar, vestibular, suporte emocional e acompanhamento familiar.',
     // OG image gerada dinamicamente por opengraph-image.tsx
@@ -46,14 +46,14 @@ const PILLARS = [
     number: 2,
     title: 'Organização comportamental',
     description:
-      'Rotina de estudos, gestão de tempo, identificação do próprio funcionamento. O adolescente aprende como ele aprende — e por que trava quando trava.',
+      'Rotina de estudos, gestão de tempo, identificação do próprio funcionamento. O adolescente aprende como ele aprende, e por que trava quando trava.',
   },
   {
     iconName: 'BookOpen' as const,
     number: 3,
     title: 'Preparação emocional para provas',
     description:
-      'Ansiedade pré-vestibular, controle de impulso, gestão de pressão. Trabalho específico para o momento da prova — não só para o conteúdo.',
+      'Ansiedade pré-vestibular, controle de impulso, gestão de pressão. Trabalho específico para o momento da prova, não só para o conteúdo.',
   },
   {
     iconName: 'Users' as const,
@@ -66,21 +66,21 @@ const PILLARS = [
 
 const CAMILA_BIO = [
   'Psicóloga com 10 anos de prática clínica, especialista em Análise do Comportamento, Psicomotricidade Relacional, Reabilitação Neuropsicológica e Terapêutica Sistêmica. Mentora e docente na área de saúde mental e desenvolvimento humano.',
-  'Desenvolveu um método autoral voltado para adolescentes em fases de transição — especialmente o período de pré-vestibular, quando a pressão acadêmica e o processo de escolha de carreira se somam às travessias normais da adolescência.',
-  'O programa que conduz não é tutoria nem coaching. É um acompanhamento psicológico estruturado que envolve o adolescente e a família — porque o processo de um não acontece sem o outro.',
-  'Co-fundadora da VCare Essence, acredita que o método começa com a recusa ao rótulo fácil: "trato a falta de resultado como falta de motivação — não como preguiça."',
+  'Desenvolveu um método autoral voltado para adolescentes em fases de transição, especialmente o período de pré-vestibular, quando a pressão acadêmica e o processo de escolha de carreira se somam às travessias normais da adolescência.',
+  'O programa que conduz não é tutoria nem coaching. É um acompanhamento psicológico estruturado que envolve o adolescente e a família, porque o processo de um não acontece sem o outro.',
+  'Co-fundadora da VCare Essence, acredita que o método começa com a recusa ao senso comum: "trato a falta de resultado como falta de motivação, não como preguiça."',
 ];
 
 const FAQ_C = [
   {
     question: 'O programa é para todos os adolescentes?',
     answer:
-      'Não. O programa é desenhado para adolescentes que estão em fase de pré-vestibular ou que apresentam queda de rendimento escolar sem causa orgânica identificada — e cujos pais identificam que o suporte psicológico estruturado faz sentido. A primeira conversa (com os pais) é justamente para avaliar se há fit.',
+      'Não. O programa é desenhado para adolescentes que estão em fase de pré-vestibular ou que apresentam queda de rendimento escolar sem causa orgânica identificada, e cujos pais identificam que o suporte psicológico estruturado faz sentido. A primeira conversa (com os pais) é justamente para avaliar se há fit.',
   },
   {
     question: 'Pode ajudar com TDAH?',
     answer:
-      'Sim. Camila tem formação específica em reabilitação neuropsicológica e atendimento de TDAH. O programa pode ser adaptado para adolescentes com diagnóstico — mas exige alinhamento com o acompanhamento médico já em curso, quando houver.',
+      'Sim. Camila tem formação específica em reabilitação neuropsicológica e atendimento de TDAH. O programa pode ser adaptado para adolescentes com diagnóstico, mas exige alinhamento com o acompanhamento médico já em curso, quando houver.',
   },
   {
     question: 'Quantos meses dura?',
@@ -90,12 +90,12 @@ const FAQ_C = [
   {
     question: 'Atende online também?',
     answer:
-      'Sim, com adaptações. O atendimento online funciona bem para adolescentes que já têm maturidade para o formato — o que é avaliado na conversa inicial. As sessões familiares tendem a funcionar melhor presencialmente, mas há flexibilidade.',
+      'Sim, com adaptações. O atendimento online funciona bem para adolescentes que já têm maturidade para o formato, o que é avaliado na conversa inicial. As sessões familiares tendem a funcionar melhor presencialmente, mas há flexibilidade.',
   },
   {
     question: 'Como funciona a conversa inicial?',
     answer:
-      'A primeira conversa é com os pais — sem o adolescente presente. É uma escuta do contexto, do que está acontecendo e do que a família espera do processo. Se houver fit, agendamos uma sessão de diagnóstico com o adolescente. Só depois disso construímos o plano.',
+      'A primeira conversa é com os pais, sem o adolescente presente. É uma escuta do contexto, do que está acontecendo e do que a família espera do processo. Se houver fit, agendamos uma sessão de diagnóstico com o adolescente. Só depois disso construímos o plano.',
   },
   {
     question: 'Qual é o investimento?',
@@ -110,14 +110,14 @@ export default function MetodoCPage() {
   return (
     <>
       <JsonLd data={breadcrumb} />
-      {/* 01 · Hero — fala com pais/mães */}
+      {/* 01 · Hero, fala com pais/mães */}
       <MethodHero
         eyebrow="Método Camila Clemente" // TODO: nome final das sócias
         headline={
           <>
             Seu filho não é preguiçoso.{' '}
             <em className="italic text-bronze">
-              Ele está desorganizado emocionalmente — e isso tem método.
+              Ele está desorganizado emocionalmente, e isso tem método.
             </em>
           </>
         }
@@ -139,7 +139,7 @@ export default function MetodoCPage() {
               'Mudou de carreira três vezes e ainda não sabe o que quer',
               'Está sempre cansado, sem motivação aparente',
               'Você não sabe se cobra, se acolhe, ou se está piorando as coisas',
-              'A relação em casa ficou tensa — e cada conversa sobre escola vira conflito',
+              'A relação em casa ficou tensa, e cada conversa sobre escola vira conflito',
             ].map((symptom) => (
               <div key={symptom} className="flex items-start gap-4 py-4 border-b border-line last:border-0">
                 <span className="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-bronze" aria-hidden="true" />
@@ -149,7 +149,7 @@ export default function MetodoCPage() {
           </div>
 
           <p className="mt-8 text-body text-ink/70">
-            Nenhum desses pontos é sinal de fracasso — nem do adolescente, nem dos pais. É sinal
+            Nenhum desses pontos é sinal de fracasso, nem do adolescente, nem dos pais. É sinal
             de que o emocional precisa de estrutura. E estrutura tem método.
           </p>
         </Container>
@@ -174,7 +174,7 @@ export default function MetodoCPage() {
             <div>
               <h3 className="font-sans font-medium text-moss text-body">Sessões individuais</h3>
               <p className="mt-2 text-body text-ink/70 leading-relaxed">
-                Atendimento semanal com o adolescente. As primeiras sessões são de diagnóstico —
+                Atendimento semanal com o adolescente. As primeiras sessões são de diagnóstico,
                 entender o funcionamento, os padrões, o que está travando. A partir daí, o
                 trabalho segue o plano desenhado para aquele caso específico.
               </p>
@@ -182,7 +182,7 @@ export default function MetodoCPage() {
             <div>
               <h3 className="font-sans font-medium text-moss text-body">Sessões familiares</h3>
               <p className="mt-2 text-body text-ink/70 leading-relaxed">
-                A cada três a quatro semanas, sessão com os pais — às vezes com o adolescente
+                A cada três a quatro semanas, sessão com os pais, às vezes com o adolescente
                 presente, às vezes não. O objetivo é alinhar expectativas, ajustar a comunicação
                 em casa e garantir que o processo em sessão tenha suporte fora dela.
               </p>
@@ -191,8 +191,8 @@ export default function MetodoCPage() {
               <h3 className="font-sans font-medium text-moss text-body">Duração e periodicidade</h3>
               <p className="mt-2 text-body text-ink/70 leading-relaxed">
                 O programa mínimo tem duração de um semestre. Casos de pré-vestibular costumam
-                exigir entre 8 e 12 meses. O plano é apresentado na conversa inicial com os pais
-                — com estimativa honesta de tempo e investimento.
+                exigir entre 8 e 12 meses. O plano é apresentado na conversa inicial com os pais,
+                com estimativa honesta de tempo e investimento.
               </p>
             </div>
           </div>
@@ -205,13 +205,13 @@ export default function MetodoCPage() {
         role="Psicóloga"
         crp="CRP XX/XXXXX" // TODO: aguardar dados das sócias
         bio={CAMILA_BIO}
-        signature="Trato a falta de resultado como falta de motivação — não como preguiça."
+        signature="Trato a falta de resultado como falta de motivação, não como preguiça."
         profileHref={ROUTES.camila}
         imgSrc="/images/profissionais/camila-clemente-vcare-essence-01.webp"
         imgAlt="Camila Clemente, psicóloga da VCare Essence"
       />
 
-      {/* 06 · FAQ — específico para pais */}
+      {/* 06 · FAQ, específico para pais */}
       <MethodFAQ questions={FAQ_C} tone="sand" />
 
       {/* 07 · CTA final */}

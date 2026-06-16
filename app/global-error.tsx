@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-// Boundary de último recurso — substitui o root layout quando ele próprio falha.
+// Boundary de último recurso, substitui o root layout quando ele próprio falha.
 // Estilos inline porque o CSS global pode não ter carregado.
 export default function GlobalError({
   error,

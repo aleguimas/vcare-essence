@@ -8,7 +8,7 @@ import { ROUTES, SITE } from '@/lib/routes';
 export const metadata: Metadata = {
   title: 'Termos de Uso · VCare Essence',
   description:
-    'Termos de uso do site da VCare Essence — incluindo a natureza informativa do conteúdo e as regras de agendamento.',
+    'Termos de uso do site da VCare Essence, incluindo a natureza informativa do conteúdo e as regras de agendamento.',
   alternates: { canonical: ROUTES.termosDeUso },
 };
 
@@ -43,7 +43,7 @@ const SECTIONS = [
   {
     title: '5. Propriedade intelectual',
     body: [
-      `Todo o conteúdo deste site — textos, imagens, identidade visual e marca — pertence à ${SITE.name} ou é utilizado mediante autorização. A reprodução sem autorização é vedada.`,
+      `Todo o conteúdo deste site, textos, imagens, identidade visual e marca, pertence à ${SITE.name} ou é utilizado mediante autorização. A reprodução sem autorização é vedada.`,
     ],
   },
   {

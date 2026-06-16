@@ -27,7 +27,7 @@ const FAQ = [
   {
     question: 'A qualidade é a mesma do atendimento presencial?',
     answer:
-      'Para a maioria dos casos, sim. O vínculo terapêutico se estabelece independentemente do formato quando há espaço adequado e boa conexão. Alguns casos clínicos específicos — como trabalhos corporais ou de psicomotricidade relacional — pedem presencial. Isso é avaliado individualmente na primeira sessão.',
+      'Para a maioria dos casos, sim. O vínculo terapêutico se estabelece independentemente do formato quando há espaço adequado e boa conexão. Alguns casos clínicos específicos, como trabalhos corporais ou de psicomotricidade relacional, pedem presencial. Isso é avaliado individualmente na primeira sessão.',
   },
   {
     question: 'Qual plataforma é utilizada?',
@@ -37,7 +37,7 @@ const FAQ = [
   {
     question: 'É indicado para quem nunca fez terapia?',
     answer:
-      'Sim — e pode ser especialmente útil. Para quem nunca fez terapia e sente algum desconforto com o formato presencial, o online oferece uma entrada mais gradual. Você está em um ambiente familiar, o que pode reduzir a ansiedade inicial. Se em algum momento o presencial fizer mais sentido, a transição é natural.',
+      'Sim, e pode ser especialmente útil. Para quem nunca fez terapia e sente algum desconforto com o formato presencial, o online oferece uma entrada mais gradual. Você está em um ambiente familiar, o que pode reduzir a ansiedade inicial. Se em algum momento o presencial fizer mais sentido, a transição é natural.',
   },
   {
     question: 'O que preciso ter para o atendimento online?',
@@ -47,7 +47,7 @@ const FAQ = [
   {
     question: 'Atende de fora de Recife?',
     answer:
-      'Sim. O atendimento online está disponível para qualquer cidade do Brasil — e, em alguns casos, para brasileiros no exterior (consultar conforme origem da demanda).',
+      'Sim. O atendimento online está disponível para qualquer cidade do Brasil, e, em alguns casos, para brasileiros no exterior (consultar conforme origem da demanda).',
   },
 ];
 
@@ -57,7 +57,7 @@ export default function AtendimentoOnlinePage() {
       <VerticalHero
         eyebrow="Atendimento Online"
         headline="Online não é menos. É outro contexto."
-        subtitle="Todas as vertcais clínicas da VCare Essence estão disponíveis online — com a mesma profundidade e o mesmo cuidado do atendimento presencial."
+        subtitle="Todas as modalidades clínicas da VCare Essence estão disponíveis online, com a mesma profundidade e o mesmo cuidado do atendimento presencial."
       />
 
       {/* Para quem é */}
@@ -69,14 +69,14 @@ export default function AtendimentoOnlinePage() {
           </Heading>
           <div className="mt-8 space-y-4 text-body text-ink/80 leading-relaxed">
             <p>
-              O atendimento online não é uma versão reduzida do presencial — é um formato
+              O atendimento online não é uma versão reduzida do presencial, é um formato
               diferente, com suas próprias vantagens. Para muitas pessoas, a familiaridade do
               próprio espaço facilita a abertura. Para quem tem agenda intensa, elimina o tempo
               de deslocamento sem sacrificar a qualidade.
             </p>
             <p>
               Para quem nunca fez terapia e sente algum desconforto com a ideia do presencial, o
-              online oferece uma entrada mais gradual — você está em casa, em um ambiente que
+              online oferece uma entrada mais gradual, você está em casa, em um ambiente que
               conhece, com a liberdade de ajustar o formato depois.
             </p>
             <p>
@@ -118,12 +118,12 @@ export default function AtendimentoOnlinePage() {
         </Container>
       </Section>
 
-      {/* Quais verticais */}
+      {/* Quais modalidades */}
       <Section tone="cream">
         <Container narrow>
           <Eyebrow>Disponível para</Eyebrow>
           <Heading as="h2" size="h2" className="mt-4">
-            Todas as verticais clínicas da casa.
+            Todas as modalidades clínicas da VCare Essence.
           </Heading>
           <div className="mt-8 grid grid-cols-2 gap-3">
             {VERTICALS_ONLINE.map((v) => (

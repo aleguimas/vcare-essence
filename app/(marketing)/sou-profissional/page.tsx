@@ -20,11 +20,11 @@ export default function SouProfissionalPage() {
         <Container>
           <Eyebrow>Sou Profissional</Eyebrow>
           <Heading as="h1" size="display-md" className="mt-5 max-w-prose-wide">
-            Uma casa para quem faz o trabalho de verdade.
+            Uma clínica para quem faz o trabalho de verdade.
           </Heading>
           <p className="mt-6 text-lead text-ink/70 max-w-prose">
-            A VCare Essence oferece dois caminhos para profissionais: residência clínica — para
-            quem quer integrar a casa e atender pacientes — e sala para gravações — para criadores
+            A VCare Essence oferece dois caminhos para profissionais: residência clínica, para
+            quem quer integrar a clínica e atender pacientes, e sala para gravações, para criadores
             de conteúdo de saúde que precisam de um cenário com identidade.
           </p>
         </Container>
@@ -40,7 +40,7 @@ export default function SouProfissionalPage() {
             >
               <div className="aspect-[4/3] bg-sand-100 relative">
                 <div className="absolute inset-0 flex items-end p-5">
-                  <p className="text-small text-muted/40 font-sans italic">Foto da sala — Sprint 06</p>
+                  <p className="text-small text-muted/40 font-sans italic">Foto da sala, Sprint 06</p>
                 </div>
               </div>
               <div className="p-8">
@@ -49,7 +49,7 @@ export default function SouProfissionalPage() {
                   Consultório Residente
                 </Heading>
                 <p className="mt-4 text-body text-ink/70 leading-relaxed">
-                  Não é locação de sala. É curadoria — você entra numa casa que tem marca,
+                  Não é locação de sala. É curadoria, você entra numa clínica que tem marca,
                   narrativa e cuidado. Psicólogos, psiquiatras, terapeutas e afins com formação
                   consolidada.
                 </p>
@@ -66,7 +66,7 @@ export default function SouProfissionalPage() {
             >
               <div className="aspect-[4/3] bg-sand-100 relative">
                 <div className="absolute inset-0 flex items-end p-5">
-                  <p className="text-small text-muted/40 font-sans italic">Foto da sala — Sprint 06</p>
+                  <p className="text-small text-muted/40 font-sans italic">Foto da sala, Sprint 06</p>
                 </div>
               </div>
               <div className="p-8">
@@ -76,7 +76,7 @@ export default function SouProfissionalPage() {
                 </Heading>
                 <p className="mt-4 text-body text-ink/70 leading-relaxed">
                   Cenário com atmosfera e endereço premium. Para vídeos, podcasts, mentorias e
-                  reuniões estratégicas. Você traz seu equipamento — a gente oferece o espaço.
+                  reuniões estratégicas. Você traz seu equipamento, a gente oferece o espaço.
                 </p>
                 <span className="inline-flex items-center gap-2 mt-6 text-bronze font-sans font-medium group-hover:text-bronze-400 transition-colors">
                   Saber mais e reservar →
@@ -92,10 +92,10 @@ export default function SouProfissionalPage() {
               Curadoria, não locação.
             </Heading>
             <p className="mt-5 text-body text-ink/70 leading-relaxed">
-              Qualquer espaço pode ser alugado. A VCare Essence faz seleção ativa — cada
+              Qualquer espaço pode ser alugado. A VCare Essence faz seleção ativa, cada
               profissional que entra aqui passa por uma conversa de alinhamento de valores e
               abordagem. Não basta ter cadastro, não basta pagar. É necessário fit com o que a
-              casa representa.
+              clínica representa.
             </p>
           </div>
         </Container>
