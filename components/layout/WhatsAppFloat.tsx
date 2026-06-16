@@ -10,7 +10,7 @@ import { ROUTES } from '@/lib/routes';
 
 // Páginas onde o botão NÃO aparece, os métodos autorais não convertem
 // por WhatsApp e o botão poluiria a jornada de qualificação.
-const HIDDEN_PATHS = [ROUTES.metodoV, ROUTES.metodoC];
+const HIDDEN_PATHS = [ROUTES.metodoV, ROUTES.metodoElo];
 
 export function WhatsAppFloat() {
   const pathname = usePathname();

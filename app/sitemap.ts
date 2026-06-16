@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/a-casa/tour',
     '/a-casa/curadoria',
     '/mep',
-    '/metodo-c',
+    '/metodo-elo',
     '/cuidados',
     '/cuidados/psicoterapia',
     '/cuidados/hipnoterapia',

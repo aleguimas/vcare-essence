@@ -6,7 +6,7 @@ export const ROUTES = {
   tour: '/a-casa/tour',
   curadoria: '/a-casa/curadoria',
   metodoV: '/mep', // MEP, Mapeamento Emocional Profundo (antes "Método V")
-  metodoC: '/metodo-c', // TODO: aguardar decisão das sócias
+  metodoElo: '/metodo-elo', // Método Elo (antes "Método C"), Camila Clemente
   cuidados: '/cuidados',
   psicoterapia: '/cuidados/psicoterapia',
   hipnoterapia: '/cuidados/hipnoterapia',
@@ -58,7 +58,7 @@ export const CALCOM_USERNAME = process.env.NEXT_PUBLIC_CALCOM_USERNAME ?? '';
 /** calLinks por vertical, usados pelo embed do Cal.com. */
 export const CAL_LINKS = {
   metodoV: 'primeiro-encontro-mep',
-  metodoC: 'conversa-inicial-metodo-c',
+  metodoElo: 'conversa-inicial-metodo-elo',
   psicoterapia: 'psicoterapia-camila',
   hipnoterapia: 'hipnoterapia-vanessa',
   testeVocacional: 'teste-vocacional-camila',

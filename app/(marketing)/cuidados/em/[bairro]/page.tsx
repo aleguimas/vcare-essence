@@ -141,7 +141,7 @@ export default async function BairroPage({ params }: PageProps) {
               { label: 'Teste vocacional', href: ROUTES.testeVocacional },
               { label: 'Orientação familiar', href: ROUTES.orientacaoFamiliar },
               { label: 'MEP', href: ROUTES.metodoV },
-              { label: 'Método C', href: ROUTES.metodoC },
+              { label: 'Método Elo', href: ROUTES.metodoElo },
               { label: 'Atendimento online', href: ROUTES.atendimentoOnline },
             ].map((v) => (
               <Link

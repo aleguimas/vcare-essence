@@ -13,7 +13,8 @@ const ICON_MAP: Record<string, LucideIcon> = { BookOpen, Brain, Users, Target };
 
 export interface Pillar {
   iconName: keyof typeof ICON_MAP;
-  number: number;
+  /** Rótulo exibido em destaque, ex.: número ("1") ou letra do acrônimo ("E"). */
+  label: string;
   title: string;
   description: string;
 }
@@ -56,7 +57,7 @@ export function ProgramPillars({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {pillars.map((pillar, i) => (
             <motion.div
-              key={pillar.number}
+              key={pillar.label}
               initial="hidden"
               whileInView="visible"
               viewport={viewportConfig}
@@ -74,7 +75,7 @@ export function ProgramPillars({
                   })()}
                 </div>
                 <span className="font-serif text-display-md text-bronze/30 leading-none mt-0.5">
-                  {pillar.number}
+                  {pillar.label}
                 </span>
               </div>
 

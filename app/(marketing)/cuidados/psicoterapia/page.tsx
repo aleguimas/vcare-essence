@@ -61,12 +61,12 @@ const FAQ = [
   {
     question: 'Quais abordagens são utilizadas?',
     answer:
-      'Camila Clemente trabalha com Análise do Comportamento (AC) e Terapia Cognitivo-Comportamental (TCC), com especialização em Psicomotricidade Relacional. Para adolescentes, o atendimento pode integrar elementos do Método C quando há necessidade de estruturação mais ampla. Profissionais convidados da clínica trazem outras abordagens, a definir conforme disponibilidade.',
+      'Camila Clemente trabalha com Análise do Comportamento (AC) e Terapia Cognitivo-Comportamental (TCC), com especialização em Psicomotricidade Relacional. Para adolescentes, o atendimento pode integrar elementos do Método Elo quando há necessidade de estruturação mais ampla. Profissionais convidados da clínica trazem outras abordagens, a definir conforme disponibilidade.',
   },
   {
     question: 'Atende adolescentes e adultos?',
     answer:
-      'Sim. Camila atende adolescentes (especialmente em fases de transição, pré-vestibular, mudanças de comportamento) e adultos. Para adolescentes que precisam de suporte mais estruturado e acompanhamento familiar, o Método C pode ser mais indicado, o que é avaliado na primeira sessão.',
+      'Sim. Camila atende adolescentes (especialmente em fases de transição, pré-vestibular, mudanças de comportamento) e adultos. Para adolescentes que precisam de suporte mais estruturado e acompanhamento familiar, o Método Elo pode ser mais indicado, o que é avaliado na primeira sessão.',
   },
   {
     question: 'Funciona online com a mesma qualidade?',

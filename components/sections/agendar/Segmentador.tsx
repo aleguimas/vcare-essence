@@ -49,11 +49,11 @@ const VERTICALS: Vertical[] = [
     bookLabel: 'Agendar primeiro encontro',
   },
   {
-    id: 'metodo-c',
-    label: 'Método C, programa para adolescentes',
+    id: 'metodo-elo',
+    label: 'Método Elo, programa para adolescentes',
     hint: 'Com Camila Clemente',
     journey: 'A',
-    calSlug: CAL_LINKS.metodoC,
+    calSlug: CAL_LINKS.metodoElo,
     bookLabel: 'Agendar conversa inicial',
   },
   {

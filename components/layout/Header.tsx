@@ -26,8 +26,8 @@ const NAV_ITEMS = [
     label: 'Métodos',
     href: ROUTES.metodoV,
     children: [
-      { label: 'MEP', href: ROUTES.metodoV }, // TODO: nome final das sócias
-      { label: 'Método C', href: ROUTES.metodoC }, // TODO: nome final das sócias
+      { label: 'MEP', href: ROUTES.metodoV },
+      { label: 'Método Elo', href: ROUTES.metodoElo },
     ],
   },
   {

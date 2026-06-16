@@ -100,14 +100,14 @@ export const BAIRROS: Bairro[] = [
     intro:
       'Atendimento para famílias de Setúbal, teste vocacional, programa para adolescentes e orientação familiar.',
     about: [
-      'Setúbal é uma das áreas mais residenciais e familiares da Zona Sul, na porção sul de Boa Viagem. É um bairro de famílias estabelecidas, com forte presença de adolescentes em fase escolar e pré-vestibular, exatamente o público para o qual o Método C foi construído.',
+      'Setúbal é uma das áreas mais residenciais e familiares da Zona Sul, na porção sul de Boa Viagem. É um bairro de famílias estabelecidas, com forte presença de adolescentes em fase escolar e pré-vestibular, exatamente o público para o qual o Método Elo foi construído.',
       'Para os pais de Setúbal que percebem que o filho era bom aluno e agora não consegue mais estudar, ou que a ansiedade pré-prova virou paralisia, a VCare Essence oferece um programa estruturado, não tutoria, não coaching, mas acompanhamento psicológico que envolve o adolescente e a família.',
       'A poucos minutos do bairro, no RioMar Trade Center, o atendimento combina proximidade com um ambiente projetado para acolher conversas difíceis, sobre escolhas, rendimento e o emocional de quem está crescendo.',
     ],
     emphasis: [
       {
-        title: 'Método C, programa para adolescentes',
-        href: ROUTES.metodoC,
+        title: 'Método Elo, programa para adolescentes',
+        href: ROUTES.metodoElo,
         reason: 'Para famílias com adolescentes em pré-vestibular e queda de rendimento.',
       },
       {
@@ -136,12 +136,12 @@ export const BAIRROS: Bairro[] = [
     about: [
       'Casa Forte é um dos bairros mais tradicionais da Zona Norte do Recife: arborizado, residencial, marcado por famílias estabelecidas e por uma vida de bairro que resistiu ao tempo. É um lugar de raízes, e de adolescentes que crescem sob expectativas que nem sempre conseguem nomear.',
       'Para as famílias de Casa Forte, a VCare Essence oferece tanto o atendimento presencial no Pina quanto a opção online, que elimina o deslocamento entre zonas da cidade sem perder profundidade clínica. Para muitos pais da Zona Norte, essa flexibilidade é o que torna o cuidado viável na rotina.',
-      'O Método C, o teste vocacional e a orientação familiar são especialmente relevantes para o perfil do bairro: famílias que querem apoiar o filho na travessia da adolescência e da escolha de carreira, com lastro clínico e não com fórmulas prontas.',
+      'O Método Elo, o teste vocacional e a orientação familiar são especialmente relevantes para o perfil do bairro: famílias que querem apoiar o filho na travessia da adolescência e da escolha de carreira, com lastro clínico e não com fórmulas prontas.',
     ],
     emphasis: [
       {
-        title: 'Método C, programa para adolescentes',
-        href: ROUTES.metodoC,
+        title: 'Método Elo, programa para adolescentes',
+        href: ROUTES.metodoElo,
         reason: 'Para adolescentes de Casa Forte em fase de vestibular e organização emocional.',
       },
       {

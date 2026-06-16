@@ -20,6 +20,12 @@ const config: NextConfig = {
 
   async redirects() {
     return [
+      // Método C virou Método Elo (2026-06-16). Redireciona o slug antigo.
+      {
+        source: '/metodo-c',
+        destination: '/metodo-elo',
+        permanent: true,
+      },
       // TODO: ativar após decisão das sócias sobre Ansiedade Zero (ver 03_sitemap_routes.md)
       // {
       //   source: '/ansiedade-zero',

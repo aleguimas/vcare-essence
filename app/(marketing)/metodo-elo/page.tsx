@@ -14,19 +14,18 @@ import { ROUTES } from '@/lib/routes';
 
 const breadcrumb = buildBreadcrumbSchema([
   { name: 'Início', path: ROUTES.home },
-  { name: 'Método C', path: ROUTES.metodoC },
+  { name: 'Método Elo', path: ROUTES.metodoElo },
 ]);
 
-// TODO: substituir pelo nome final do método, aguardar decisão das sócias
 export const metadata: Metadata = {
-  title: 'Método C · Para adolescentes em fase de escolha',
+  title: 'Método Elo · Para adolescentes em fase de escolha',
   description:
-    'Seu filho não é preguiçoso. Pode estar desorganizado emocionalmente. Camila Clemente conduz um programa estruturado para adolescentes em pré-vestibular, com suporte psicológico, organização e acompanhamento familiar.',
-  alternates: { canonical: ROUTES.metodoC },
+    'Seu filho não é preguiçoso. Pode estar desorganizado emocionalmente. Camila Clemente conduz o Método Elo, programa estruturado para adolescentes em pré-vestibular, com suporte psicológico, organização e acompanhamento familiar.',
+  alternates: { canonical: ROUTES.metodoElo },
   openGraph: {
-    title: 'Método C · Para adolescentes em fase de escolha · VCare Essence',
+    title: 'Método Elo · Para adolescentes em fase de escolha · VCare Essence',
     description:
-      'Programa estruturado para adolescentes: rendimento escolar, vestibular, suporte emocional e acompanhamento familiar.',
+      'Método Elo: programa estruturado para adolescentes, rendimento escolar, vestibular, suporte emocional e acompanhamento familiar.',
     // OG image gerada dinamicamente por opengraph-image.tsx
   },
 };
@@ -36,31 +35,31 @@ export const metadata: Metadata = {
 const PILLARS = [
   {
     iconName: 'Brain' as const,
-    number: 1,
-    title: 'Suporte psicológico contínuo',
+    label: 'E',
+    title: 'Entender',
     description:
-      'Atendimento individual com abordagem científica (Análise do Comportamento). Trabalha autoconhecimento, regulação emocional e padrões de comportamento que afetam o rendimento.',
+      'Avaliação inicial para compreender o ponto de partida: perfil emocional, hábitos de estudo, fatores que interferem no rendimento, ansiedade, dificuldades comportamentais e interesses profissionais.',
   },
   {
     iconName: 'Target' as const,
-    number: 2,
-    title: 'Organização comportamental',
+    label: 'L',
+    title: 'Lapidar',
     description:
-      'Rotina de estudos, gestão de tempo, identificação do próprio funcionamento. O adolescente aprende como ele aprende, e por que trava quando trava.',
+      'Desenvolvimento das competências que sustentam o resultado: organização, gestão do tempo, autorregulação emocional, habilidades sociais e estratégias de aprendizagem.',
   },
   {
     iconName: 'BookOpen' as const,
-    number: 3,
-    title: 'Preparação emocional para provas',
+    label: 'O',
+    title: 'Orientar',
     description:
-      'Ansiedade pré-vestibular, controle de impulso, gestão de pressão. Trabalho específico para o momento da prova, não só para o conteúdo.',
+      'Construção de um plano individualizado: projeto de vida, escolha profissional, metas acadêmicas e preparação para vestibulares e concursos.',
   },
   {
     iconName: 'Users' as const,
-    number: 4,
-    title: 'Acompanhamento familiar',
+    label: '+',
+    title: 'Conexão',
     description:
-      'Alinhamento entre pais e filho sobre expectativas, comunicação e papel de cada um. Sessões periódicas com a família para manter o processo coeso.',
+      'Envolvimento da família para fortalecer o suporte ao adolescente, porque o processo de um não acontece sem o outro.',
   },
 ];
 
@@ -106,13 +105,13 @@ const FAQ_C = [
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function MetodoCPage() {
+export default function MetodoEloPage() {
   return (
     <>
       <JsonLd data={breadcrumb} />
       {/* 01 · Hero, fala com pais/mães */}
       <MethodHero
-        eyebrow="Método Camila Clemente" // TODO: nome final das sócias
+        eyebrow="Método Elo, com Camila Clemente"
         headline={
           <>
             Seu filho não é preguiçoso.{' '}
@@ -155,10 +154,11 @@ export default function MetodoCPage() {
         </Container>
       </Section>
 
-      {/* 03 · Programa em 4 pilares */}
+      {/* 03 · Os quatro pilares do Método Elo (E·L·O·+) */}
       <ProgramPillars
         pillars={PILLARS}
-        eyebrow="O programa em quatro pilares"
+        eyebrow="Os quatro pilares do Método Elo"
+        headline="E, L, O e a conexão que sustenta tudo: Entender, Lapidar, Orientar."
         tone="sand"
       />
 

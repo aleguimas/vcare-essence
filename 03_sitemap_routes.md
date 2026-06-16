@@ -14,7 +14,7 @@
 │
 ├── /metodo-v                             ← Método Vanessa Albuquerque (slug provisório)
 │
-├── /metodo-c                             ← Método Camila Clemente (slug provisório)
+├── /metodo-elo                           ← Método Elo, Camila Clemente
 │
 ├── /cuidados                             ← visão geral das 4 verticais clínicas
 │   ├── /cuidados/psicoterapia
@@ -88,7 +88,7 @@ export const ROUTES = {
   aCasa: '/a-casa',
   experienciaSensorial: '/a-casa/experiencia-sensorial',
   metodoV: '/metodo-v',          // TODO: aguardar decisão
-  metodoC: '/metodo-c',          // TODO: aguardar decisão
+  metodoElo: '/metodo-elo',      // Método Elo
   cuidados: '/cuidados',
   psicoterapia: '/cuidados/psicoterapia',
   hipnoterapia: '/cuidados/hipnoterapia',
@@ -114,7 +114,7 @@ export const ROUTES = {
 | Item | Aponta para | Comportamento mobile |
 |---|---|---|
 | **A Casa** | `/a-casa` | Drawer expandível com 5 subpáginas |
-| **Métodos** | `/metodo-v` (dropdown) | Drawer com 2 itens (Método V + Método C) |
+| **Métodos** | `/metodo-v` (dropdown) | Drawer com 2 itens (Método V + Método Elo) |
 | **Cuidados** | `/cuidados` | Drawer com 5 verticais clínicas |
 | **Profissionais** | `/profissionais` | Drawer com 3 itens |
 | **Diário** | `/diario` | Link direto |
@@ -145,7 +145,7 @@ export const ROUTES = {
 │                      - Online                                │
 │  Métodos                                Agendar              │
 │  - Método V          Profissionais                           │
-│  - Método C          - Vanessa                               │
+│  - Método Elo          - Vanessa                               │
 │                      - Camila                                │
 │                      - Convidados                            │
 │                                                              │

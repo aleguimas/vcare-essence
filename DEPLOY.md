@@ -12,7 +12,7 @@ podem ser inventados (CFP/LGPD e identidade de marca):
 
 | Item | Onde editar |
 |---|---|
-| Nomes finais dos Métodos V e C | `lib/routes.ts` (slugs) + eyebrows nas páginas `metodo-v`/`metodo-c` |
+| Nomes dos métodos (resolvidos: MEP e Método Elo) | `lib/routes.ts` (slugs `/mep` e `/metodo-elo`) + eyebrows nas páginas `mep`/`metodo-elo` |
 | CRPs de Vanessa e Camila | `lib/routes.ts` (não há campo ainda — hoje vão inline nas páginas) + schemas |
 | Telefone / WhatsApp | `lib/routes.ts` → `SITE.whatsapp` (formato `5581XXXXXXXXX`) e `SITE.phone` |
 | E-mail institucional | `lib/routes.ts` → `SITE.email` |
@@ -38,7 +38,7 @@ o botão flutuante e o CTA do segmentador. Hoje degradam para "em breve"/ocultos
 - [x] `pnpm lint` sem warnings
 - [x] Imagens otimizadas (ambiente ≤186KB) e com `alt`
 - [x] Links internos sem 404 (seção Diário removida da home até o blog existir)
-- [x] OG: imagens dinâmicas via `opengraph-image.tsx` (home, metodo-v, metodo-c)
+- [x] OG: imagens dinâmicas via `opengraph-image.tsx` (home, mep, metodo-elo)
 - [x] `sitemap.xml`, `robots.txt`, schemas JSON-LD, favicon
 
 ---

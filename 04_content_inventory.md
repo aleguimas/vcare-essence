@@ -48,7 +48,7 @@
   - CTA: `Conhecer o Método →`
 
   **Coluna B — Para estruturar e acompanhar**
-  - h3: `Método C — para adolescentes em fase decisiva.`
+  - h3: `Método Elo — para adolescentes em fase decisiva.`
   - Texto curto: `Programa estruturado para melhorar o rendimento escolar, preparar para o vestibular e organizar o emocional, com acompanhamento familiar.`
   - CTA: `Conhecer o Método →`
 
@@ -211,7 +211,7 @@ Sequência visual numerada, cada movimento com h3 + parágrafo curto:
 - Texto direto, com gentileza:
   - Não é para quem busca terapia semanal de longo prazo — para isso, recomendamos a Camila ou um dos profissionais convidados da casa.
   - Não é para quem busca medicação — não fazemos psiquiatria nesta vertical.
-  - Não é para adolescentes — para essa fase, recomendamos o Método C.
+  - Não é para adolescentes — para essa fase, recomendamos o Método Elo.
   - Não é para quem busca o menor preço de consulta — o método opera em outra lógica.
 
 **07 · Casos editoriais (anônimos)**
@@ -245,12 +245,12 @@ Perguntas reais. Respostas honestas. Schema FAQPage.
 
 ---
 
-## MÉTODO C — `/metodo-c`
+## MÉTODO ELO — `/metodo-elo`
 
 > **Página estratégica de segunda maior densidade.** Copy fala simultaneamente com a família e com o adolescente. Detalhes no Sprint 03.
 
 ### Metadata
-- **Title:** `Método C — Para adolescentes em fase de escolha · VCare Essence`
+- **Title:** `Método Elo — Para adolescentes em fase de escolha · VCare Essence`
 - **Description:** `Seu filho não é preguiçoso. Pode estar desorganizado emocionalmente. Camila Clemente conduz um programa estruturado para adolescentes em pré-vestibular, com suporte psicológico, organização e acompanhamento familiar.`
 
 ### Estrutura
@@ -426,7 +426,7 @@ Página-hub das 5 verticais clínicas. Curta — funciona como índice editorial
 3. Biografia em primeira pessoa
 4. Formação e especializações (AC, Psicomotricidade Relacional, Reabilitação Neuropsicológica, TDAH, Sistêmica)
 5. Mentora e docente
-6. Em que trabalha (Método C + Psicoterapia + Teste vocacional + Orientação familiar)
+6. Em que trabalha (Método Elo + Psicoterapia + Teste vocacional + Orientação familiar)
 7. Citação-marca
 8. Links das verticais + Agendar
 

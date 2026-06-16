@@ -22,11 +22,11 @@ const METHODS = [
   },
   {
     eyebrow: 'Para estruturar e acompanhar',
-    title: 'Método C, para adolescentes em fase decisiva.',
+    title: 'Método Elo, para adolescentes em fase decisiva.',
     description:
       'Programa estruturado para melhorar o rendimento escolar, preparar para o vestibular e organizar o emocional, com acompanhamento familiar.',
     cta: 'Conhecer o Método',
-    href: ROUTES.metodoC, // TODO: slug final das sócias
+    href: ROUTES.metodoElo,
     tone: 'cream' as const,
   },
 ] as const;

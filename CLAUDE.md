@@ -6,11 +6,17 @@
 
 ## ⚠️ Ajustes do cliente aplicados em 2026-06-15 (NÃO regredir)
 
+### Ajuste de 2026-06-16
+
+8. **"Método C" → "Método Elo".** URL `/metodo-c` → **`/metodo-elo`** (pasta `app/(marketing)/metodo-elo/`), com redirect 301 do slug antigo em `next.config.ts`. Key de rota renomeada `ROUTES.metodoC` → **`ROUTES.metodoElo`**; `CAL_LINKS.metodoElo = 'conversa-inicial-metodo-elo'`; vertical id do Segmentador `metodo-c` → `metodo-elo`. **ELO é acrônimo dos 4 pilares:** **E**ntender (avaliação inicial), **L**apidar (competências), **O**rientar (plano individualizado) e **+ Conexão** (família). Os cards de `ProgramPillars` agora exibem as letras E·L·O·+ (campo `label: string`, antes `number`). **A conduta/posicionamento da Camila não mudou, só o nome do método.**
+
+### Ajustes de 2026-06-15
+
 Rodada de ajustes a partir do doc "AJUSTES SITE VCARE.pdf". Estas decisões já estão no código e **substituem** indicações anteriores deste arquivo:
 
 1. **Tipografia: Georgia (títulos) + Arial (corpo).** Fraunces/Inter foram REMOVIDOS. Stack web-safe em `app/globals.css` (`--font-serif`/`--font-sans`); `next/font` saiu do `app/layout.tsx`. Não reintroduzir Fraunces/Inter.
 2. **"Casa" → "Clínica" em toda copy visível.** "Casa Boutique" → "Clínica Boutique"; nav "A Casa" → "A Clínica". **Preservar:** rotas `/a-casa`, key `ROUTES.aCasa`, imports `components/sections/casa/`, o bairro **Casa Forte** (slug `casa-forte`) e "casa" quando = lar do paciente (ex.: "conforto de casa").
-3. **"Método V" → "MEP" (Mapeamento Emocional Profundo).** URL `/metodo-v` → **`/mep`** (pasta `app/(marketing)/mep/`). `ROUTES.metodoV` mantém o nome da key, mas `value = '/mep'`. **Método C (Camila) não foi renomeado.**
+3. **"Método V" → "MEP" (Mapeamento Emocional Profundo).** URL `/metodo-v` → **`/mep`** (pasta `app/(marketing)/mep/`). `ROUTES.metodoV` mantém o nome da key, mas `value = '/mep'`. (Método C foi renomeado para Método Elo em 2026-06-16, ver ajuste acima.)
 4. **Travessões (—) banidos do site** (davam "cara de IA"): use vírgula (ou `·` em títulos de página). Não usar `—` em copy.
 5. **WhatsApp por pessoa:** `SITE.whatsapp` = `5581997671049` (Camila, padrão/home) e `SITE.whatsappVanessa` = `5581997865560`. `whatsappNumberForPath()` em `lib/whatsapp.ts` escolhe Vanessa nas páginas dela (vanessa, /mep, hipnoterapia), Camila no resto.
 6. **CRPs preenchidos:** Camila Clemente = 02/19121; Vanessa Albuquerque = 02/15875.
@@ -61,7 +67,7 @@ Tudo que importa começa por dentro: a calma, o foco, a alegria, a escolha. E qu
 
 **Métodos autorais (premium):**
 1. **MEP — Mapeamento Emocional Profundo** (Vanessa): hipnoterapia para destravar empresários. Rota `/mep`. Página dedicada robusta.
-2. **Método C** (Camila): programa estruturado para adolescentes (rendimento + vestibular + suporte + família). Rota `/metodo-c`. Página dedicada robusta.
+2. **Método Elo** (Camila): programa estruturado para adolescentes (rendimento + vestibular + suporte + família). Acrônimo dos 4 pilares: Entender, Lapidar, Orientar, + Conexão. Rota `/metodo-elo`. Página dedicada robusta.
 
 **Verticais clínicas:**
 3. **Psicoterapia tradicional** — Camila e convidados, adolescentes e adultos
