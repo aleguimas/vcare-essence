@@ -13,7 +13,7 @@ Rodada de ajustes a partir do doc "AJUSTES SITE VCARE.pdf". Estas decisões já 
 3. **"Método V" → "MEP" (Mapeamento Emocional Profundo).** URL `/metodo-v` → **`/mep`** (pasta `app/(marketing)/mep/`). `ROUTES.metodoV` mantém o nome da key, mas `value = '/mep'`. **Método C (Camila) não foi renomeado.**
 4. **Travessões (—) banidos do site** (davam "cara de IA"): use vírgula (ou `·` em títulos de página). Não usar `—` em copy.
 5. **WhatsApp por pessoa:** `SITE.whatsapp` = `5581997671049` (Camila, padrão/home) e `SITE.whatsappVanessa` = `5581999022649`. `whatsappNumberForPath()` em `lib/whatsapp.ts` escolhe Vanessa nas páginas dela (vanessa, /mep, hipnoterapia), Camila no resto.
-6. **CRP Camila Clemente = 02/19121** (preenchido). CRP da Vanessa ainda é TODO.
+6. **CRPs preenchidos:** Camila Clemente = 02/19121; Vanessa Albuquerque = 02/15875.
 7. **Hipnoterapia:** não usar a palavra "mística" (nem para desmistificar); enquadrar como "com ciência, resultado rápido e eficaz".
 
 ---
