@@ -12,10 +12,10 @@ import { cn } from '@/lib/utils';
 
 const METHODS = [
   {
-    eyebrow: 'Para destravar',
-    title: 'MEP, para empresários com uma trava emocional.',
+    eyebrow: 'Para acessar profundamente e destravar',
+    title: 'MEP, Mapeamento Emocional Profundo.',
     description:
-      'Encontros estruturados. Hipnoterapia clínica como ferramenta para acessar o inconsciente e ir à raiz do que está travando o próximo passo.',
+      'Um processo para quem convive com travas, bloqueios emocionais ou sintomas persistentes que não foram resolvidos em abordagens anteriores. São encontros estruturados com hipnoterapia clínica como ferramenta de acesso ao inconsciente, com foco em identificar e tratar a raiz do que está impedindo o próximo passo e reorganizar padrões internos com profundidade.',
     cta: 'Conhecer o Método',
     href: ROUTES.metodoV, // TODO: slug final das sócias
     tone: 'sand' as const,

@@ -14,7 +14,7 @@ import { ROUTES } from '@/lib/routes';
 export const metadata: Metadata = {
   title: 'Vanessa Albuquerque, Hipnoterapeuta · VCare Essence',
   description:
-    'Hipnoterapeuta com 14 anos de prática. Conduz o MEP para destravar empresários emocionalmente, na VCare Essence (RioMar Trade Center, Recife) e online.',
+    'Hipnoterapeuta com 15 anos de prática. Conduz o MEP para destravar empresários emocionalmente, na VCare Essence (RioMar Trade Center, Recife) e online.',
   alternates: { canonical: ROUTES.vanessa },
 };
 
@@ -34,14 +34,14 @@ const FORMATION = [
 
 const VERTICALS = [
   {
-    name: 'MEP',
-    href: ROUTES.metodoV,
-    description: 'Programa autoral para empresários com trava emocional. Encontros estruturados, hipnoterapia clínica como método central.',
+    name: '1º PASSO, MEP (Mapeamento Emocional Profundo)',
+    description:
+      'O MEP é uma investigação estratégica que identifica a raiz emocional dos sintomas, dos padrões repetitivos e dos bloqueios inconscientes que mantêm o problema ativo. Objetivo: gerar clareza, revelar a causa raiz e construir um direcionamento assertivo para o tratamento.',
   },
   {
-    name: 'Hipnoterapia Clínica',
-    href: ROUTES.hipnoterapia,
-    description: 'Hipnoterapia avulsa para questões pontuais, ansiedade, fobias, hábitos, bloqueios emocionais específicos.',
+    name: '2º PASSO, Plano de tratamento exclusivo e personalizado',
+    description:
+      'Cada pessoa carrega uma história única. Por isso, cada tratamento também deve ser único. Após o MEP, é desenvolvido um plano terapêutico exclusivo, construído com base na sua história de vida, nos seus objetivos e nas necessidades identificadas durante a investigação. Esse plano integra Hipnoterapia, Psicologia, Neurociência e Reprogramação Mental para definir os objetivos terapêuticos, a quantidade de encontros necessários e a estratégia mais adequada. Objetivo: garantir que o tratamento atue diretamente na causa raiz do problema, promovendo mudanças profundas, resultados mais eficazes e uma transformação sólida.',
   },
 ];
 
@@ -50,7 +50,7 @@ const schema = [
     name: 'Vanessa Albuquerque',
     jobTitle: 'Hipnoterapeuta',
     description:
-      'Hipnoterapeuta com 14 anos de prática, especializada em destravar empresários(as) através de método autoral.',
+      'Hipnoterapeuta com 15 anos de prática, especializada em destravar empresários(as) através de método autoral.',
     path: ROUTES.vanessa,
     image: '/images/profissionais/vanessa-albuquerque-vcare-essence-02.webp',
     crp: 'CRP 02/15875',
@@ -70,15 +70,16 @@ export default function VanessaPage() {
       <ProfessionalHero
         name="Vanessa Albuquerque"
         title="Hipnoterapeuta"
-        subtitle="14 anos de prática"
+        subtitle="15 anos de prática clínica"
         crp="CRP 02/15875"
+        cfp="CFP 013/2000"
         imageSrc="/images/profissionais/vanessa-albuquerque-vcare-essence-02.webp"
         imageAlt="Vanessa Albuquerque, hipnoterapeuta da VCare Essence, ensaio editorial"
       />
 
-      <ProfessionalBio headline="Hipnoterapeuta. Por escolha, não por acidente.">
+      <ProfessionalBio headline="Hipnoterapeuta por propósito. Psicóloga por paixão.">
         <p>
-          Hipnoterapeuta clínica e Psicóloga há 14 anos. Durante muito tempo, utilizei a
+          Hipnoterapeuta clínica e Psicóloga há 15 anos. Durante muito tempo, utilizei a
           hipnoterapia como uma ferramenta complementar. Hoje, ela é o centro da minha atuação.
         </p>
         <p>
@@ -109,7 +110,11 @@ export default function VanessaPage() {
         tone="sand"
       />
 
-      <ProfessionalVerticals items={VERTICALS} tone="cream" />
+      <ProfessionalVerticals
+        items={VERTICALS}
+        tone="cream"
+        heading="Atuação eficaz e focada na raiz do problema em dois passos estratégicos:"
+      />
 
       <Section tone="sand" size="sm">
         <Container narrow>
@@ -120,9 +125,8 @@ export default function VanessaPage() {
       </Section>
 
       <ProfessionalCTA
-        headline="Um primeiro encontro é uma conversa de diagnóstico, não compromisso."
-        subtext="A partir dele, decidimos juntos se há fit para um plano."
-        ctaLabel="Agendar primeiro encontro"
+        headline="O primeiro encontro já é uma consulta de diagnóstico clínico, dedicada a compreender seu caso em profundidade e orientar com precisão o próximo passo terapêutico."
+        ctaLabel="Agendar atendimento"
       />
     </>
   );

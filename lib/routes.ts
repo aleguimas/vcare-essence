@@ -43,7 +43,7 @@ export const SITE = {
   },
   phone: '', // TODO: aguardar decisão das sócias
   whatsapp: '5581997671049', // Camila Clemente, número padrão (home e geral)
-  whatsappVanessa: '5581999022649', // Vanessa Albuquerque, páginas dela
+  whatsappVanessa: '5581997865560', // Vanessa Albuquerque, páginas dela
   instagram: '', // TODO: aguardar decisão das sócias
   email: '', // TODO: aguardar decisão das sócias
   cnpj: '', // TODO: aguardar decisão das sócias

@@ -18,7 +18,7 @@ const PROFESSIONALS = [
   {
     name: 'Vanessa Albuquerque',
     title: 'Hipnoterapeuta',
-    experience: '14 anos de prática',
+    experience: '15 anos de prática',
     crp: 'CRP 02/15875',
     signature: 'Acesso a raiz e destravo o que te impede de avançar com Método Exclusivo e resultado imediato.',
     href: ROUTES.vanessa,

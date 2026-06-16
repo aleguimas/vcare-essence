@@ -28,12 +28,13 @@ export function FinalCTA() {
           className="text-center max-w-prose-wide mx-auto"
         >
           <motion.div variants={fadeInUp}>
-            <Eyebrow tone="muted">Comece quando quiser</Eyebrow>
+            <Eyebrow tone="muted">Comece agora</Eyebrow>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
             <Heading as="h2" size="display-md" className="mt-5 text-cream">
-              Uma primeira conversa nem sempre tem palavras. Comece pelo silêncio.
+              Nem toda mudança começa com palavras, algumas começam com uma decisão. Dê o próximo
+              passo e fale conosco.
             </Heading>
           </motion.div>
 

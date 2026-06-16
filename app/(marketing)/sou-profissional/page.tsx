@@ -20,12 +20,12 @@ export default function SouProfissionalPage() {
         <Container>
           <Eyebrow>Sou Profissional</Eyebrow>
           <Heading as="h1" size="display-md" className="mt-5 max-w-prose-wide">
-            Uma clínica para quem faz o trabalho de verdade.
+            Uma clínica para quem busca se diferenciar.
           </Heading>
           <p className="mt-6 text-lead text-ink/70 max-w-prose">
-            A VCare Essence oferece dois caminhos para profissionais: residência clínica, para
-            quem quer integrar a clínica e atender pacientes, e sala para gravações, para criadores
-            de conteúdo de saúde que precisam de um cenário com identidade.
+            A VCare Essence oferece duas salas para sublocação, ideais para profissionais da saúde.
+            Os espaços podem ser usados para atendimentos, reuniões e também para gravação de
+            conteúdos, com um ambiente estruturado, estético e com identidade profissional.
           </p>
         </Container>
       </Section>

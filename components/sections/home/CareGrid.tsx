@@ -26,7 +26,7 @@ const CARE_ITEMS: Array<{
   {
     icon: Sparkles,
     label: 'Hipnoterapia',
-    description: 'Hipnoterapia clínica para questões pontuais, com ciência, resultado rápido e eficaz.',
+    description: 'Hipnoterapia clínica para questões emocionais profundas, atuando diretamente no inconsciente para promover mudanças consistentes e eficazes.',
     href: ROUTES.hipnoterapia,
   },
   {

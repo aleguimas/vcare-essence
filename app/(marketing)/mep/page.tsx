@@ -22,7 +22,7 @@ const breadcrumb = buildBreadcrumbSchema([
 export const metadata: Metadata = {
   title: 'MEP · Para destravar emocionalmente',
   description:
-    'Trava emocional não é fraqueza, é informação. Vanessa Albuquerque, hipnoterapeuta com 14 anos de prática, conduz um método autoral em encontros estruturados, não em anos de terapia. Para empresários prontos para o próximo nível.',
+    'Trava emocional não é fraqueza, é informação. Vanessa Albuquerque, hipnoterapeuta com 15 anos de prática, conduz um método autoral em encontros estruturados, não em anos de terapia. Para empresários prontos para o próximo nível.',
   alternates: { canonical: ROUTES.metodoV },
   openGraph: {
     title: 'MEP · Para destravar emocionalmente · VCare Essence',
@@ -84,7 +84,7 @@ const CASES = [
 ];
 
 const VANESSA_BIO = [
-  'Hipnoterapeuta clínica com 14 anos de prática, formada e com atuação contínua nas bases da hipnoterapia clínica e do acesso ao inconsciente como ferramenta de transformação.',
+  'Hipnoterapeuta clínica com 15 anos de prática, formada e com atuação contínua nas bases da hipnoterapia clínica e do acesso ao inconsciente como ferramenta de transformação.',
   'Ao longo de mais de uma década, desenvolveu um método autoral que combina diagnóstico aprofundado, hipnoterapia clínica e acompanhamento estruturado, voltado especificamente para empresários e líderes que chegam a um ponto de paralisia sem explicação racional aparente.',
   'Co-fundadora da VCare Essence, acredita que o ambiente é parte do processo terapêutico, não cenário. É nesse princípio que a clínica foi construída.',
 ];

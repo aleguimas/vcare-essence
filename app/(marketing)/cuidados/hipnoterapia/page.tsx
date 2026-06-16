@@ -19,7 +19,7 @@ import { ROUTES } from '@/lib/routes';
 export const metadata: Metadata = {
   title: 'Hipnoterapia Clínica · VCare Essence',
   description:
-    'Hipnoterapia clínica em Recife, com ciência, resultado rápido e eficaz. Atendimento regulamentado para ansiedade, fobias, hábitos e trauma. Vanessa Albuquerque, 14 anos de prática.',
+    'Hipnoterapia clínica em Recife, com ciência, resultado rápido e eficaz. Atendimento regulamentado para ansiedade, fobias, hábitos e trauma. Vanessa Albuquerque, 15 anos de prática.',
   alternates: { canonical: ROUTES.hipnoterapia },
 };
 
@@ -88,7 +88,7 @@ const FAQ = [
   {
     question: 'Qual a formação da Vanessa em hipnoterapia?',
     answer:
-      'Vanessa tem 14 anos de prática em hipnoterapia clínica, com formação continuada na área. A especificidade da formação pode ser verificada no perfil completo da profissional.',
+      'Vanessa tem 15 anos de prática em hipnoterapia clínica, com formação continuada na área. A especificidade da formação pode ser verificada no perfil completo da profissional.',
   },
   {
     question: 'Hipnoterapia avulsa é diferente do MEP?',
@@ -118,7 +118,7 @@ export default function HipnoterapiaPage() {
         <p>
           É um recurso auxiliar regulamentado pelo Conselho Federal de Psicologia (Resolução CFP
           nº 013/2000) para uso por profissionais habilitados. Na VCare Essence, é conduzida por
-          Vanessa Albuquerque, hipnoterapeuta com 14 anos de prática clínica.
+          Vanessa Albuquerque, hipnoterapeuta com 15 anos de prática clínica.
         </p>
       </VerticalDefinition>
 

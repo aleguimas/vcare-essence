@@ -14,7 +14,7 @@ const FOUNDERS = [
   {
     name: 'Vanessa Albuquerque',
     role: 'Hipnoterapeuta',
-    experience: '14 anos de prática',
+    experience: '15 anos de prática',
     quote: 'Acesso a raiz e destravo o que te impede de avançar com Método Exclusivo e resultado imediato.',
     cta: 'Conhecer Vanessa',
     href: ROUTES.vanessa,

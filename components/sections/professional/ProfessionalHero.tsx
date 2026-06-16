@@ -11,6 +11,7 @@ interface ProfessionalHeroProps {
   title: string;
   subtitle: string;
   crp: string;
+  cfp?: string;
   imageSrc?: string;
   imageAlt: string;
 }
@@ -20,6 +21,7 @@ export function ProfessionalHero({
   title,
   subtitle,
   crp,
+  cfp,
   imageSrc,
   imageAlt,
 }: ProfessionalHeroProps) {
@@ -87,6 +89,11 @@ export function ProfessionalHero({
             <motion.p variants={fadeInUp} className="mt-3 text-small text-muted font-sans">
               {crp}
             </motion.p>
+            {cfp && (
+              <motion.p variants={fadeInUp} className="mt-1 text-small text-muted font-sans">
+                {cfp}
+              </motion.p>
+            )}
           </motion.div>
         </div>
       </Container>
