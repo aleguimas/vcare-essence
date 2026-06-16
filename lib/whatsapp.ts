@@ -4,11 +4,12 @@ const BASE_MESSAGE = 'Olá! Cheguei pelo site da VCare Essence.';
 
 const VERTICAL_MESSAGES: Record<string, string> = {
   'metodo-v': `${BASE_MESSAGE} Tenho interesse em conhecer o MEP (Vanessa).`,
-  'metodo-elo': `${BASE_MESSAGE} Tenho interesse no Método Elo (Camila) para um adolescente da família.`,
+  'metodo-elo': `${BASE_MESSAGE} Tenho interesse no Método ELO (Camila) para um adolescente da família.`,
   psicoterapia: `${BASE_MESSAGE} Gostaria de informações sobre psicoterapia.`,
   hipnoterapia: `${BASE_MESSAGE} Gostaria de informações sobre hipnoterapia clínica.`,
   'teste-vocacional': `${BASE_MESSAGE} Tenho interesse em teste vocacional.`,
   'orientacao-familiar': `${BASE_MESSAGE} Tenho interesse em orientação familiar.`,
+  sublocacao: `${BASE_MESSAGE} Gostaria de saber valores e condições da sublocação de salas.`,
 };
 
 /**

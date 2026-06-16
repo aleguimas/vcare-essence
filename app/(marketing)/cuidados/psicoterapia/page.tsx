@@ -17,7 +17,7 @@ import { ROUTES } from '@/lib/routes';
 export const metadata: Metadata = {
   title: 'Psicoterapia · VCare Essence',
   description:
-    'Psicoterapia clínica para adolescentes e adultos em Recife e online. Abordagens baseadas em evidências: TCC e Análise do Comportamento. Atendimento no RioMar Trade Center.',
+    'Psicoterapia clínica para adolescentes e adultos em Recife e online. Abordagem baseada em evidências: Análise do Comportamento. Atendimento no RioMar Trade Center.',
   alternates: { canonical: ROUTES.psicoterapia },
 };
 
@@ -25,7 +25,7 @@ const schema = [
   buildMedicalTherapySchema({
     name: 'Psicoterapia',
     description:
-      'Psicoterapia clínica para adolescentes e adultos, com base em Análise do Comportamento e Terapia Cognitivo-Comportamental.',
+      'Psicoterapia clínica para adolescentes e adultos, com base em Análise do Comportamento.',
     path: ROUTES.psicoterapia,
   }),
   buildBreadcrumbSchema([
@@ -61,12 +61,12 @@ const FAQ = [
   {
     question: 'Quais abordagens são utilizadas?',
     answer:
-      'Camila Clemente trabalha com Análise do Comportamento (AC) e Terapia Cognitivo-Comportamental (TCC), com especialização em Psicomotricidade Relacional. Para adolescentes, o atendimento pode integrar elementos do Método Elo quando há necessidade de estruturação mais ampla. Profissionais convidados da clínica trazem outras abordagens, a definir conforme disponibilidade.',
+      'Camila Clemente trabalha com Análise do Comportamento (AC), com especialização em Psicomotricidade Relacional. Para adolescentes, o atendimento pode integrar elementos do Método ELO quando há necessidade de estruturação mais ampla. Profissionais convidados da clínica trazem outras abordagens, a definir conforme disponibilidade.',
   },
   {
     question: 'Atende adolescentes e adultos?',
     answer:
-      'Sim. Camila atende adolescentes (especialmente em fases de transição, pré-vestibular, mudanças de comportamento) e adultos. Para adolescentes que precisam de suporte mais estruturado e acompanhamento familiar, o Método Elo pode ser mais indicado, o que é avaliado na primeira sessão.',
+      'Sim. Camila atende adolescentes (especialmente em fases de transição, pré-vestibular, mudanças de comportamento) e adultos. Para adolescentes que precisam de suporte mais estruturado e acompanhamento familiar, o Método ELO pode ser mais indicado, o que é avaliado na primeira sessão.',
   },
   {
     question: 'Funciona online com a mesma qualidade?',
@@ -141,10 +141,6 @@ export default function PsicoterapiaPage() {
               {
                 name: 'Análise do Comportamento (AC)',
                 desc: 'Abordagem científica que investiga a relação entre comportamento, ambiente e história de vida. Trabalha padrões comportamentais com base em dados, não em interpretações. Camila Clemente é especialista nessa abordagem.',
-              },
-              {
-                name: 'Terapia Cognitivo-Comportamental (TCC)',
-                desc: 'Uma das abordagens mais estudadas na literatura científica. Trabalha a relação entre pensamentos, emoções e comportamentos. Eficaz para ansiedade, depressão, fobias e outros quadros.',
               },
               {
                 name: 'Profissionais convidados',

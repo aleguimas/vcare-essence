@@ -41,16 +41,8 @@ interface Vertical {
 // Jornada B = verticais clínicas (intenção direta, WhatsApp como CTA principal)
 const VERTICALS: Vertical[] = [
   {
-    id: 'metodo-v',
-    label: 'MEP, destravamento emocional para empresários',
-    hint: 'Com Vanessa Albuquerque',
-    journey: 'A',
-    calSlug: CAL_LINKS.metodoV,
-    bookLabel: 'Agendar primeiro encontro',
-  },
-  {
     id: 'metodo-elo',
-    label: 'Método Elo, programa para adolescentes',
+    label: 'Método ELO, programa para adolescentes',
     hint: 'Com Camila Clemente',
     journey: 'A',
     calSlug: CAL_LINKS.metodoElo,
@@ -58,7 +50,7 @@ const VERTICALS: Vertical[] = [
   },
   {
     id: 'psicoterapia',
-    label: 'Psicoterapia (semanal ou quinzenal)',
+    label: 'Psicoterapia',
     hint: 'Adolescentes e adultos',
     journey: 'B',
     calSlug: CAL_LINKS.psicoterapia,
@@ -66,7 +58,7 @@ const VERTICALS: Vertical[] = [
   },
   {
     id: 'hipnoterapia',
-    label: 'Hipnoterapia clínica (questão pontual)',
+    label: 'Hipnoterapia Clínica (tratamento emocional profundo)',
     hint: 'Com Vanessa Albuquerque',
     journey: 'B',
     calSlug: CAL_LINKS.hipnoterapia,
@@ -89,6 +81,14 @@ const VERTICALS: Vertical[] = [
     bookLabel: 'Agendar conversa',
   },
   {
+    id: 'sublocacao',
+    label: 'Sublocação de salas',
+    hint: 'Valores e condições',
+    journey: 'B',
+    calSlug: '',
+    bookLabel: 'Falar com a gente',
+  },
+  {
     id: 'outro',
     label: 'Outro / Não sei ainda',
     hint: 'A gente ajuda você a entender',
@@ -109,7 +109,7 @@ export function Segmentador() {
   };
 
   // Verticais conduzidas pela Vanessa usam o WhatsApp dela; demais, o da Camila.
-  const isVanessaVertical = selected?.id === 'metodo-v' || selected?.id === 'hipnoterapia';
+  const isVanessaVertical = selected?.id === 'hipnoterapia';
   const whatsappLink = selected
     ? buildWhatsAppLink(selected.id, isVanessaVertical ? ROUTES.vanessa : undefined)
     : null;

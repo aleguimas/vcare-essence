@@ -37,7 +37,7 @@ const FOOTER_EXTRA = [
     title: 'Métodos',
     links: [
       { label: 'MEP', href: ROUTES.metodoV },
-      { label: 'Método Elo', href: ROUTES.metodoElo },
+      { label: 'Método ELO', href: ROUTES.metodoElo },
     ],
   },
   {

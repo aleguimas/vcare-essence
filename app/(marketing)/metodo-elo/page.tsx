@@ -14,18 +14,18 @@ import { ROUTES } from '@/lib/routes';
 
 const breadcrumb = buildBreadcrumbSchema([
   { name: 'Início', path: ROUTES.home },
-  { name: 'Método Elo', path: ROUTES.metodoElo },
+  { name: 'Método ELO', path: ROUTES.metodoElo },
 ]);
 
 export const metadata: Metadata = {
-  title: 'Método Elo · Para adolescentes em fase de escolha',
+  title: 'Método ELO · Para adolescentes em fase de escolha',
   description:
-    'Seu filho não é preguiçoso. Pode estar desorganizado emocionalmente. Camila Clemente conduz o Método Elo, programa estruturado para adolescentes em pré-vestibular, com suporte psicológico, organização e acompanhamento familiar.',
+    'Seu filho não é preguiçoso. Pode estar desorganizado emocionalmente. Camila Clemente conduz o Método ELO, programa estruturado para adolescentes em pré-vestibular, com suporte psicológico, organização e acompanhamento familiar.',
   alternates: { canonical: ROUTES.metodoElo },
   openGraph: {
-    title: 'Método Elo · Para adolescentes em fase de escolha · VCare Essence',
+    title: 'Método ELO · Para adolescentes em fase de escolha · VCare Essence',
     description:
-      'Método Elo: programa estruturado para adolescentes, rendimento escolar, vestibular, suporte emocional e acompanhamento familiar.',
+      'Método ELO: programa estruturado para adolescentes, rendimento escolar, vestibular, suporte emocional e acompanhamento familiar.',
     // OG image gerada dinamicamente por opengraph-image.tsx
   },
 };
@@ -111,7 +111,7 @@ export default function MetodoEloPage() {
       <JsonLd data={breadcrumb} />
       {/* 01 · Hero, fala com pais/mães */}
       <MethodHero
-        eyebrow="Método Elo, com Camila Clemente"
+        eyebrow="Método ELO, com Camila Clemente"
         headline={
           <>
             Seu filho não é preguiçoso.{' '}
@@ -154,10 +154,10 @@ export default function MetodoEloPage() {
         </Container>
       </Section>
 
-      {/* 03 · Os quatro pilares do Método Elo (E·L·O·+) */}
+      {/* 03 · Os quatro pilares do Método ELO (E·L·O·+) */}
       <ProgramPillars
         pillars={PILLARS}
-        eyebrow="Os quatro pilares do Método Elo"
+        eyebrow="Os quatro pilares do Método ELO"
         headline="E, L, O e a conexão que sustenta tudo: Entender, Lapidar, Orientar."
         tone="sand"
       />

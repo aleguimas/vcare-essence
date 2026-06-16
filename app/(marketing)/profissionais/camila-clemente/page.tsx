@@ -14,7 +14,7 @@ import { ROUTES } from '@/lib/routes';
 export const metadata: Metadata = {
   title: 'Camila Clemente, Psicóloga · VCare Essence',
   description:
-    'Psicóloga com 10 anos de prática, especialista em Análise do Comportamento, TDAH e Terapêutica Sistêmica. Conduz o Método Elo para adolescentes na VCare Essence, Recife.',
+    'Psicóloga com 10 anos de prática, especialista em Análise do Comportamento, TDAH e Terapêutica Sistêmica. Conduz o Método ELO para adolescentes na VCare Essence, Recife.',
   alternates: { canonical: ROUTES.camila },
 };
 
@@ -29,7 +29,7 @@ const FORMATION = [
 
 const VERTICALS = [
   {
-    name: 'Método Elo',
+    name: 'Método ELO',
     href: ROUTES.metodoElo,
     description: 'Programa estruturado para adolescentes em pré-vestibular, rendimento, organização emocional e acompanhamento familiar.',
   },

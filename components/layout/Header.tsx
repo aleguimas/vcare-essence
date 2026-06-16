@@ -27,7 +27,7 @@ const NAV_ITEMS = [
     href: ROUTES.metodoV,
     children: [
       { label: 'MEP', href: ROUTES.metodoV },
-      { label: 'Método Elo', href: ROUTES.metodoElo },
+      { label: 'Método ELO', href: ROUTES.metodoElo },
     ],
   },
   {

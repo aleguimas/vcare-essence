@@ -259,7 +259,7 @@ export default function MetodoVPage() {
                 text: 'Não é para quem busca medicação, não fazemos psiquiatria nesta vertical.',
               },
               {
-                text: 'Não é para adolescentes, para essa fase, o Método Elo é mais adequado.',
+                text: 'Não é para adolescentes, para essa fase, o Método ELO é mais adequado.',
               },
               {
                 text: 'Não é para quem busca o menor preço de consulta, o método opera em outra lógica.',
