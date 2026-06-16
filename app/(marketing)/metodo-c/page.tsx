@@ -203,7 +203,7 @@ export default function MetodoCPage() {
       <MethodProfessional
         name="Camila Clemente"
         role="Psicóloga"
-        crp="CRP XX/XXXXX" // TODO: aguardar dados das sócias
+        crp="CRP 02/19121"
         bio={CAMILA_BIO}
         signature="Trato a falta de resultado como falta de motivação, não como preguiça."
         profileHref={ROUTES.camila}

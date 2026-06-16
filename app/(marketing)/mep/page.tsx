@@ -281,7 +281,7 @@ export default function MetodoVPage() {
       <MethodProfessional
         name="Vanessa Albuquerque"
         role="Hipnoterapeuta Clínica"
-        crp="CRP XX/XXXXX" // TODO: aguardar dados das sócias
+        crp="CRP 02/15875"
         bio={VANESSA_BIO}
         signature="Acesso a raiz e destravo o que te impede de avançar com Método Exclusivo e resultado imediato."
         profileHref={ROUTES.vanessa}

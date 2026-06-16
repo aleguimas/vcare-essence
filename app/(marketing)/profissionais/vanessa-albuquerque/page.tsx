@@ -53,7 +53,7 @@ const schema = [
       'Hipnoterapeuta com 14 anos de prática, especializada em destravar empresários(as) através de método autoral.',
     path: ROUTES.vanessa,
     image: '/images/profissionais/vanessa-albuquerque-vcare-essence-02.webp',
-    crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
+    crp: 'CRP 02/15875',
   }),
   buildBreadcrumbSchema([
     { name: 'Início', path: ROUTES.home },
@@ -71,7 +71,7 @@ export default function VanessaPage() {
         name="Vanessa Albuquerque"
         title="Hipnoterapeuta"
         subtitle="14 anos de prática"
-        crp="CRP XX/XXXXX" // TODO: aguardar dados das sócias
+        crp="CRP 02/15875"
         imageSrc="/images/profissionais/vanessa-albuquerque-vcare-essence-02.webp"
         imageAlt="Vanessa Albuquerque, hipnoterapeuta da VCare Essence, ensaio editorial"
       />

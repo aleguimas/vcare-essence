@@ -19,7 +19,7 @@ const PROFESSIONALS = [
     name: 'Vanessa Albuquerque',
     title: 'Hipnoterapeuta',
     experience: '14 anos de prática',
-    crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
+    crp: 'CRP 02/15875',
     signature: 'Acesso a raiz e destravo o que te impede de avançar com Método Exclusivo e resultado imediato.',
     href: ROUTES.vanessa,
     imgSrc: '/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp',
@@ -29,7 +29,7 @@ const PROFESSIONALS = [
     name: 'Camila Clemente',
     title: 'Psicóloga',
     experience: '10 anos de prática',
-    crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
+    crp: 'CRP 02/19121',
     signature: 'Trato a falta de resultado como falta de motivação, não como preguiça.',
     href: ROUTES.camila,
     imgSrc: '/images/profissionais/camila-clemente-vcare-essence-01.webp',

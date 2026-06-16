@@ -39,7 +39,7 @@ const PROFESSIONALS = [
   {
     name: 'Camila Clemente',
     role: 'Psicóloga',
-    crp: 'CRP XX/XXXXX', // TODO: aguardar dados das sócias
+    crp: 'CRP 02/19121',
     href: ROUTES.camila,
     imgSrc: '/images/profissionais/camila-clemente-vcare-essence-01.webp',
   },
