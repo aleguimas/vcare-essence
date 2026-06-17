@@ -25,19 +25,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/profissionais/vanessa-albuquerque',
     '/profissionais/camila-clemente',
     '/profissionais/convidados',
-    '/diario',
     '/sou-profissional',
     '/sou-profissional/consultorio-residente',
     '/sou-profissional/sala-gravacoes',
     '/agendar',
     '/politica-de-privacidade',
     '/termos-de-uso',
-  ].map((path) => ({
-    url: `${base}${path}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: path === '' ? 1.0 : path.startsWith('/metodo') ? 0.9 : 0.7,
-  }));
+  ].map((path) => {
+    // Métodos autorais (MEP e ELO) são páginas-âncora, prioridade alta.
+    const isMethod = path === '/mep' || path === '/metodo-elo';
+    return {
+      url: `${base}${path}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: path === '' ? 1.0 : isMethod ? 0.9 : 0.7,
+    };
+  });
 
   const bairroRoutes = BAIRRO_SLUGS.map((slug) => ({
     url: `${base}/cuidados/em/${slug}`,

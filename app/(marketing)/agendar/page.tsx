@@ -5,6 +5,8 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildFAQSchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES, SITE } from '@/lib/routes';
 
 export const metadata: Metadata = {
@@ -37,9 +39,18 @@ const FAQ = [
   },
 ];
 
+const schema = [
+  buildFAQSchema(FAQ.map((item) => ({ question: item.q, answer: item.a }))),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'Agendar', path: ROUTES.agendar },
+  ]),
+];
+
 export default function AgendarPage() {
   return (
     <>
+      <JsonLd data={schema} />
       {/* Hero */}
       <Section tone="cream" size="md" className="border-b border-line">
         <Container>

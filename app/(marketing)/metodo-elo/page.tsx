@@ -9,13 +9,21 @@ import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { buildBreadcrumbSchema } from '@/lib/schemas';
+import { buildMedicalTherapySchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
 
-const breadcrumb = buildBreadcrumbSchema([
-  { name: 'Início', path: ROUTES.home },
-  { name: 'Método ELO', path: ROUTES.metodoElo },
-]);
+const schema = [
+  buildMedicalTherapySchema({
+    name: 'Método ELO',
+    description:
+      'Programa autoral de Camila Clemente para adolescentes em fase de vestibular e rendimento escolar: avaliação, desenvolvimento de competências, plano individual e acompanhamento familiar (Entender, Lapidar, Orientar e Conexão).',
+    path: ROUTES.metodoElo,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'Método ELO', path: ROUTES.metodoElo },
+  ]),
+];
 
 export const metadata: Metadata = {
   title: 'Método ELO · Para adolescentes em fase de escolha',
@@ -108,7 +116,7 @@ const FAQ_C = [
 export default function MetodoEloPage() {
   return (
     <>
-      <JsonLd data={breadcrumb} />
+      <JsonLd data={schema} />
       {/* 01 · Hero, fala com pais/mães */}
       <MethodHero
         eyebrow="Método ELO, com Camila Clemente"

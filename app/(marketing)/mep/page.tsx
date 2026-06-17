@@ -10,15 +10,22 @@ import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { buildBreadcrumbSchema } from '@/lib/schemas';
+import { buildMedicalTherapySchema, buildBreadcrumbSchema } from '@/lib/schemas';
 import { ROUTES } from '@/lib/routes';
 
-const breadcrumb = buildBreadcrumbSchema([
-  { name: 'Início', path: ROUTES.home },
-  { name: 'MEP', path: ROUTES.metodoV },
-]);
+const schema = [
+  buildMedicalTherapySchema({
+    name: 'MEP, Mapeamento Emocional Profundo',
+    description:
+      'Método autoral de Vanessa Albuquerque baseado em hipnoterapia clínica, para destravar empresários e líderes em encontros estruturados, com diagnóstico aprofundado e plano individual.',
+    path: ROUTES.metodoV,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Início', path: ROUTES.home },
+    { name: 'MEP', path: ROUTES.metodoV },
+  ]),
+];
 
-// TODO: substituir pelo nome final do método, aguardar decisão das sócias
 export const metadata: Metadata = {
   title: 'MEP · Para destravar emocionalmente',
   description:
@@ -127,7 +134,7 @@ const FAQ_V = [
 export default function MetodoVPage() {
   return (
     <>
-      <JsonLd data={breadcrumb} />
+      <JsonLd data={schema} />
       {/* 01 · Hero editorial, sem CTA imediato */}
       <MethodHero
         eyebrow="MEP · Mapeamento Emocional Profundo"
