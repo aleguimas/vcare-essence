@@ -138,6 +138,8 @@ export default function MetodoVPage() {
           </>
         }
         subheadline="Para empresários e empresárias que já conquistaram muito e sentem algo invisível impedindo o próximo passo."
+        whatsappVertical="metodo-v"
+        whatsappLabel="Falar com a Vanessa no WhatsApp"
       />
 
       {/* 02 · A trava, sintomas reconhecíveis */}

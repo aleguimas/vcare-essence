@@ -1,20 +1,34 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { MessageCircle } from 'lucide-react';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
+import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { fadeInUp, stagger } from '@/lib/motion';
 
 interface MethodHeroProps {
   eyebrow: string;
   headline: React.ReactNode;
   subheadline?: string;
-  /** Sem CTA, esta seção qualifica, não vende */
   professionalPhoto?: React.ReactNode;
+  /** Vertical para a mensagem pré-preenchida do WhatsApp (ex.: 'metodo-v'). */
+  whatsappVertical?: string;
+  /** Rótulo do botão de WhatsApp logo após a mensagem principal. */
+  whatsappLabel?: string;
 }
 
-export function MethodHero({ eyebrow, headline, subheadline, professionalPhoto }: MethodHeroProps) {
+export function MethodHero({
+  eyebrow,
+  headline,
+  subheadline,
+  professionalPhoto,
+  whatsappVertical,
+  whatsappLabel = 'Falar pelo WhatsApp',
+}: MethodHeroProps) {
+  const whatsappLink = buildWhatsAppLink(whatsappVertical, usePathname());
   return (
     <Section tone="cream" size="lg">
       <Container>
@@ -40,6 +54,20 @@ export function MethodHero({ eyebrow, headline, subheadline, professionalPhoto }
               <motion.p variants={fadeInUp} className="mt-6 text-lead text-ink/70 max-w-prose">
                 {subheadline}
               </motion.p>
+            )}
+
+            {whatsappLink && (
+              <motion.div variants={fadeInUp} className="mt-8">
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-moss px-6 py-3.5 text-cream font-sans font-medium transition-colors duration-300 hover:bg-moss-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2"
+                >
+                  <MessageCircle size={18} strokeWidth={1.5} aria-hidden="true" />
+                  {whatsappLabel}
+                </a>
+              </motion.div>
             )}
           </motion.div>
 

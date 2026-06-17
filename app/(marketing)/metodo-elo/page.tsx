@@ -121,6 +121,8 @@ export default function MetodoEloPage() {
           </>
         }
         subheadline="Programa estruturado para adolescentes em fase de vestibular, rendimento escolar e travessias de identidade."
+        whatsappVertical="metodo-elo"
+        whatsappLabel="Falar com a Camila no WhatsApp"
       />
 
       {/* 02 · O que pode estar acontecendo */}
