@@ -2,11 +2,14 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { MessageCircle } from 'lucide-react';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
+import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { fadeInUp, fadeIn, stagger, viewportConfig } from '@/lib/motion';
 
 interface MethodProfessionalProps {
@@ -18,6 +21,8 @@ interface MethodProfessionalProps {
   profileHref: string;
   imgSrc?: string;
   imgAlt: string;
+  /** Vertical para a mensagem pré-preenchida do WhatsApp (ex.: 'metodo-v'). */
+  whatsappVertical?: string;
 }
 
 export function MethodProfessional({
@@ -29,7 +34,10 @@ export function MethodProfessional({
   profileHref,
   imgSrc,
   imgAlt,
+  whatsappVertical,
 }: MethodProfessionalProps) {
+  const firstName = name.split(' ')[0];
+  const whatsappLink = buildWhatsAppLink(whatsappVertical, usePathname());
   return (
     <Section tone="sand">
       <Container>
@@ -99,7 +107,18 @@ export function MethodProfessional({
               &ldquo;{signature}&rdquo;
             </motion.blockquote>
 
-            <motion.div variants={fadeInUp} className="mt-8">
+            <motion.div variants={fadeInUp} className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+              {whatsappLink && (
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-moss px-5 py-3 text-cream font-sans font-medium transition-colors duration-300 hover:bg-moss-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2"
+                >
+                  <MessageCircle size={18} strokeWidth={1.5} aria-hidden="true" />
+                  Falar com {firstName} no WhatsApp
+                </a>
+              )}
               <Link
                 href={profileHref}
                 className="inline-flex items-center gap-2 text-bronze font-sans font-medium hover:text-bronze-400 transition-colors duration-300 group"

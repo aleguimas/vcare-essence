@@ -6,21 +6,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { trackEvent } from '@/lib/analytics';
-import { ROUTES } from '@/lib/routes';
-
-// Páginas onde o botão NÃO aparece, os métodos autorais não convertem
-// por WhatsApp e o botão poluiria a jornada de qualificação.
-const HIDDEN_PATHS = [ROUTES.metodoV, ROUTES.metodoElo];
 
 export function WhatsAppFloat() {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
 
+  // WhatsApp é o único canal de contato do site, com o número correto por
+  // caminho (Vanessa nas páginas dela, Camila no restante).
   const link = buildWhatsAppLink(undefined, pathname);
-  const isHidden = HIDDEN_PATHS.some((p) => pathname.startsWith(p));
 
   useEffect(() => {
-    if (isHidden || !link) return;
+    if (!link) return;
 
     const timer = setTimeout(() => setVisible(true), 10_000);
 
@@ -34,10 +30,10 @@ export function WhatsAppFloat() {
       clearTimeout(timer);
       window.removeEventListener('scroll', onScroll);
     };
-  }, [isHidden, link]);
+  }, [link]);
 
-  // Sem número configurado ou em página oculta: não renderiza nada
-  if (isHidden || !link) return null;
+  // Sem número configurado: não renderiza nada
+  if (!link) return null;
 
   return (
     <AnimatePresence>

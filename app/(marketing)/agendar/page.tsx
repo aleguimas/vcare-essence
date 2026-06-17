@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: 'Quanto tempo dura a primeira sessão?',
-    a: 'Varia conforme a vertical. A primeira conversa dos métodos autorais (V e C) dura cerca de 60 minutos. Sessões de psicoterapia, 50 minutos. Hipnoterapia, de 60 a 90 minutos.',
+    a: 'Varia conforme a vertical. A primeira conversa dos métodos autorais (MEP e ELO) dura cerca de 60 minutos. Sessões de psicoterapia, 50 minutos. Hipnoterapia, cerca de 2 horas.',
   },
   {
     q: 'Preciso de indicação médica?',

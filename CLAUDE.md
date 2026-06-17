@@ -6,6 +6,14 @@
 
 ## ⚠️ Ajustes do cliente aplicados em 2026-06-15 (NÃO regredir)
 
+### Ajuste de 2026-06-17 (doc "AJUSTE 4.pdf")
+
+9. **Agendamento online REMOVIDO. WhatsApp é o único canal de contato do site.** O embed do Cal.com saiu do Segmentador (`components/sections/agendar/Segmentador.tsx`) e o componente `CalendarEmbed.tsx` foi deletado. Todos os CTAs de conversão (`FinalCTA`, `VerticalCTA`, `ProfessionalCTA`, `MethodFinalCTA`) agora têm **só o botão WhatsApp** (variant `secondary`); os props `agendaLabel`/`ctaLabel` de "Agendar" foram removidos. O `WhatsAppFloat` agora aparece em **todas** as páginas (não há mais `HIDDEN_PATHS`, métodos incluídos). `CAL_LINKS`/`buildCalLink` em `lib/routes.ts` ficaram como exports não usados (ok). As keys de nav "Agendar" no Header/Footer/Hero seguem apontando para `/agendar` (página do Segmentador, agora WhatsApp-only) como navegação, não como agendamento online.
+10. **Segmentador: card do MEP adicionado** (id `metodo-v`, Vanessa) e **Sublocação roteada para a Vanessa**. Regra de número via campo `vanessa: boolean` no Vertical → Vanessa para `metodo-v`, `hipnoterapia`, `sublocacao`; Camila no restante.
+11. **Sublocação (sou-profissional) → WhatsApp da Vanessa.** `ROUTES.souProfissional` entrou em `VANESSA_PATHS` (`lib/whatsapp.ts`), cobrindo `/sou-profissional` e subpáginas. (Os forms de reserva/candidatura continuam enviando email via Resend, isso não mudou.)
+12. **WhatsApp dentro dos Métodos, por profissional.** `MethodFinalCTA` ganhou prop `vertical` e o botão principal abre o WhatsApp com mensagem pré-preenchida. `MethodProfessional` ganhou prop `whatsappVertical` e um botão "Falar com {primeiro nome} no WhatsApp". `/mep` usa `metodo-v` (Vanessa), `/metodo-elo` usa `metodo-elo` (Camila).
+13. **Duração da hipnoterapia = ~2 horas** (antes "60 a 90 minutos"). Corrigido no FAQ de `/agendar` e em `HOW_ITEMS` de `/cuidados/hipnoterapia`. No mesmo FAQ, "(V e C)" virou **"(MEP e ELO)"**.
+
 ### Ajuste de 2026-06-16
 
 8. **"Método C" → "Método Elo".** URL `/metodo-c` → **`/metodo-elo`** (pasta `app/(marketing)/metodo-elo/`), com redirect 301 do slug antigo em `next.config.ts`. Key de rota renomeada `ROUTES.metodoC` → **`ROUTES.metodoElo`**; `CAL_LINKS.metodoElo = 'conversa-inicial-metodo-elo'`; vertical id do Segmentador `metodo-c` → `metodo-elo`. **ELO é acrônimo dos 4 pilares:** **E**ntender (avaliação inicial), **L**apidar (competências), **O**rientar (plano individualizado) e **+ Conexão** (família). Os cards de `ProgramPillars` agora exibem as letras E·L·O·+ (campo `label: string`, antes `number`). **A conduta/posicionamento da Camila não mudou, só o nome do método.**

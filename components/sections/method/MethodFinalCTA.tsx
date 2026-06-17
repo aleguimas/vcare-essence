@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
@@ -8,8 +7,7 @@ import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { Button } from '@/components/ui/button';
-import { ROUTES } from '@/lib/routes';
-import { whatsappNumberForPath } from '@/lib/whatsapp';
+import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { fadeInUp, stagger, viewportConfig } from '@/lib/motion';
 
 interface MethodFinalCTAProps {
@@ -17,6 +15,8 @@ interface MethodFinalCTAProps {
   headline: string;
   subtext: string;
   ctaLabel: string;
+  /** Vertical para a mensagem pré-preenchida do WhatsApp (ex.: 'metodo-v'). */
+  vertical?: string;
 }
 
 export function MethodFinalCTA({
@@ -24,8 +24,9 @@ export function MethodFinalCTA({
   headline,
   subtext,
   ctaLabel,
+  vertical,
 }: MethodFinalCTAProps) {
-  const whatsapp = whatsappNumberForPath(usePathname());
+  const whatsappLink = buildWhatsAppLink(vertical, usePathname());
   return (
     <Section tone="moss" size="lg" className="min-h-[50vh] flex items-center">
       <Container>
@@ -51,24 +52,19 @@ export function MethodFinalCTA({
           </motion.p>
 
           <motion.div variants={fadeInUp} className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" variant="secondary">
-              <Link href={ROUTES.agendar}>{ctaLabel}</Link>
-            </Button>
+            {whatsappLink ? (
+              <Button asChild size="lg" variant="secondary">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  {ctaLabel}
+                </a>
+              </Button>
+            ) : (
+              // TODO: substituir pelo número real, aguardar decisão das sócias
+              <Button size="lg" variant="secondary" disabled aria-label="WhatsApp, número a confirmar">
+                {ctaLabel}
+              </Button>
+            )}
           </motion.div>
-
-          {whatsapp ? (
-            <motion.p variants={fadeInUp} className="mt-6 text-small text-cream/50">
-              Ou{' '}
-              <a
-                href={`https://wa.me/${whatsapp}`}
-                className="underline underline-offset-4 hover:text-cream/80 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                fale pelo WhatsApp →
-              </a>
-            </motion.p>
-          ) : null}
         </motion.div>
       </Container>
     </Section>

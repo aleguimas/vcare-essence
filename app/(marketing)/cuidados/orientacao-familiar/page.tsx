@@ -173,7 +173,6 @@ export default function OrientacaoFamiliarPage() {
       <VerticalCTA
         headline="A família não precisa ter tudo resolvido para chegar. Pode chegar com as perguntas."
         subtext="Presencial em Recife ou online."
-        agendaLabel="Agendar conversa inicial"
       />
     </>
   );

@@ -15,11 +15,13 @@ const VERTICAL_MESSAGES: Record<string, string> = {
 /**
  * Páginas conduzidas pela Vanessa usam o WhatsApp dela; o restante do site
  * (home, páginas da Camila e verticais clínicas dela) usa o número padrão (Camila).
+ * Sublocação de salas (sou-profissional) também é tratada pela Vanessa.
  */
 const VANESSA_PATHS: readonly string[] = [
   ROUTES.vanessa,
   ROUTES.metodoV, // /mep
   ROUTES.hipnoterapia,
+  ROUTES.souProfissional, // sublocação de salas (e subpáginas)
 ];
 
 /** Número de WhatsApp adequado ao caminho atual. Vazio se não configurado. */

@@ -126,7 +126,6 @@ export default function VanessaPage() {
 
       <ProfessionalCTA
         headline="O primeiro encontro já é uma consulta de diagnóstico clínico, dedicada a compreender seu caso em profundidade e orientar com precisão o próximo passo terapêutico."
-        ctaLabel="Agendar atendimento"
       />
     </>
   );

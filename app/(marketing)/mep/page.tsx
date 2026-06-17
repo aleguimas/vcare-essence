@@ -287,6 +287,7 @@ export default function MetodoVPage() {
         profileHref={ROUTES.vanessa}
         imgSrc="/images/profissionais/vanessa-albuquerque-vcare-essence-01.webp"
         imgAlt="Vanessa Albuquerque, hipnoterapeuta da VCare Essence"
+        whatsappVertical="metodo-v"
       />
 
       {/* 09 · FAQ */}
@@ -296,8 +297,9 @@ export default function MetodoVPage() {
       <MethodFinalCTA
         eyebrow="O encontro começa aqui"
         headline="Um primeiro encontro é uma conversa de diagnóstico. Não compromisso."
-        subtext="A partir dele, decidimos juntos se há fit para um plano."
-        ctaLabel="Agendar primeiro encontro"
+        subtext="A partir dele, decidimos juntos se há fit para um plano. Fale com a Vanessa pelo WhatsApp."
+        ctaLabel="Falar com a Vanessa no WhatsApp"
+        vertical="metodo-v"
       />
     </>
   );

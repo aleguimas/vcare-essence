@@ -209,6 +209,7 @@ export default function MetodoEloPage() {
         profileHref={ROUTES.camila}
         imgSrc="/images/profissionais/camila-clemente-vcare-essence-01.webp"
         imgAlt="Camila Clemente, psicóloga da VCare Essence"
+        whatsappVertical="metodo-elo"
       />
 
       {/* 06 · FAQ, específico para pais */}
@@ -218,8 +219,9 @@ export default function MetodoEloPage() {
       <MethodFinalCTA
         eyebrow="O primeiro passo é uma conversa"
         headline="A conversa inicial é com os pais. Sem compromisso, sem o adolescente presente."
-        subtext="Para entender o contexto, ouvir o que está acontecendo e avaliar juntos se há fit com o programa."
-        ctaLabel="Agendar conversa inicial"
+        subtext="Para entender o contexto, ouvir o que está acontecendo e avaliar juntos se há fit com o programa. Fale com a Camila pelo WhatsApp."
+        ctaLabel="Falar com a Camila no WhatsApp"
+        vertical="metodo-elo"
       />
     </>
   );

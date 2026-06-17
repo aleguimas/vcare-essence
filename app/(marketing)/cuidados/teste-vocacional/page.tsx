@@ -182,7 +182,6 @@ export default function TesteVocacionalPage() {
       <VerticalCTA
         headline="Clareza não é luxo. É o começo de qualquer escolha real."
         subtext="Presencial em Recife ou online."
-        agendaLabel="Agendar avaliação inicial"
       />
     </>
   );

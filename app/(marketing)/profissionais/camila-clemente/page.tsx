@@ -129,7 +129,6 @@ export default function CamilaPage() {
       <ProfessionalCTA
         headline="O primeiro passo é uma conversa. Sem pressão, sem compromisso."
         subtext="Presencial em Recife ou online."
-        ctaLabel="Agendar"
       />
     </>
   );

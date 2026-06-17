@@ -144,7 +144,6 @@ export default function AtendimentoOnlinePage() {
       <VerticalCTA
         headline="Começa de onde você estiver."
         subtext="Atendimento online disponível para todo o Brasil."
-        agendaLabel="Agendar online"
       />
     </>
   );

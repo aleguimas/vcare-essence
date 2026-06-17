@@ -48,7 +48,7 @@ const PROFESSIONALS = [
 ];
 
 const HOW_ITEMS = [
-  { label: 'Duração da sessão', value: '60 a 90 minutos' },
+  { label: 'Duração da sessão', value: 'Cerca de 2 horas' },
   { label: 'Formato', value: 'Presencial ou online' },
   { label: 'Estado durante a sessão', value: 'Consciente, com memória preservada' },
   { label: 'Número de sessões', value: 'Definido individualmente' },
