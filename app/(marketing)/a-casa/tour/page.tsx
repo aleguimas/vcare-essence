@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { EditorialGallery } from '@/components/sections/casa/EditorialGallery';
+import { VideoEmbed } from '@/components/media/VideoEmbed';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
@@ -71,6 +72,20 @@ export default function TourPage() {
             Cada detalhe foi escolhido com intenção. A galeria abaixo mostra o que as palavras
             só conseguem aproximar.
           </p>
+        </Container>
+      </Section>
+
+      {/* Vídeo do tour */}
+      <Section tone="cream" size="sm">
+        <Container>
+          <Eyebrow className="mb-6">O tour em vídeo</Eyebrow>
+          <div className="max-w-prose-wide">
+            <VideoEmbed
+              videoId="S9EHySBbY0s"
+              poster="/images/ambiente/sala-01-teto-led-sensorial.webp"
+              title="Tour pela VCare Essence, a primeira clínica sensorial de Recife"
+            />
+          </div>
         </Container>
       </Section>
 
