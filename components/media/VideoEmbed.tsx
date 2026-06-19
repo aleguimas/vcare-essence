@@ -25,10 +25,12 @@ interface VideoEmbedProps {
  * leve e evita cookies de terceiros antes da interação do usuário.
  */
 // Escada de resoluções da capa do YouTube, da melhor para a mais garantida.
-// maxres/sd nem sempre existem; quando faltam, o YouTube devolve um JPEG
-// cinza de 120x90 com status 404, que alguns navegadores renderizam em vez
-// de disparar onError. Por isso detectamos também pelo tamanho carregado.
-const YT_THUMB_LADDER = ['maxresdefault', 'sddefault', 'hqdefault'] as const;
+// NÃO começamos pelo maxresdefault: ele não existe para muitos vídeos e o
+// YouTube devolve um JPEG cinza de 120x90 com status 404 que alguns navegadores
+// renderizam em vez de disparar onError. sddefault (640x480) e hqdefault
+// (480x360) existem para todo vídeo público, então o HTML já nasce com capa
+// válida, sem depender do JS. A detecção por tamanho fica como rede de segurança.
+const YT_THUMB_LADDER = ['sddefault', 'hqdefault'] as const;
 const YT_PLACEHOLDER_MAX_WIDTH = 120;
 
 export function VideoEmbed({
