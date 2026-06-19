@@ -24,6 +24,13 @@ interface VideoEmbedProps {
  * e só carrega o iframe (e os scripts do YouTube) após o clique. Mantém o LCP
  * leve e evita cookies de terceiros antes da interação do usuário.
  */
+// Escada de resoluções da capa do YouTube, da melhor para a mais garantida.
+// maxres/sd nem sempre existem; quando faltam, o YouTube devolve um JPEG
+// cinza de 120x90 com status 404, que alguns navegadores renderizam em vez
+// de disparar onError. Por isso detectamos também pelo tamanho carregado.
+const YT_THUMB_LADDER = ['maxresdefault', 'sddefault', 'hqdefault'] as const;
+const YT_PLACEHOLDER_MAX_WIDTH = 120;
+
 export function VideoEmbed({
   videoId,
   poster,
@@ -32,10 +39,11 @@ export function VideoEmbed({
   className = '',
 }: VideoEmbedProps) {
   const [playing, setPlaying] = useState(false);
-  // Capa oficial do YouTube; cai para hqdefault se o maxres não existir.
-  const [ytThumb, setYtThumb] = useState(
-    `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
-  );
+  // Índice na escada de resoluções; avança quando a capa falha ou é a cinza.
+  const [thumbStep, setThumbStep] = useState(0);
+  const ytThumb = `https://i.ytimg.com/vi/${videoId}/${YT_THUMB_LADDER[thumbStep]}.jpg`;
+  const nextThumb = () =>
+    setThumbStep((step) => Math.min(step + 1, YT_THUMB_LADDER.length - 1));
 
   return (
     <div
@@ -70,13 +78,16 @@ export function VideoEmbed({
             // sem configurar domínio remoto no next/image.
             // eslint-disable-next-line @next/next/no-img-element
             <img
+              key={ytThumb}
               src={ytThumb}
               alt={title}
               loading="lazy"
               decoding="async"
-              onError={() =>
-                setYtThumb(`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`)
-              }
+              onError={nextThumb}
+              onLoad={(e) => {
+                // Capa cinza de "indisponível" (120x90): desce para a próxima.
+                if (e.currentTarget.naturalWidth <= YT_PLACEHOLDER_MAX_WIDTH) nextThumb();
+              }}
               className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-600 ease-soft group-hover:scale-[1.02]"
             />
           )}

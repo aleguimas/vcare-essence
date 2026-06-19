@@ -55,7 +55,7 @@ export const SITE = {
  */
 export const TOUR_VIDEO = {
   videoId: 'S9EHySBbY0s',
-  title: 'Tour pela VCare Essence, a primeira clínica sensorial de Recife',
+  title: 'Sinta um pouco da Experiência VCare',
   description:
     'Um passeio pelo espaço da VCare Essence no RioMar Trade Center: recepção, salas de atendimento, céu estrelado em fibra óptica e os detalhes sensoriais que fazem parte do tratamento.',
   uploadDate: '2026-06-17', // data de publicação no YouTube, confirmada pelas sócias

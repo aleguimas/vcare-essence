@@ -248,8 +248,9 @@ export function buildVideoSchema({ videoId, name, description, uploadDate, path 
     '@type': 'VideoObject',
     name,
     description,
+    // sddefault e hqdefault existem para todo vídeo público; maxresdefault não.
     thumbnailUrl: [
-      `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
+      `https://i.ytimg.com/vi/${videoId}/sddefault.jpg`,
       `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
     ],
     uploadDate,
