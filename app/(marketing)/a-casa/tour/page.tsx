@@ -7,7 +7,9 @@ import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { Heading } from '@/components/editorial/Heading';
 import { Button } from '@/components/ui/button';
-import { ROUTES } from '@/lib/routes';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { buildVideoSchema } from '@/lib/schemas';
+import { ROUTES, TOUR_VIDEO } from '@/lib/routes';
 
 export const metadata: Metadata = {
   title: 'Tour pela Clínica · A Clínica · VCare Essence',
@@ -62,6 +64,15 @@ const SALAS = [
 export default function TourPage() {
   return (
     <>
+      <JsonLd
+        data={buildVideoSchema({
+          videoId: TOUR_VIDEO.videoId,
+          name: TOUR_VIDEO.title,
+          description: TOUR_VIDEO.description,
+          uploadDate: TOUR_VIDEO.uploadDate,
+          path: ROUTES.tour,
+        })}
+      />
       <Section tone="cream" size="md" className="border-b border-line">
         <Container>
           <Eyebrow>A Clínica · Tour</Eyebrow>
@@ -80,11 +91,7 @@ export default function TourPage() {
         <Container>
           <Eyebrow className="mb-6">O tour em vídeo</Eyebrow>
           <div className="max-w-prose-wide">
-            <VideoEmbed
-              videoId="S9EHySBbY0s"
-              poster="/images/ambiente/sala-01-teto-led-sensorial.webp"
-              title="Tour pela VCare Essence, a primeira clínica sensorial de Recife"
-            />
+            <VideoEmbed videoId={TOUR_VIDEO.videoId} title={TOUR_VIDEO.title} />
           </div>
         </Container>
       </Section>

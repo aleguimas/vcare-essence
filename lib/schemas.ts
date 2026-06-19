@@ -229,6 +229,37 @@ export function buildBreadcrumbSchema(items: { name: string; path: string }[]) {
   };
 }
 
+interface VideoInput {
+  videoId: string;
+  name: string;
+  description: string;
+  uploadDate: string;
+  /** Caminho da página que hospeda o vídeo (ex.: ROUTES.tour ou '/') */
+  path: string;
+}
+
+/**
+ * VideoObject para vídeos do YouTube embutidos no site. Usa a thumbnail e o
+ * embed oficiais do YouTube. `uploadDate` é obrigatório para rich results.
+ */
+export function buildVideoSchema({ videoId, name, description, uploadDate, path }: VideoInput) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl: [
+      `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
+      `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+    ],
+    uploadDate,
+    embedUrl: `https://www.youtube.com/embed/${videoId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+    publisher: { '@id': CLINIC_ID },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE.url}${path}` },
+  };
+}
+
 interface ArticleInput {
   title: string;
   excerpt: string;

@@ -6,7 +6,7 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Eyebrow } from '@/components/editorial/Eyebrow';
 import { VideoEmbed } from '@/components/media/VideoEmbed';
-import { ROUTES } from '@/lib/routes';
+import { ROUTES, TOUR_VIDEO } from '@/lib/routes';
 import { fadeInUp, stagger, viewportConfig } from '@/lib/motion';
 
 export function HouseGallery() {
@@ -38,11 +38,7 @@ export function HouseGallery() {
           viewport={viewportConfig}
           variants={fadeInUp}
         >
-          <VideoEmbed
-            videoId="S9EHySBbY0s"
-            poster="/images/ambiente/sala-01-teto-led-sensorial.webp"
-            title="Tour pela VCare Essence, a primeira clínica sensorial de Recife"
-          />
+          <VideoEmbed videoId={TOUR_VIDEO.videoId} title={TOUR_VIDEO.title} />
         </motion.div>
 
         <motion.div
