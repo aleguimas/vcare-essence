@@ -15,7 +15,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
         Pular para o conteúdo
       </a>
       <Header />
-      <main id="main" tabIndex={-1} className="pt-[72px] outline-none">
+      <main id="main" tabIndex={-1} className="pt-20 outline-none">
         {children}
       </main>
       <Footer />

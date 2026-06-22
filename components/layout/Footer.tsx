@@ -168,12 +168,12 @@ function FooterCol({
       <p className="text-small font-semibold text-cream/40 uppercase tracking-wider mb-4">
         {title}
       </p>
-      <ul className="space-y-2">
+      <ul className="space-y-1">
         {links.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-small text-cream/70 hover:text-bronze-100 transition-colors duration-200"
+              className="block py-1 text-small text-cream/70 hover:text-bronze-100 transition-colors duration-200"
             >
               {link.label}
             </Link>

@@ -124,7 +124,7 @@ export function Header() {
           <Dialog.Root open={mobileOpen} onOpenChange={setMobileOpen}>
             <Dialog.Trigger asChild>
               <button
-                className="lg:hidden p-2 -mr-2 text-moss rounded-full transition-colors hover:bg-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze"
+                className="lg:hidden flex h-11 w-11 -mr-2 items-center justify-center text-moss rounded-full transition-colors hover:bg-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze"
                 aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
               >
                 {mobileOpen ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
@@ -144,7 +144,7 @@ export function Header() {
                     />
                   </Dialog.Overlay>
 
-                  <Dialog.Content asChild aria-label="Menu de navegação">
+                  <Dialog.Content asChild>
                     <motion.div
                       className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-cream shadow-xl flex flex-col"
                       initial={{ x: '100%' }}
@@ -152,6 +152,10 @@ export function Header() {
                       exit={{ x: '100%' }}
                       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     >
+                      <Dialog.Title className="sr-only">Menu de navegação</Dialog.Title>
+                      <Dialog.Description className="sr-only">
+                        Links para as páginas da VCare Essence
+                      </Dialog.Description>
                       <div className="flex items-center justify-between px-6 py-5 border-b border-line">
                         <Image
                           src="/images/logo/logo-horizontal.webp"
@@ -162,7 +166,7 @@ export function Header() {
                         />
                         <Dialog.Close asChild>
                           <button
-                            className="p-2 -mr-2 text-moss rounded-full transition-colors hover:bg-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze"
+                            className="flex h-11 w-11 -mr-2 items-center justify-center text-moss rounded-full transition-colors hover:bg-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze"
                             aria-label="Fechar menu"
                           >
                             <X size={20} strokeWidth={1.5} />
@@ -304,7 +308,7 @@ function MobileNavItem({ item, onClose }: { item: NavItem; onClose: () => void }
                   key={child.href}
                   href={child.href}
                   onClick={onClose}
-                  className="block py-2 px-2 text-small font-sans text-muted hover:text-moss transition-colors"
+                  className="block py-3 px-2 text-small font-sans text-muted hover:text-moss transition-colors"
                 >
                   {child.label}
                 </Link>

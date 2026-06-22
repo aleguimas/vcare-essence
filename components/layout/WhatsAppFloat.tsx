@@ -10,10 +10,24 @@ import { trackEvent } from '@/lib/analytics';
 export function WhatsAppFloat() {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
+  // Enquanto o banner de cookies está aberto (consentimento ainda não decidido),
+  // não mostramos o float para evitar sobreposição no canto inferior do mobile.
+  const [consentDecided, setConsentDecided] = useState(true);
 
   // WhatsApp é o único canal de contato do site, com o número correto por
   // caminho (Vanessa nas páginas dela, Camila no restante).
   const link = buildWhatsAppLink(undefined, pathname);
+
+  useEffect(() => {
+    const read = () => setConsentDecided(localStorage.getItem('vcare-consent') !== null);
+    read();
+    window.addEventListener('vcare-consent-change', read);
+    window.addEventListener('storage', read);
+    return () => {
+      window.removeEventListener('vcare-consent-change', read);
+      window.removeEventListener('storage', read);
+    };
+  }, []);
 
   useEffect(() => {
     if (!link) return;
@@ -37,7 +51,7 @@ export function WhatsAppFloat() {
 
   return (
     <AnimatePresence>
-      {visible && (
+      {visible && consentDecided && (
         <motion.a
           href={link}
           target="_blank"
@@ -47,7 +61,7 @@ export function WhatsAppFloat() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 12 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="group fixed bottom-6 right-6 z-40 flex items-center gap-3 rounded-full bg-bronze px-5 py-3.5 text-cream shadow-lg transition-colors duration-300 hover:bg-bronze-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+          className="group fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-bronze px-5 py-3.5 text-cream shadow-lg transition-colors duration-300 hover:bg-bronze-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
           aria-label="Falar pelo WhatsApp"
         >
           <MessageCircle size={20} strokeWidth={1.5} aria-hidden="true" />

@@ -74,7 +74,7 @@ export function Hero() {
             <Button asChild size="lg">
               <Link href={ROUTES.aCasa}>Conhecer a clínica</Link>
             </Button>
-            <Button asChild size="lg" variant="ghost">
+            <Button asChild size="lg" variant="secondary">
               <Link href={ROUTES.agendar}>Agendar uma conversa</Link>
             </Button>
           </motion.div>
