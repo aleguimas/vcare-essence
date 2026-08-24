@@ -46,7 +46,6 @@ export const SITE = {
   whatsappVanessa: '5581997865560', // Vanessa Albuquerque, páginas dela
   instagram: '', // TODO: aguardar decisão das sócias
   email: '', // TODO: aguardar decisão das sócias
-  cnpj: '', // TODO: aguardar decisão das sócias
 } as const;
 
 /**

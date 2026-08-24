@@ -93,7 +93,7 @@ export default function PoliticaPrivacidadePage() {
               8. Contato
             </Heading>
             <p className="mt-3 text-body text-ink/80 leading-relaxed">
-              {/* TODO: inserir email do encarregado (DPO) e CNPJ quando confirmados */}
+              {/* TODO: inserir email do encarregado (DPO) quando confirmado */}
               Para questões sobre seus dados, fale com a gente pelo{' '}
               <Link href={ROUTES.agendar} className="text-bronze underline underline-offset-4 hover:text-bronze-400">
                 canal de contato

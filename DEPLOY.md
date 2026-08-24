@@ -17,7 +17,6 @@ podem ser inventados (CFP/LGPD e identidade de marca):
 | Telefone / WhatsApp | `lib/routes.ts` → `SITE.whatsapp` (formato `5581XXXXXXXXX`) e `SITE.phone` |
 | E-mail institucional | `lib/routes.ts` → `SITE.email` |
 | Instagram | `lib/routes.ts` → `SITE.instagram` |
-| CNPJ | `lib/routes.ts` → `SITE.cnpj` (footer) |
 | CEP exato e coordenadas geo | `lib/routes.ts` (zip) e `lib/schemas.ts` (`CLINIC_GEO`) |
 | Horários de atendimento | `lib/schemas.ts` (openingHours) + página `agendar` e `a-casa/endereco` |
 | Formas de pagamento / política de cancelamento | páginas `agendar` e `termos-de-uso` |

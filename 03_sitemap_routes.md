@@ -155,7 +155,7 @@ export const ROUTES = {
 │  Pina, Recife — PE                                           │
 │  WhatsApp · Instagram · Email                                │
 │                                                              │
-│  CRP XX/XXXXX · CRP XX/XXXXX · CNPJ XX.XXX.XXX/0001-XX      │
+│  CRP XX/XXXXX · CRP XX/XXXXX                                │
 │                                                              │
 │  © 2026 VCare Essence · Política de privacidade · Termos    │
 └─────────────────────────────────────────────────────────────┘

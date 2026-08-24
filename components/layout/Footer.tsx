@@ -135,10 +135,8 @@ export function Footer() {
         {/* Rodapé legal */}
         <div className="mt-12 pt-8 border-t border-cream/10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap gap-x-6 gap-y-1 text-small text-cream/40">
-            {/* TODO: CRPs e CNPJ a confirmar com as sócias */}
             <span>CRP 02/15875, Vanessa Albuquerque</span>
             <span>CRP 02/19121, Camila Clemente</span>
-            <span>CNPJ XX.XXX.XXX/0001-XX</span>
           </div>
 
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-small text-cream/40">
